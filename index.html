@@ -197,32 +197,6 @@ body{font-family:'Zen Kaku Gothic New','Noto Serif TC',serif;font-weight:400;bac
 .rkm{font-size:.46rem;color:rgba(122,170,140,.36);white-space:nowrap;margin-top:.4rem;}
 .route-hint{font-size:.57rem;color:rgba(184,212,200,.22);padding:.3rem 1.3rem 0;}
 
-/* DAYS */
-.days-sec{padding:0 0 3rem;background:var(--cream);}
-.days-hd{padding:2.8rem 1.3rem 1.2rem;max-width:580px;margin:0 auto;}
-.day-card{margin:.55rem .9rem;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 2px 18px rgba(26,39,68,.08),0 1px 3px rgba(26,39,68,.04);border:1px solid rgba(200,180,140,.22);}
-.dh{display:flex;align-items:stretch;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none;position:relative;overflow:hidden;min-height:82px;}
-.dh[data-d="1"]{background:linear-gradient(135deg,#0e1e20,#102038);}
-.dh[data-d="2"]{background:linear-gradient(135deg,#101e14,#182c1c);}
-.dh[data-d="3"]{background:linear-gradient(135deg,#0e1e10,#1c2e18);}
-.dh[data-d="4"]{background:linear-gradient(135deg,#14201a,#182e24);}
-.dh[data-d="5"]{background:linear-gradient(135deg,#0e1c28,#102840);}
-.dh[data-d="6"]{background:linear-gradient(135deg,#0c1e32,#102845);}
-.dh[data-d="7"]{background:linear-gradient(135deg,#101e1a,#122030);}
-.dh-num{flex-shrink:0;width:62px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1rem 0;border-right:1px solid rgba(255,255,255,.07);position:relative;z-index:1;}
-.dh-n{font-family:'Shippori Mincho B1',serif;font-size:2.3rem;font-weight:800;color:rgba(232,200,122,.9);line-height:1;}
-.dh-wd{font-size:.46rem;letter-spacing:.15em;color:rgba(200,220,210,.32);margin-top:.1rem;}
-.dh-mid{flex:1;padding:.9rem .6rem .9rem 1rem;position:relative;z-index:1;}
-.dh-date{font-size:.56rem;letter-spacing:.2em;color:rgba(232,200,122,.62);margin-bottom:.14rem;}
-.dh-title{font-family:'Noto Serif TC','STSong',serif;font-size:1.02rem;font-weight:700;color:#fff;line-height:1.25;}
-.dh-route{font-size:.6rem;color:rgba(184,212,200,.44);margin-top:.22rem;}
-.dh-right{flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 .9rem;gap:.38rem;position:relative;z-index:1;}
-.dh-km-wrap{text-align:center;}
-.dh-km{font-family:'Shippori Mincho B1',serif;font-size:1.1rem;color:rgba(232,200,122,.85);line-height:1;}
-.dh-km-l{font-size:.45rem;color:rgba(200,220,210,.35);letter-spacing:.1em;}
-.dh-arr{color:rgba(200,210,200,.28);font-size:.7rem;transition:transform .3s;}
-.dh-arr.open{transform:rotate(180deg);}
-
 /* DAY BODY */
 .db{display:none;background:var(--cream);padding:1rem 1.1rem 1.3rem;}
 .db.open{display:block;animation:slideOpen .28s ease;}
@@ -397,6 +371,29 @@ body{font-family:'Zen Kaku Gothic New','Noto Serif TC',serif;font-weight:400;bac
 .nc-t{font-family:'Noto Serif TC','STSong',serif;font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:.3rem;}
 .nc-b{font-size:.69rem;color:var(--nmuted);line-height:1.65;}
 
+/* LAUNDRY */
+.laundry-band{background:var(--cream2);border-top:1px solid var(--cborder);border-bottom:1px solid var(--cborder);padding:2.8rem 1.3rem;}
+.laundry-inner{max-width:580px;margin:0 auto;}
+.laundry-intro{font-size:.75rem;color:var(--nmuted);line-height:1.75;margin-bottom:1.2rem;font-family:'Noto Serif TC',serif;}
+.laundry-days{display:flex;flex-direction:column;gap:.65rem;}
+.ld-row{display:grid;grid-template-columns:52px 1fr;gap:0;background:#fff;border:1px solid var(--cborder);border-radius:10px;overflow:hidden;}
+.ld-day{background:var(--navy);color:rgba(232,200,122,.9);font-family:'Shippori Mincho B1',serif;font-size:1.3rem;font-weight:800;display:flex;align-items:center;justify-content:center;padding:.5rem 0;}
+.ld-body{padding:.65rem .9rem;}
+.ld-title{font-family:'Noto Serif TC','STSong',serif;font-size:.85rem;font-weight:700;color:var(--navy);margin-bottom:.22rem;}
+.ld-shops{display:flex;flex-direction:column;gap:.32rem;}
+.ld-shop{display:flex;align-items:flex-start;gap:.55rem;}
+.ld-shop-info{flex:1;min-width:0;}
+.ld-shop-name{font-size:.72rem;font-weight:600;color:var(--navy);}
+.ld-shop-meta{font-size:.62rem;color:var(--nmuted);line-height:1.5;margin-top:.1rem;}
+.ld-badge{font-size:.5rem;padding:1px 6px;border-radius:2rem;margin-left:5px;font-weight:600;}
+.ld-ok{background:rgba(58,104,72,.12);color:var(--sage);border:1px solid rgba(58,104,72,.2);}
+.ld-sub{background:rgba(168,120,48,.1);color:var(--gold);border:1px solid rgba(168,120,48,.2);}
+.ld-warn{background:rgba(176,48,32,.07);color:var(--red);border:1px solid rgba(176,48,32,.18);}
+.ld-map-btn{display:inline-flex;align-items:center;gap:3px;font-size:.55rem;padding:3px 8px;border-radius:2rem;border:1px solid rgba(26,115,232,.3);color:rgba(26,115,232,.9);background:rgba(26,115,232,.05);text-decoration:none;white-space:nowrap;flex-shrink:0;margin-top:.18rem;}
+.ld-map-btn:active{opacity:.7;}
+.ld-none{font-size:.7rem;color:var(--nmuted);line-height:1.6;padding:.1rem 0;}
+.ld-tip{margin-top:.5rem;font-size:.62rem;color:var(--sage);background:rgba(58,104,72,.07);border-left:2.5px solid var(--sage2);border-radius:0 5px 5px 0;padding:.28rem .6rem;line-height:1.55;}
+
 /* FOOTER */
 footer{background:linear-gradient(160deg,#090f16,#0c1a10);padding:3rem 1.3rem calc(3rem + env(safe-area-inset-bottom,0px));text-align:center;position:relative;overflow:hidden;}
 footer::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(200,151,58,.05) 0%,transparent 70%);}
@@ -411,18 +408,81 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
 @media(max-width:360px){.h-title-1{font-size:1.8rem;}.pillars,.nav-grid,.notes-grid{grid-template-columns:1fr;}.fruit-grid{grid-template-columns:1fr;}}
 </style>
 </head>
+
+<style id="dp-overrides">
+/* === DAY PAGE OVERRIDES — appended last, wins over everything === */
+
+/* Fixed date bar */
+#dp-bar {
+  position: fixed !important;
+  top: 0; left: 0; right: 0;
+  z-index: 9999;
+  background: #08111a !important;
+  border-bottom: 3px solid #c8973a;
+  box-shadow: 0 4px 28px rgba(0,0,0,.7);
+  display: flex !important;
+  padding: .5rem .2rem .42rem;
+  overflow-x: auto; scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+#dp-bar::-webkit-scrollbar { display: none; }
+#dp-bar .dtab {
+  flex: 1; min-width: 44px;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: .55rem .1rem .5rem;
+  background: transparent; border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer; -webkit-tap-highlight-color: transparent;
+  transition: all .18s; margin-bottom: -3px;
+}
+#dp-bar .dtab-n {
+  font-family: "Shippori Mincho B1", serif;
+  font-size: 1rem; font-weight: 800;
+  color: rgba(255,255,255,.5);
+  line-height: 1; white-space: nowrap;
+  transition: color .18s;
+}
+#dp-bar .dtab-s {
+  font-size: .52rem; color: rgba(200,151,58,.55);
+  white-space: nowrap; letter-spacing: .04em;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+#dp-bar .dtab.active .dtab-n { color: #ffe088; font-size: 1.05rem; }
+#dp-bar .dtab.active .dtab-s { color: #e8c878; }
+#dp-bar .dtab.active { border-bottom-color: #c8973a; }
+#dp-bar .dtab:active { opacity: .7; }
+
+/* Push page down below fixed bar */
+#dp-hero { margin-top: 65px !important; }
+
+/* Day panels — ONLY use display none/block, no animation on none */
+.dp-panel { display: none !important; }
+.dp-panel.active { display: block !important; }
+
+/* Day card inside panel */
+.dp-card {
+  margin: .7rem .9rem 1.2rem;
+  border-radius: 14px; overflow: hidden;
+  box-shadow: 0 2px 18px rgba(26,39,68,.08);
+  border: 1px solid rgba(200,180,140,.22);
+  background: #fff;
+}
+.dp-card .dh-arr { display: none !important; }
+.dp-card .db { display: block !important; background: var(--cream); padding: 1rem 1.1rem 1.3rem; }
+.dp-sec { padding: 1.5rem 1.3rem; max-width: 580px; margin: 0 auto; }
+</style>
+
 <body>
-
-<!-- STICKY NAV -->
-<nav class="snav" id="snav">
-  <div class="snav-btn" onclick="goTo('hero-sec')"><span class="ico">🏠</span><span>首頁</span></div>
-  <div class="snav-btn" onclick="goTo('map-sec')"><span class="ico">🗺️</span><span>地圖</span></div>
-  <div class="snav-btn" onclick="goTo('days-sec')"><span class="ico">📅</span><span>行程</span></div>
-  <div class="snav-btn" onclick="goTo('onsen-sec')"><span class="ico">♨️</span><span>溫泉</span></div>
-  <div class="snav-btn" onclick="goTo('nav-sec')"><span class="ico">🚗</span><span>導航</span></div>
-</nav>
-
-<!-- ═══ HERO ═══ -->
+<div id="dp-bar">
+  <button class="dtab active" data-tab="1" onclick="dpShow(1)"><span class="dtab-n">5/11</span><span class="dtab-s">抵達福岡</span></button>
+  <button class="dtab" data-tab="2" onclick="dpShow(2)"><span class="dtab-n">5/12</span><span class="dtab-s">紫藤古城</span></button>
+  <button class="dtab" data-tab="3" onclick="dpShow(3)"><span class="dtab-n">5/13</span><span class="dtab-s">神木茶鄉</span></button>
+  <button class="dtab" data-tab="4" onclick="dpShow(4)"><span class="dtab-n">5/14</span><span class="dtab-s">海中鳥居</span></button>
+  <button class="dtab" data-tab="5" onclick="dpShow(5)"><span class="dtab-n">5/15</span><span class="dtab-s">最西端</span></button>
+  <button class="dtab" data-tab="6" onclick="dpShow(6)"><span class="dtab-n">5/16</span><span class="dtab-s">生月落日</span></button>
+  <button class="dtab" data-tab="7" onclick="dpShow(7)"><span class="dtab-n">5/17</span><span class="dtab-s">返程</span></button>
+</div>
+<div id="dp-hero"><!-- ═══ HERO ═══ -->
 <section class="hero" id="hero-sec">
   <div class="h-bg"></div>
   <div class="h-stars"></div>
@@ -508,8 +568,7 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
       <span class="ticker-item">🌅 糸島白色鳥居夕照</span>
     </div>
   </div>
-</section>
-
+</section></div>
 <!-- ═══ INTRO ═══ -->
 <div class="intro-band">
   <div class="intro-inner">
@@ -524,260 +583,11 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
     </div>
   </div>
 </div>
+<div id="dp-anchor"></div>
+<div id="dp-area">
 
-<!-- ═══════════════════════════════════════════════
-     GOOGLE MAP 全程 + 每日地圖
-═══════════════════════════════════════════════ -->
-<div class="map-sec" id="map-sec">
-<div class="map-inner">
-  <p class="sec-ey">查看景點地圖</p>
-  <h2 class="sec-ti song">全程 7 天景點路線圖</h2>
-  <p class="sec-sub">點擊下方按鈕，在 Google Maps 查看每天景點定位 · 可直接導航</p>
-
-  <!-- 全程總覽 -->
-  <a class="map-full-btn"
-     href="https://www.google.com/maps/dir/福岡空港/唐津城/鏡山展望台/古湯温泉/武雄神社/御船山楽園/祐徳稲荷神社/嬉野温泉/大魚神社/雲仙地獄/石岳展望台/神崎鼻公園/生月大橋/桜井二見ヶ浦/福岡空港"
-     target="_blank" rel="noopener">
-    <span class="mico">🗺️</span>
-    <span>全程 7 天景點總覽地圖（Google Maps）</span>
-  </a>
-
-  <div class="map-days">
-
-    <!-- DAY 1 -->
-    <div class="map-day-card">
-      <div class="map-day-head">
-        <div class="mday-num">1<span>MON</span></div>
-        <div class="mday-info">
-          <div class="mday-title">抵達福岡 · 泡湯放鬆吃豬排</div>
-          <div class="mday-route">機場地鐵 → 日航飯店 · 步行散策</div>
-        </div>
-        <div class="mday-km"><div class="km-n">—</div><div class="km-l">步行</div></div>
-      </div>
-      <div class="map-spots">
-        <div class="spot-list">
-          <div class="spot-item"><span class="spot-pin">🚐</span><div><div class="spot-name">福岡機場 → 機場接送專車</div><div class="spot-note">預約接送，直達博多日航飯店，約 25 分鐘</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">博多運河城 · 市區散策</div><div class="spot-note">放行李，感受博多氛圍</div></div></div>
-          <div class="spot-item"><span class="spot-pin">🍱</span><div><div class="spot-name">黑かつ亭 炸豬排飯</div><div class="spot-note">AMU Plaza 9F · 17:00 首波免排隊</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">那珂川屋台夜景散步</div><div class="spot-note">飯後沿河散步・屋台燈籠倒映水面</div></div></div>
-          <div class="spot-item"><span class="spot-pin">🏨</span><div><div class="spot-name">福岡日航飯店（今晚泡澡放鬆）</div><div class="spot-note">博多車站正對面・明日早餐後取車</div></div></div>
-        </div>
-        <a class="map-btn" href="https://www.google.com/maps/search/那珂川+博多+屋台/@33.585,130.4,14z" target="_blank" rel="noopener">
-          📍 Day 1 在 Google Maps 查看
-        </a>
-      </div>
-    </div>
-
-    <!-- DAY 2 -->
-    <div class="map-day-card">
-      <div class="map-day-head">
-        <div class="mday-num">2<span>TUE</span></div>
-        <div class="mday-info">
-          <div class="mday-title">上帝視角 · 紫藤古城與鯉魚旗</div>
-          <div class="mday-route">福岡 → 唐津 → 鏡山 → 古湯溫泉</div>
-        </div>
-        <div class="mday-km"><div class="km-n">110</div><div class="km-l">KM</div></div>
-      </div>
-      <div class="map-spots">
-        <div class="spot-list">
-          <div class="spot-item"><span class="spot-pin">🚗</span><div><div class="spot-name">福岡機場 · 取車出發</div><div class="spot-note">06:30 早餐後搭地鐵至機場辦理取車</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">唐津城（百年紫藤）</div><div class="spot-note">9:00 開 · 五月限定絕景 · 60km/1h</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">鏡山展望台</div><div class="spot-note">虹之松原全景 · +15km/20min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">見歸之瀑布</div><div class="spot-note">秘境瀑布 · +28km/35min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">川上峽（300條鯉魚旗）</div><div class="spot-note">傍晚抵達最美 · +35km/42min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">🏨</span><div><div class="spot-name">古湯溫泉 旅館大和屋</div><div class="spot-note">+6km/8min</div></div></div>
-        </div>
-        <a class="map-btn" href="https://www.google.com/maps/dir/唐津城/鏡山展望台/見帰りの滝/川上峡/古湯温泉/@33.45,130.1,11z" target="_blank" rel="noopener">
-          📍 Day 2 路線在 Google Maps 查看
-        </a>
-      </div>
-    </div>
-
-    <!-- DAY 3 -->
-    <div class="map-day-card">
-      <div class="map-day-head">
-        <div class="mday-num">3<span>WED</span></div>
-        <div class="mday-info">
-          <div class="mday-title">神木茶鄉 · 千年靈氣與佐賀和牛</div>
-          <div class="mday-route">古湯 → 武雄 → 御船山 → 嬉野</div>
-        </div>
-        <div class="mday-km"><div class="km-n">60</div><div class="km-l">KM</div></div>
-      </div>
-      <div class="map-spots">
-        <div class="spot-list">
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">武雄神社 · 大楠（3000年）</div><div class="spot-note">能量點 · 竹林神木 · 45km/50min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">御船山樂園（斷崖絕景）</div><div class="spot-note">08:00開 · 杜鵑花期 · +1km/5min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">祐德稻荷神社</div><div class="spot-note">日本三大稻荷 · +30km/35min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">嬉野茶空間梯田</div><div class="spot-note">翠綠幾何茶園 · +24km/28min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">🏨</span><div><div class="spot-name">嬉野溫泉 光陽閣</div><div class="spot-note">佐賀和牛晚餐 · +10km/12min</div></div></div>
-        </div>
-        <a class="map-btn" href="https://www.google.com/maps/dir/武雄神社/御船山楽園/祐徳稲荷神社/嬉野温泉/@33.1,130.0,11z" target="_blank" rel="noopener">
-          📍 Day 3 路線在 Google Maps 查看
-        </a>
-      </div>
-    </div>
-
-    <!-- DAY 4 -->
-    <div class="map-day-card">
-      <div class="map-day-head">
-        <div class="mday-num">4<span>THU</span></div>
-        <div class="mday-info">
-          <div class="mday-title">火山地熱 · 海中鳥居與杜鵑花海</div>
-          <div class="mday-route">嬉野 → 太良 → 島原半島 → 雲仙</div>
-        </div>
-        <div class="mday-km"><div class="km-n">90</div><div class="km-l">KM</div></div>
-      </div>
-      <div class="map-spots">
-        <div class="spot-list">
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">大魚神社「海上三鳥居」</div><div class="spot-note">退潮限定 · 40km/45min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">🛒</span><div><div class="spot-name">道の駅 太良（茂木枇杷）</div><div class="spot-note">五月限定 · +10km/12min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">水果公車站</div><div class="spot-note">哈密瓜造型 · +25km/28min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">仁田峠索道（杜鵑花海）</div><div class="spot-note">五月限定 · +55km/1h</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">雲仙地獄谷</div><div class="spot-note">火山仙境 · +15km/18min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">🏨</span><div><div class="spot-name">雲仙みかど飯店</div><div class="spot-note">+5km/5min</div></div></div>
-        </div>
-        <a class="map-btn" href="https://www.google.com/maps/dir/大魚神社/道の駅+太良/水果バス停/仁田峠/雲仙地獄/@32.85,130.2,11z" target="_blank" rel="noopener">
-          📍 Day 4 路線在 Google Maps 查看
-        </a>
-      </div>
-    </div>
-
-    <!-- DAY 5 -->
-    <div class="map-day-card">
-      <div class="map-day-head">
-        <div class="mday-num">5<span>FRI</span></div>
-        <div class="mday-info">
-          <div class="mday-title">西端群島 · 制霸日本最西端</div>
-          <div class="mday-route">雲仙 → 西海 → 佐世保 · 漁村</div>
-        </div>
-        <div class="mday-km"><div class="km-n">110</div><div class="km-l">KM</div></div>
-      </div>
-      <div class="map-spots">
-        <div class="spot-list">
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">西海橋（渦潮）</div><div class="spot-note">拱橋奇景 · 45km/50min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">石岳展望台（九十九島）</div><div class="spot-note">建議 15:00–17:00 · +22km/28min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">🏆</span><div><div class="spot-name">神崎鼻公園（最西端）</div><div class="spot-note">領取証明書 · +52km/1h10min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">🏨</span><div><div class="spot-name">民宿 海の幸</div><div class="spot-note">⚠️現金 ¥17,600 · +10km/12min</div></div></div>
-        </div>
-        <a class="map-btn" href="https://www.google.com/maps/dir/西海橋/石岳展望台/神崎鼻公園/@33.15,129.65,11z" target="_blank" rel="noopener">
-          📍 Day 5 路線在 Google Maps 查看
-        </a>
-      </div>
-    </div>
-
-    <!-- DAY 6 -->
-    <div class="map-day-card">
-      <div class="map-day-head">
-        <div class="mday-num">6<span>SAT</span></div>
-        <div class="mday-info">
-          <div class="mday-title">世界盡頭 · 生月島落日大道</div>
-          <div class="mday-route">佐世保 → 生月島 → 川內峠 → 糸島 → 福岡</div>
-        </div>
-        <div class="mday-km"><div class="km-n">130</div><div class="km-l">KM</div></div>
-      </div>
-      <div class="map-spots">
-        <div class="spot-list">
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">生月島落日大道</div><div class="spot-note">汽車廣告聖地 · 30km/35min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">川內峠（360°大草原）</div><div class="spot-note">無遮蔽壯景 · +18km/22min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">糸島 · 白色鳥居（夫婦岩）</div><div class="spot-note">黃金夕陽時刻 · +80km/1.5h</div></div></div>
-          <div class="spot-item"><span class="spot-pin">🏨</span><div><div class="spot-name">博多溫泉 富士の苑</div><div class="spot-note">100% 源泉掛流 · +32km/38min</div></div></div>
-        </div>
-        <a class="map-btn" href="https://www.google.com/maps/dir/生月大橋/川内峠/桜井二見ヶ浦/博多温泉/@33.45,129.7,10z" target="_blank" rel="noopener">
-          📍 Day 6 路線在 Google Maps 查看
-        </a>
-      </div>
-    </div>
-
-    <!-- DAY 7 -->
-    <div class="map-day-card">
-      <div class="map-day-head">
-        <div class="mday-num">7<span>SUN</span></div>
-        <div class="mday-info">
-          <div class="mday-title">完美圓滿 · 晨光散步後返程</div>
-          <div class="mday-route">福岡市區 → 福岡機場</div>
-        </div>
-        <div class="mday-km"><div class="km-n">10</div><div class="km-l">KM</div></div>
-      </div>
-      <div class="map-spots">
-        <div class="spot-list">
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">那珂川河堤晨光散步</div><div class="spot-note">07:30–08:30 · 最後一拍</div></div></div>
-          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">櫛田神社（選擇性）</div><div class="spot-note">2000年古社・步行15min</div></div></div>
-          <div class="spot-item"><span class="spot-pin">✈️</span><div><div class="spot-name">福岡機場・還車・起飛</div><div class="spot-note">約10km/15min</div></div></div>
-        </div>
-        <a class="map-btn map-btn-alt" href="https://www.google.com/maps/search/那珂川+福岡/@33.585,130.4,14z" target="_blank" rel="noopener">
-          📍 Day 7 在 Google Maps 查看
-        </a>
-      </div>
-    </div>
-
-  </div><!-- end map-days -->
-</div>
-</div>
-
-<!-- ═══ ROUTE STRIP ═══ -->
-<div class="route-strip" id="route-sec">
-  <div class="route-hd">
-    <p class="route-ey">完整自駕路線</p>
-    <h2 class="route-ti song">七日壯闊全景 · 580–620 km</h2>
-    <p class="route-sub">橫跨福岡 · 佐賀 · 長崎 · 左右滑動查看</p>
-  </div>
-  <div class="rx">
-    <div class="rchain">
-      <div class="rnode"><div class="rdot key"></div><div class="rlabel key">福岡<br>機場</div></div>
-      <div class="redge"><div class="rline"></div><div class="rkm">5km</div></div>
-      <div class="rnode"><div class="rdot"></div><div class="rlabel">大濠<br>公園</div></div>
-      <div class="redge"><div class="rline"></div><div class="rkm">60km</div></div>
-      <div class="rnode"><div class="rdot key"></div><div class="rlabel key">唐津城<br>鏡山</div></div>
-      <div class="redge"><div class="rline"></div><div class="rkm">63km</div></div>
-      <div class="rnode"><div class="rdot"></div><div class="rlabel">川上峽<br>古湯</div></div>
-      <div class="redge"><div class="rline"></div><div class="rkm">46km</div></div>
-      <div class="rnode"><div class="rdot"></div><div class="rlabel">武雄<br>御船山</div></div>
-      <div class="redge"><div class="rline"></div><div class="rkm">55km</div></div>
-      <div class="rnode"><div class="rdot key"></div><div class="rlabel key">嬉野<br>溫泉</div></div>
-      <div class="redge"><div class="rline"></div><div class="rkm">55km</div></div>
-      <div class="rnode"><div class="rdot"></div><div class="rlabel">大魚<br>神社</div></div>
-      <div class="redge"><div class="rline"></div><div class="rkm">90km</div></div>
-      <div class="rnode"><div class="rdot key"></div><div class="rlabel key">雲仙<br>地獄</div></div>
-      <div class="redge"><div class="rline"></div><div class="rkm">67km</div></div>
-      <div class="rnode"><div class="rdot"></div><div class="rlabel">石岳<br>展望台</div></div>
-      <div class="redge"><div class="rline"></div><div class="rkm">52km</div></div>
-      <div class="rnode"><div class="rdot"></div><div class="rlabel">最西端<br>神崎鼻</div></div>
-      <div class="redge"><div class="rline"></div><div class="rkm">30km</div></div>
-      <div class="rnode"><div class="rdot key"></div><div class="rlabel key">生月島<br>落日道</div></div>
-      <div class="redge"><div class="rline"></div><div class="rkm">80km</div></div>
-      <div class="rnode"><div class="rdot"></div><div class="rlabel">糸島<br>白鳥居</div></div>
-      <div class="redge"><div class="rline"></div><div class="rkm">32km</div></div>
-      <div class="rnode"><div class="rdot key"></div><div class="rlabel key">福岡<br>返程</div></div>
-    </div>
-  </div>
-  <p class="route-hint">← 左右滑動查看完整路線</p>
-</div>
-
-<!-- ═══ LIGHT CHASER ═══ -->
-<div class="dark-band">
-  <div class="dark-inner">
-    <p class="dark-ey">追光時刻表</p>
-    <h2 class="dark-ti song">精準狙擊四大魔幻光影</h2>
-    <div class="lc-items">
-      <div class="lc-item"><div class="lc-num">1</div><div><div class="lc-time">Morning High Sun — Day 4</div><div class="lc-spot song">仁田峠與雲仙索道（五月限定杜鵑）</div><div class="lc-desc">頂光完美展現粉紫花海飽和度，與有明海壯闊海景同框，務必安排在雲仙地獄之前前往。</div></div></div>
-      <div class="lc-item"><div class="lc-num">2</div><div><div class="lc-time">15:00 – 16:00 — Day 2</div><div class="lc-spot song">鏡山展望台（虹之松原全景）</div><div class="lc-desc">午後斜射光增加松林立體感與海水反差，百萬棵黑松形成的弧形海岸線壯觀至極。</div></div></div>
-      <div class="lc-item"><div class="lc-num">3</div><div><div class="lc-time">15:00 – 17:00 — Day 5</div><div class="lc-spot song">石岳展望台（九十九島群島剪影）</div><div class="lc-desc">電影《末代武士》取景地。捕捉水面碎金光芒與島嶼層疊剪影的最佳黃金時段。</div></div></div>
-      <div class="lc-item"><div class="lc-num">4</div><div><div class="lc-time">18:15 前卡位 — Day 6</div><div class="lc-spot song">生月島落日大道（公路電影感）</div><div class="lc-desc">五月日落 19:10。務必 18:15 前卡位，捕捉落日將斷崖海岸公路染成暖橘色的極致電影感。</div></div></div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══ DAYS ═══ -->
-<div class="days-sec" id="days-sec">
-<div class="days-hd">
-  <p class="sec-ey">每日詳細行程</p>
-  <h2 class="sec-ti song">7 Days · 完整旅遊規劃</h2>
-  <p class="sec-sub">點擊展開 · 含景點距離 · 飯店晚餐早餐 · 溫泉特色</p>
-</div>
-
-<!-- ─── DAY 1 ─── -->
-<div class="day-card">
-  <div class="dh" data-d="1" onclick="tog(this)">
+<div class="dp-panel active" data-panel="1">
+<div class="dp-card"><div class="dh" data-d="1" onclick="tog(this)">
     <div class="dh-num"><div class="dh-n">1</div><div class="dh-wd">MON</div></div>
     <div class="dh-mid"><div class="dh-date">5 月 11 日（一）</div><div class="dh-title">抵達福岡 · 接送直達 · 泡湯吃豬排</div><div class="dh-route">福岡機場 → 機場接送 → 日航飯店</div></div>
     <div class="dh-right"><div class="dh-km-wrap"><div class="dh-km">—</div><div class="dh-km-l">接送</div></div><div class="dh-arr">▾</div></div>
@@ -824,9 +634,58 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
   </div>
 </div>
 
-<!-- ─── DAY 2 ─── -->
-<div class="day-card">
-  <div class="dh" data-d="2" onclick="tog(this)">
+    </div></div>
+<div class="dp-sec"><p class="sec-ey">今日路線</p><div class="map-days"><!-- DAY 1 -->
+    <div class="map-day-card">
+      <div class="map-day-head">
+        <div class="mday-num">1<span>MON</span></div>
+        <div class="mday-info">
+          <div class="mday-title">抵達福岡 · 泡湯放鬆吃豬排</div>
+          <div class="mday-route">機場地鐵 → 日航飯店 · 步行散策</div>
+        </div>
+        <div class="mday-km"><div class="km-n">—</div><div class="km-l">步行</div></div>
+      </div>
+      <div class="map-spots">
+        <div class="spot-list">
+          <div class="spot-item"><span class="spot-pin">🚐</span><div><div class="spot-name">福岡機場 → 機場接送專車</div><div class="spot-note">預約接送，直達博多日航飯店，約 25 分鐘</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">博多運河城 · 市區散策</div><div class="spot-note">放行李，感受博多氛圍</div></div></div>
+          <div class="spot-item"><span class="spot-pin">🍱</span><div><div class="spot-name">黑かつ亭 炸豬排飯</div><div class="spot-note">AMU Plaza 9F · 17:00 首波免排隊</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">那珂川屋台夜景散步</div><div class="spot-note">飯後沿河散步・屋台燈籠倒映水面</div></div></div>
+          <div class="spot-item"><span class="spot-pin">🏨</span><div><div class="spot-name">福岡日航飯店（今晚泡澡放鬆）</div><div class="spot-note">博多車站正對面・明日早餐後取車</div></div></div>
+        </div>
+        <a class="map-btn" href="https://www.google.com/maps/search/那珂川+博多+屋台/@33.585,130.4,14z" target="_blank" rel="noopener">
+          📍 Day 1 在 Google Maps 查看
+        </a>
+      </div>
+    </div></div></div>
+<div class="dp-sec"><p class="sec-ey">五月初夏味蕾</p><h2 class="sec-ti song">🍑 今日必買</h2><div class="fruit-grid"><div class="fruit-card"><div class="fc-ico">🍓</div><div class="fc-n song">福岡甘王草莓</div><div class="fc-d">五月中已是季末，能以極具 CP 值的特惠價捕獲最後一批濃郁香氣</div><div class="fc-w">Day 1–2 超市採買</div></div></div></div>
+<div class="dp-sec" style="padding-bottom:2.5rem;"><p class="sec-ey">沿途必備</p><h2 class="sec-ti song">🧺 今日洗衣站</h2><div class="laundry-days"><div class="ld-row">
+      <div class="ld-day">1</div>
+      <div class="ld-body">
+        <div class="ld-title">博多 · 日航飯店周邊</div>
+        <div class="ld-shops">
+          <div class="ld-shop">
+            <div class="ld-shop-info">
+              <div class="ld-shop-name">COIN LAUNDRY SAVON<span class="ld-badge ld-ok">推薦</span></div>
+              <div class="ld-shop-meta">⭐ 4.0 · 24 小時 · 8kg 僅 ¥300 · 自動投洗劑 · 博多站步行約 12 分</div>
+              <a class="ld-map-btn" href="https://maps.google.com/?cid=10727052327023882265" target="_blank">📍 Google Maps 導航</a>
+            </div>
+          </div>
+          <div class="ld-shop">
+            <div class="ld-shop-info">
+              <div class="ld-shop-name">ランドリープレス 博多住吉店<span class="ld-badge ld-sub">備選</span></div>
+              <div class="ld-shop-meta">⭐ 3.8 · 24 小時 · 多語言介面 · Wi-Fi · 博多站步行約 10 分</div>
+              <a class="ld-map-btn" href="https://maps.google.com/?cid=3512073534513446634" target="_blank">📍 Google Maps 導航</a>
+            </div>
+          </div>
+        </div>
+        <div class="ld-tip">抵達當天晚上散步去吃豬排飯時順路丟洗，隔天取車前取回</div>
+      </div>
+    </div></div></div>
+</div>
+
+<div class="dp-panel" data-panel="2">
+<div class="dp-card"><div class="dh" data-d="2" onclick="tog(this)">
     <div class="dh-num"><div class="dh-n">2</div><div class="dh-wd">TUE</div></div>
     <div class="dh-mid"><div class="dh-date">5 月 12 日（二）</div><div class="dh-title">上帝視角 · 紫藤古城與鯉魚旗</div><div class="dh-route">福岡 → 唐津 → 鏡山 → 古湯溫泉</div></div>
     <div class="dh-right"><div class="dh-km-wrap"><div class="dh-km">110</div><div class="dh-km-l">KM</div></div><div class="dh-arr">▾</div></div>
@@ -837,7 +696,8 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
       <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot st"></div></div><div class="tl-body"><div class="tags"><span class="tag t-scene">取車出發</span></div><div class="tl-name">福岡機場 · 租車取車</div><div class="tl-note">06:30 吃完早餐後搭地鐵至機場 · 辦理取車手續 · 熟悉車輛操作 · 自駕旅程正式啟動！</div></div></div>
       <div class="tl-conn"><div class="tl-cline"></div><div class="tl-cpill">🚗 60 km · 約 1 小時</div></div>
       <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot hi"></div></div><div class="tl-body"><div class="tags"><span class="tag t-photo">📸 必拍</span><span class="tag t-scene">古城</span></div><div class="tl-name">唐津城（百年紫藤瀑布）</div><div class="tl-note">天守閣 09:00 開 · 五月限定絕景</div><div class="photo-tip">以白色天守閣為背景，由下往上拍盛開的百年紫藤，如瀑布般垂落的紫色花串</div><div class="mapcode">📍 導航：0955-72-5697</div></div></div>
-      <div class="tl-conn"><div class="tl-cline"></div><div class="tl-cpill">🚗 15 km · 20 分鐘</div></div><div class="tl-note">建議 15:00–16:00 · 日本三大松原之一</div><div class="photo-tip">午後斜射光增加 100 萬棵松林的立體層次感，弧形海岸線壯觀令人屏息</div><div class="mapcode">📍 Mapcode: 182 431 035*41</div></div></div>
+      <div class="tl-conn"><div class="tl-cline"></div><div class="tl-cpill">🚗 15 km · 20 分鐘</div></div>
+      <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot hi"></div></div><div class="tl-body"><div class="tags"><span class="tag t-photo">📸 必拍</span><span class="tag t-scene">展望台</span></div><div class="tl-name">鏡山展望台（虹之松原全景）</div><div class="tl-note">建議 15:00–16:00 · 日本三大松原之一</div><div class="photo-tip">午後斜射光增加 100 萬棵松林的立體層次感，弧形海岸線壯觀令人屏息</div><div class="mapcode">📍 Mapcode: 182 431 035*41</div></div></div>
       <div class="tl-conn"><div class="tl-cline"></div><div class="tl-cpill">🚗 28 km · 35 分鐘</div></div>
       <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-body"><div class="tags"><span class="tag t-scene">秘境瀑布</span></div><div class="tl-name">見歸之瀑布</div><div class="tl-note">佐賀縣最大瀑布 · 深山芬多精 · 靜謐療癒</div></div></div>
       <div class="tl-conn"><div class="tl-cline"></div><div class="tl-cpill">🚗 35 km · 42 分鐘</div></div>
@@ -872,12 +732,80 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
       <div class="hb-price"><span class="hb-pl">住宿實付</span><span class="hb-pn">¥ 29,800</span></div>
     </div>
     <div class="onsen-pill">♨️ <span><span class="op-l">古湯微溫泉</span> · 鹼性單純泉 · 38°C 可長泡 · 鎮定神經引導深層睡眠</span><span class="op-t">38°C</span></div>
-  </div>
+  </div></div>
+<div class="dp-sec"><p class="sec-ey">今日路線</p><div class="map-days"><!-- DAY 2 -->
+    <div class="map-day-card">
+      <div class="map-day-head">
+        <div class="mday-num">2<span>TUE</span></div>
+        <div class="mday-info">
+          <div class="mday-title">上帝視角 · 紫藤古城與鯉魚旗</div>
+          <div class="mday-route">福岡 → 唐津 → 鏡山 → 古湯溫泉</div>
+        </div>
+        <div class="mday-km"><div class="km-n">110</div><div class="km-l">KM</div></div>
+      </div>
+      <div class="map-spots">
+        <div class="spot-list">
+          <div class="spot-item"><span class="spot-pin">🚗</span><div><div class="spot-name">福岡機場 · 取車出發</div><div class="spot-note">06:30 早餐後搭地鐵至機場辦理取車</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">唐津城（百年紫藤）</div><div class="spot-note">9:00 開 · 五月限定絕景 · 60km/1h</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">鏡山展望台</div><div class="spot-note">虹之松原全景 · +15km/20min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">見歸之瀑布</div><div class="spot-note">秘境瀑布 · +28km/35min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">川上峽（300條鯉魚旗）</div><div class="spot-note">傍晚抵達最美 · +35km/42min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">🏨</span><div><div class="spot-name">古湯溫泉 旅館大和屋</div><div class="spot-note">+6km/8min</div></div></div>
+        </div>
+        <a class="map-btn" href="https://www.google.com/maps/dir/唐津城/鏡山展望台/見帰りの滝/川上峡/古湯温泉/@33.45,130.1,11z" target="_blank" rel="noopener">
+          📍 Day 2 路線在 Google Maps 查看
+        </a>
+      </div>
+    </div></div></div>
+<div class="dark-band"><div class="dark-inner"><p class="dark-ey">今晚溫泉</p><h2 class="dark-ti song">泉質品鑑</h2><div class="oc-list"><div class="oc"><div class="oc">
+      <div class="oc-head">
+        <div class="oc-day">D2</div>
+        <div class="oc-info">
+          <div class="oc-name">古湯溫泉<br>旅館大和屋</div>
+          <div class="oc-type">鹼性單純泉 · ¥ 29,800</div>
+        </div>
+        <div class="oc-temp">38°C<span>微溫泉</span></div>
+      </div>
+      <div class="oc-body">
+        <div class="oc-keyword">♨ 最適合長泡 · 鎮定神經 · 深層睡眠</div>
+        <div class="oc-desc">無色無味，低刺激，是最溫柔的秘湯體驗。水溫恰到好處，能長時間浸泡 30–40 分鐘而不暈眩，讓疲憊的身體一點一點地鬆開。隱於佐賀深山的清幽旅館，在林間的靜謐中徹底放空——這是鎮定神經、引導極致深層睡眠的「眠之湯」。</div>
+        <div class="oc-bars">
+          <div class="oc-br"><span class="oc-bl">舒眠</span><div class="oc-btrack"><div class="oc-bfill" style="width:95%"></div></div></div>
+          <div class="oc-br"><span class="oc-bl">潤澤</span><div class="oc-btrack"><div class="oc-bfill" style="width:52%"></div></div></div>
+          <div class="oc-br"><span class="oc-bl">循環</span><div class="oc-btrack"><div class="oc-bfill" style="width:58%"></div></div></div>
+        </div>
+      </div>
+    </div></div></div></div></div>
+<div class="dp-sec"><p class="sec-ey">今日備忘</p><h2 class="sec-ti song">⚠️ 注意事項</h2><div class="notes-grid"><div class="note-card"><div class="nc-ico">⏰</div><div class="nc-t song">古湯早餐要預約</div><div class="nc-b">Day 2 入住大和屋時，向櫃台預約「最早時段（一番早い時間）」，確保 07:30 吃完，趕上武雄大楠 09:30 最美斜射光。</div></div></div></div>
+<div class="dark-band"><div class="dark-inner"><p class="dark-ey">導航座標</p><h2 class="dark-ti song">今日 Mapcode</h2><div class="nav-tip">💡 <span>切換車機至 Mapcode 模式後輸入</span></div><div class="nav-grid"><div class="nav-card"><div class="nc-day">Day 2</div><div class="nc-spot">鏡山展望台</div><div class="nc-code">182 431 035*41</div><div class="nc-note">山頂免費停車場，步行 3 分即達</div></div></div></div></div>
+<div class="dp-sec"><p class="sec-ey">五月初夏味蕾</p><h2 class="sec-ti song">🍑 今日必買</h2><div class="fruit-grid"><div class="fruit-card"><div class="fc-ico">🍊</div><div class="fc-n song">甘夏柑橘</div><div class="fc-d">呼子朝市與沿海公路盛產，帶有迷人微酸與飽滿果肉，是自駕途中最佳解膩聖品</div><div class="fc-w">Day 2 唐津朝市</div></div></div></div>
+<div class="dp-sec" style="padding-bottom:2.5rem;"><p class="sec-ey">沿途必備</p><h2 class="sec-ti song">🧺 今日洗衣站</h2><div class="laundry-days"><div class="ld-row">
+      <div class="ld-day">2</div>
+      <div class="ld-body">
+        <div class="ld-title">唐津城附近（賞完紫藤後順路）</div>
+        <div class="ld-shops">
+          <div class="ld-shop">
+            <div class="ld-shop-info">
+              <div class="ld-shop-name">アサヒコインランドリー 二タ子店<span class="ld-badge ld-ok">推薦</span></div>
+              <div class="ld-shop-meta">⭐ 4.2 · 24 小時 · 空間寬敞乾淨 · 唐津城開車 3 分</div>
+              <a class="ld-map-btn" href="https://maps.google.com/?cid=13294716015697609720" target="_blank">📍 Google Maps 導航</a>
+            </div>
+          </div>
+          <div class="ld-shop">
+            <div class="ld-shop-info">
+              <div class="ld-shop-name">Cleaning Station Karatsu<span class="ld-badge ld-sub">步行最近</span></div>
+              <div class="ld-shop-meta">⭐ 3.6 · 24 小時 · 唐津城步行 5 分 · 海邊方向</div>
+              <a class="ld-map-btn" href="https://maps.google.com/?cid=16335232965437776016" target="_blank">📍 Google Maps 導航</a>
+            </div>
+          </div>
+        </div>
+        <div class="ld-tip">賞完紫藤丟進洗衣機 → 去鏡山拍照 → 回程取衣服，完全不浪費時間</div>
+      </div>
+    </div></div></div>
 </div>
 
-<!-- ─── DAY 3 ─── -->
-<div class="day-card">
-  <div class="dh" data-d="3" onclick="tog(this)">
+<div class="dp-panel" data-panel="3">
+<div class="dp-card"><div class="dh" data-d="3" onclick="tog(this)">
     <div class="dh-num"><div class="dh-n">3</div><div class="dh-wd">WED</div></div>
     <div class="dh-mid"><div class="dh-date">5 月 13 日（三）</div><div class="dh-title">神木茶鄉 · 千年靈氣與佐賀和牛</div><div class="dh-route">古湯 → 武雄 → 御船山 → 嬉野溫泉</div></div>
     <div class="dh-right"><div class="dh-km-wrap"><div class="dh-km">60</div><div class="dh-km-l">KM</div></div><div class="dh-arr">▾</div></div>
@@ -922,12 +850,77 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
       <div class="hb-price"><span class="hb-pl">住宿實付</span><span class="hb-pn">¥ 36,700</span></div>
     </div>
     <div class="onsen-pill">♨️ <span><span class="op-l">嬉野美肌之湯</span> · 日本三大美肌湯 · 碳酸氫鈉泉 · 泡後皮膚滑如絲</span><span class="op-t">40–41°C</span></div>
-  </div>
+  </div></div>
+<div class="dp-sec"><p class="sec-ey">今日路線</p><div class="map-days"><!-- DAY 3 -->
+    <div class="map-day-card">
+      <div class="map-day-head">
+        <div class="mday-num">3<span>WED</span></div>
+        <div class="mday-info">
+          <div class="mday-title">神木茶鄉 · 千年靈氣與佐賀和牛</div>
+          <div class="mday-route">古湯 → 武雄 → 御船山 → 嬉野</div>
+        </div>
+        <div class="mday-km"><div class="km-n">60</div><div class="km-l">KM</div></div>
+      </div>
+      <div class="map-spots">
+        <div class="spot-list">
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">武雄神社 · 大楠（3000年）</div><div class="spot-note">能量點 · 竹林神木 · 45km/50min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">御船山樂園（斷崖絕景）</div><div class="spot-note">08:00開 · 杜鵑花期 · +1km/5min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">祐德稻荷神社</div><div class="spot-note">日本三大稻荷 · +30km/35min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">嬉野茶空間梯田</div><div class="spot-note">翠綠幾何茶園 · +24km/28min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">🏨</span><div><div class="spot-name">嬉野溫泉 光陽閣</div><div class="spot-note">佐賀和牛晚餐 · +10km/12min</div></div></div>
+        </div>
+        <a class="map-btn" href="https://www.google.com/maps/dir/武雄神社/御船山楽園/祐徳稲荷神社/嬉野温泉/@33.1,130.0,11z" target="_blank" rel="noopener">
+          📍 Day 3 路線在 Google Maps 查看
+        </a>
+      </div>
+    </div></div></div>
+<div class="dark-band"><div class="dark-inner"><p class="dark-ey">今晚溫泉</p><h2 class="dark-ti song">泉質品鑑</h2><div class="oc-list"><div class="oc"><div class="oc">
+      <div class="oc-head">
+        <div class="oc-day">D3</div>
+        <div class="oc-info">
+          <div class="oc-name">嬉野溫泉<br>光陽閣</div>
+          <div class="oc-type">碳酸氫鈉泉 · ¥ 36,700</div>
+        </div>
+        <div class="oc-temp">40–41°C<span>美肌之湯</span></div>
+      </div>
+      <div class="oc-body">
+        <div class="oc-keyword">♨ 日本三大美肌之湯 · 皮膚滑如絲 · 退房前必泡</div>
+        <div class="oc-desc">日本三大美肌之湯之一，富含碳酸氫鈉的泉水觸感如高濃度精華液，入浴後皮膚明顯滑嫩細緻。搭配展望露天風呂的開闊視野，是整趟旅程最奢華的溫泉體驗。晚餐是頂級佐賀和牛壽喜燒，和牛加上美肌湯，這一夜是整趟旅程最值得期待的夜晚。</div>
+        <div class="oc-bars">
+          <div class="oc-br"><span class="oc-bl">舒眠</span><div class="oc-btrack"><div class="oc-bfill" style="width:70%"></div></div></div>
+          <div class="oc-br"><span class="oc-bl">潤澤</span><div class="oc-btrack"><div class="oc-bfill" style="width:98%"></div></div></div>
+          <div class="oc-br"><span class="oc-bl">循環</span><div class="oc-btrack"><div class="oc-bfill" style="width:74%"></div></div></div>
+        </div>
+      </div>
+    </div></div></div></div></div>
+<div class="dark-band"><div class="dark-inner"><p class="dark-ey">導航座標</p><h2 class="dark-ti song">今日 Mapcode</h2><div class="nav-tip">💡 <span>切換車機至 Mapcode 模式後輸入</span></div><div class="nav-grid"><div class="nav-card"><div class="nc-day">Day 3</div><div class="nc-spot">嬉野茶空間梯田</div><div class="nc-code">104 010 371*18</div><div class="nc-note">內野山地區梯田茶園</div></div></div></div></div>
+<div class="dp-sec" style="padding-bottom:2.5rem;"><p class="sec-ey">沿途必備</p><h2 class="sec-ti song">🧺 今日洗衣站</h2><div class="laundry-days"><div class="ld-row">
+      <div class="ld-day">3</div>
+      <div class="ld-body">
+        <div class="ld-title">嬉野溫泉 · 光陽閣周邊</div>
+        <div class="ld-shops">
+          <div class="ld-shop">
+            <div class="ld-shop-info">
+              <div class="ld-shop-name">WASH House 嬉野溫泉店<span class="ld-badge ld-ok">推薦</span></div>
+              <div class="ld-shop-meta">⭐ 4.3 · 24 小時 · App 付款 · 可遠端查看進度 · 設備新</div>
+              <a class="ld-map-btn" href="https://maps.google.com/?cid=13585954405883797623" target="_blank">📍 Google Maps 導航</a>
+            </div>
+          </div>
+          <div class="ld-shop">
+            <div class="ld-shop-info">
+              <div class="ld-shop-name">ASAHI コインランドリー 嬉野店<span class="ld-badge ld-sub">備選</span></div>
+              <div class="ld-shop-meta">24 小時 · 洗乾一體機 · WASH House 滿了可用</div>
+              <a class="ld-map-btn" href="https://maps.google.com/?cid=3910803147851663901" target="_blank">📍 Google Maps 導航</a>
+            </div>
+          </div>
+        </div>
+        <div class="ld-tip">泡完嬉野美肌湯後去洗，約 1 小時搞定，隔天出發前取回</div>
+      </div>
+    </div></div></div>
 </div>
 
-<!-- ─── DAY 4 ─── -->
-<div class="day-card">
-  <div class="dh" data-d="4" onclick="tog(this)">
+<div class="dp-panel" data-panel="4">
+<div class="dp-card"><div class="dh" data-d="4" onclick="tog(this)">
     <div class="dh-num"><div class="dh-n">4</div><div class="dh-wd">THU</div></div>
     <div class="dh-mid"><div class="dh-date">5 月 14 日（四）</div><div class="dh-title">火山地熱 · 海中鳥居與杜鵑花海</div><div class="dh-route">嬉野 → 太良 → 島原半島 → 雲仙</div></div>
     <div class="dh-right"><div class="dh-km-wrap"><div class="dh-km">90</div><div class="dh-km-l">KM</div></div><div class="dh-arr">▾</div></div>
@@ -974,12 +967,77 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
       <div class="hb-price"><span class="hb-pl">住宿實付</span><span class="hb-pn">¥ 27,038</span></div>
     </div>
     <div class="onsen-pill">♨️ <span><span class="op-l">雲仙硫磺泉</span> · 酸性硫磺泉 · 42°C+ · 強效解除肌肉疲痛 · 空中露天風呂</span><span class="op-t">42°C+</span></div>
+  </div></div>
+<div class="dp-sec"><p class="sec-ey">今日路線</p><div class="map-days"><!-- DAY 4 -->
+    <div class="map-day-card">
+      <div class="map-day-head">
+        <div class="mday-num">4<span>THU</span></div>
+        <div class="mday-info">
+          <div class="mday-title">火山地熱 · 海中鳥居與杜鵑花海</div>
+          <div class="mday-route">嬉野 → 太良 → 島原半島 → 雲仙</div>
+        </div>
+        <div class="mday-km"><div class="km-n">90</div><div class="km-l">KM</div></div>
+      </div>
+      <div class="map-spots">
+        <div class="spot-list">
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">大魚神社「海上三鳥居」</div><div class="spot-note">退潮限定 · 40km/45min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">🛒</span><div><div class="spot-name">道の駅 太良（茂木枇杷）</div><div class="spot-note">五月限定 · +10km/12min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">水果公車站</div><div class="spot-note">哈密瓜造型 · +25km/28min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">仁田峠索道（杜鵑花海）</div><div class="spot-note">五月限定 · +55km/1h</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">雲仙地獄谷</div><div class="spot-note">火山仙境 · +15km/18min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">🏨</span><div><div class="spot-name">雲仙みかど飯店</div><div class="spot-note">+5km/5min</div></div></div>
+        </div>
+        <a class="map-btn" href="https://www.google.com/maps/dir/大魚神社/道の駅+太良/水果バス停/仁田峠/雲仙地獄/@32.85,130.2,11z" target="_blank" rel="noopener">
+          📍 Day 4 路線在 Google Maps 查看
+        </a>
+      </div>
+    </div></div></div>
+<div class="dark-band"><div class="dark-inner"><p class="dark-ey">今晚溫泉</p><h2 class="dark-ti song">泉質品鑑</h2><div class="oc-list"><div class="oc"><div class="oc">
+      <div class="oc-head">
+        <div class="oc-day">D4</div>
+        <div class="oc-info">
+          <div class="oc-name">雲仙溫泉<br>みかど飯店</div>
+          <div class="oc-type">酸性硫磺泉 · ¥ 27,038</div>
+        </div>
+        <div class="oc-temp">42°C+<span>火山強湯</span></div>
+      </div>
+      <div class="oc-body">
+        <div class="oc-keyword">♨ 療效最強 · 解除肌肉疲痛 · 空中露天風呂</div>
+        <div class="oc-desc">乳白微透的火山強湯，空氣中帶著淡淡硫磺香，這是大自然最原始的能量。能強效擴張血管，立竿見影解除連日長途開車與步行累積的深層肌肉疲痛。珍稀銘木建築的空中露天風呂，一邊泡湯一邊飽覽有明海天一色——是整趟旅程「療效最強、視野最開闊」的溫泉。</div>
+        <div class="oc-bars">
+          <div class="oc-br"><span class="oc-bl">舒眠</span><div class="oc-btrack"><div class="oc-bfill" style="width:78%"></div></div></div>
+          <div class="oc-br"><span class="oc-bl">潤澤</span><div class="oc-btrack"><div class="oc-bfill" style="width:60%"></div></div></div>
+          <div class="oc-br"><span class="oc-bl">循環</span><div class="oc-btrack"><div class="oc-bfill" style="width:96%"></div></div></div>
+        </div>
+      </div>
+    </div></div></div></div></div>
+<div class="dp-sec"><p class="sec-ey">今日備忘</p><h2 class="sec-ti song">⚠️ 注意事項</h2><div class="notes-grid"><div class="note-card"><div class="nc-ico">🌊</div><div class="nc-t song">大魚神社退潮時機</div><div class="nc-b">Day 4 出發前查「太良町 潮汐表」，退潮時可步行至鳥居下方，效果最震撼。漲潮時鳥居浮在水面也很美，兩種各有特色。</div></div></div></div>
+<div class="dark-band"><div class="dark-inner"><p class="dark-ey">導航座標</p><h2 class="dark-ti song">今日 Mapcode</h2><div class="nav-tip">💡 <span>切換車機至 Mapcode 模式後輸入</span></div><div class="nav-grid"><div class="nav-card"><div class="nc-day">Day 4</div><div class="nc-spot">水果公車站</div><div class="nc-code">415 857 044*31</div><div class="nc-note">路邊注意安全</div></div>
+<div class="nav-card"><div class="nc-day">Day 4</div><div class="nc-spot">仁田峠索道</div><div class="nc-code">173 511 773*63</div><div class="nc-note">第一停車場，杜鵑花海起點</div></div></div></div></div>
+<div class="dp-sec"><p class="sec-ey">五月初夏味蕾</p><h2 class="sec-ti song">🍑 今日必買</h2><div class="fruit-grid"><div class="fruit-card main"><div class="fc-ico">🍑</div><div class="fc-n song">長崎茂木枇杷（旅程絕對主角）</div><div class="fc-d">五月正達完美巔峰！全國產量第一，果肉極度柔軟多汁、甜度極高。極不耐壓，請當天享用，是五月九州最值得買的伴手禮。</div><div class="fc-w">📍 Day 4 · 國道 207 號「道の駅 太良」· 務必買一盒放車上當天吃</div></div>
+<div class="fruit-card"><div class="fc-ico">🍈</div><div class="fc-n song">初夏洋香瓜</div><div class="fc-d">回到旅館泡完溫泉後，享用一盒當地溫室哈密瓜，是最經典的日式享受</div><div class="fc-w">各地道の駅</div></div>
   </div>
+</div></div></div>
+<div class="dp-sec" style="padding-bottom:2.5rem;"><p class="sec-ey">沿途必備</p><h2 class="sec-ti song">🧺 今日洗衣站</h2><div class="laundry-days"><div class="ld-row">
+      <div class="ld-day">4</div>
+      <div class="ld-body">
+        <div class="ld-title">島原 · 雲仙路上（備用）</div>
+        <div class="ld-shops">
+          <div class="ld-shop">
+            <div class="ld-shop-info">
+              <div class="ld-shop-name">洗濯ハカセ Laundry.LAB 島原<span class="ld-badge ld-ok">最新設備</span></div>
+              <div class="ld-shop-meta">⭐ 4.5 · 24 小時 · App 監控進度 · 有停車場 · 下山進雲仙地獄前順路</div>
+              <a class="ld-map-btn" href="https://maps.google.com/?cid=14104483558334194938" target="_blank">📍 Google Maps 導航</a>
+            </div>
+          </div>
+        </div>
+        <div class="ld-tip">D3 嬉野沒時間洗的話，D4 下山順路在此補洗</div>
+      </div>
+    </div></div></div>
 </div>
 
-<!-- ─── DAY 5 ─── -->
-<div class="day-card">
-  <div class="dh" data-d="5" onclick="tog(this)">
+<div class="dp-panel" data-panel="5">
+<div class="dp-card"><div class="dh" data-d="5" onclick="tog(this)">
     <div class="dh-num"><div class="dh-n">5</div><div class="dh-wd">FRI</div></div>
     <div class="dh-mid"><div class="dh-date">5 月 15 日（五）</div><div class="dh-title">西端群島 · 制霸日本最西端</div><div class="dh-route">雲仙 → 西海 → 佐世保漁村</div></div>
     <div class="dh-right"><div class="dh-km-wrap"><div class="dh-km">110</div><div class="dh-km-l">KM</div></div><div class="dh-arr">▾</div></div>
@@ -1021,12 +1079,60 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
       </div>
       <div class="hb-price"><span class="hb-pl">住宿實付（⚠️現金）</span><span class="hb-pn" style="color:rgba(220,120,100,.9);">¥ 17,600</span></div>
     </div>
-  </div>
+  </div></div>
+<div class="dp-sec"><p class="sec-ey">今日路線</p><div class="map-days"><!-- DAY 5 -->
+    <div class="map-day-card">
+      <div class="map-day-head">
+        <div class="mday-num">5<span>FRI</span></div>
+        <div class="mday-info">
+          <div class="mday-title">西端群島 · 制霸日本最西端</div>
+          <div class="mday-route">雲仙 → 西海 → 佐世保 · 漁村</div>
+        </div>
+        <div class="mday-km"><div class="km-n">110</div><div class="km-l">KM</div></div>
+      </div>
+      <div class="map-spots">
+        <div class="spot-list">
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">西海橋（渦潮）</div><div class="spot-note">拱橋奇景 · 45km/50min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">石岳展望台（九十九島）</div><div class="spot-note">建議 15:00–17:00 · +22km/28min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">🏆</span><div><div class="spot-name">神崎鼻公園（最西端）</div><div class="spot-note">領取証明書 · +52km/1h10min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">🏨</span><div><div class="spot-name">民宿 海の幸</div><div class="spot-note">⚠️現金 ¥17,600 · +10km/12min</div></div></div>
+        </div>
+        <a class="map-btn" href="https://www.google.com/maps/dir/西海橋/石岳展望台/神崎鼻公園/@33.15,129.65,11z" target="_blank" rel="noopener">
+          📍 Day 5 路線在 Google Maps 查看
+        </a>
+      </div>
+    </div></div></div>
+<div class="dp-sec"><p class="sec-ey">今日備忘</p><h2 class="sec-ti song">⚠️ 注意事項</h2><div class="notes-grid"><div class="note-card full alert"><div class="nc-ico">⚠️</div><div class="nc-t song" style="color:var(--red);">Day 5 民宿 · 務必備妥現金</div><div class="nc-b">民宿「海の幸」住宿費 ¥17,600 <strong>僅收日圓現金</strong>，不接受信用卡或 IC 卡。建議在福岡機場或便利商店 ATM 提前提領，出發前再次確認。</div></div>
+<div class="note-card"><div class="nc-ico">🏆</div><div class="nc-t song">最西端証明書領取</div><div class="nc-b">神崎鼻合照後，車程 1–2 分鐘至「小佐佐行政中心」（0956-68-2111），平日 17:15 前出示照片即可免費領取到達証明書。</div></div></div></div>
+<div class="dark-band"><div class="dark-inner"><p class="dark-ey">導航座標</p><h2 class="dark-ti song">今日 Mapcode</h2><div class="nav-tip">💡 <span>切換車機至 Mapcode 模式後輸入</span></div><div class="nav-grid"><div class="nav-card"><div class="nc-day">Day 5</div><div class="nc-spot">石岳展望台</div><div class="nc-code">307 435 593*33</div><div class="nc-note">步行 5 分鐘登頂</div></div>
+<div class="nav-card"><div class="nc-day">Day 5</div><div class="nc-spot">神崎鼻（最西端）</div><div class="nc-code">89 156 770*63</div><div class="nc-note">步行至海邊拍石碑合照</div></div></div></div></div>
+<div class="dp-sec" style="padding-bottom:2.5rem;"><p class="sec-ey">沿途必備</p><h2 class="sec-ti song">🧺 今日洗衣站</h2><div class="laundry-days"><div class="ld-row">
+      <div class="ld-day">5</div>
+      <div class="ld-body">
+        <div class="ld-title">平戶市區 · 民宿附近</div>
+        <div class="ld-shops">
+          <div class="ld-shop">
+            <div class="ld-shop-info">
+              <div class="ld-shop-name">Dondon Coin Laundry 平戶<span class="ld-badge ld-ok">推薦</span></div>
+              <div class="ld-shop-meta">6:00 AM – 11:00 PM · 自動投洗劑 · 有停車場 · 平戶市區</div>
+              <a class="ld-map-btn" href="https://maps.google.com/?cid=15805190931912654745" target="_blank">📍 Google Maps 導航</a>
+            </div>
+          </div>
+          <div class="ld-shop">
+            <div class="ld-shop-info">
+              <div class="ld-shop-name">SUN コインランドリー 平戶店<span class="ld-badge ld-sub">備選</span></div>
+              <div class="ld-shop-meta">6:00 AM – 12:00 AM · 有找零機 · 平戶碼頭附近</div>
+              <a class="ld-map-btn" href="https://maps.google.com/?cid=13305596518222358029" target="_blank">📍 Google Maps 導航</a>
+            </div>
+          </div>
+        </div>
+        <div class="ld-tip">⚠️ 民宿晚餐前去洗（記得備現金），飯後取回</div>
+      </div>
+    </div></div></div>
 </div>
 
-<!-- ─── DAY 6 ─── -->
-<div class="day-card">
-  <div class="dh" data-d="6" onclick="tog(this)">
+<div class="dp-panel" data-panel="6">
+<div class="dp-card"><div class="dh" data-d="6" onclick="tog(this)">
     <div class="dh-num"><div class="dh-n">6</div><div class="dh-wd">SAT</div></div>
     <div class="dh-mid"><div class="dh-date">5 月 16 日（六）</div><div class="dh-title">世界盡頭 · 生月島落日大道</div><div class="dh-route">佐世保 → 生月島 → 川內峠 → 糸島 → 福岡</div></div>
     <div class="dh-right"><div class="dh-km-wrap"><div class="dh-km">130</div><div class="dh-km-l">KM</div></div><div class="dh-arr">▾</div></div>
@@ -1069,102 +1175,30 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
       <div class="hb-price"><span class="hb-pl">住宿實付</span><span class="hb-pn">¥ 24,638</span></div>
     </div>
     <div class="onsen-pill">♨️ <span><span class="op-l">博多源泉掛流</span> · 100% 純湯不加水 · 鈣鈉氯化物泉 · 鹽分薄膜保溫驅寒</span><span class="op-t">源泉直出</span></div>
-  </div>
-</div>
-
-<!-- ─── DAY 7 ─── -->
-<div class="day-card">
-  <div class="dh" data-d="7" onclick="tog(this)">
-    <div class="dh-num"><div class="dh-n">7</div><div class="dh-wd">SUN</div></div>
-    <div class="dh-mid"><div class="dh-date">5 月 17 日（日）</div><div class="dh-title">完美圓滿 · 晨光散步後返程</div><div class="dh-route">福岡市區 → 福岡機場</div></div>
-    <div class="dh-right"><div class="dh-km-wrap"><div class="dh-km">10</div><div class="dh-km-l">KM</div></div><div class="dh-arr">▾</div></div>
-  </div>
-  <div class="db">
-    <div class="day-intro"><strong>【旅程尾聲：帶著光影記憶起飛】</strong>最後一天，用最放鬆的節奏畫下句點。在富士の苑吃完 07:30 的日式早餐後，漫步到那珂川河堤，感受福岡清晨最柔和的光線——這是整趟旅程最後一次按下快門的機會，請放慢腳步，細細感受。帶著 600 公里的光影記憶、四種溫泉的療癒，以及佐賀和牛的滋味，依依不捨地起飛。</div>
-    <div class="tl">
-      <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot hi"></div></div><div class="tl-body"><div class="tags"><span class="tag t-photo">📸 最後一拍</span></div><div class="tl-name">那珂川河堤晨光散步</div><div class="tl-note">07:30–08:30 · 早晨光線最柔和迷人</div><div class="photo-tip">早晨的那珂川光線最柔和，隨手捕捉日本街道與河畔的寧靜日常，是整趟最放鬆的一張</div></div></div>
-      <div class="tl-conn"><div class="tl-cline"></div><div class="tl-cpill">🚶 步行 15 分鐘</div></div>
-      <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-body"><div class="tags"><span class="tag t-temple">神社</span></div><div class="tl-name">櫛田神社（選擇性）</div><div class="tl-note">超過 2000 年歷史 · 博多總鎮守 · 參拜求旅程平安</div></div></div>
-      <div class="tl-conn"><div class="tl-cline"></div><div class="tl-cpill">🚗 10 km · 15 分鐘</div></div>
-      <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot st"></div></div><div class="tl-body"><div class="tags"><span class="tag t-scene">完美圓滿</span></div><div class="tl-name">福岡機場 · 還車 · 起飛</div><div class="tl-note">帶著 600km 的光影記憶、四種溫泉療癒、佐賀和牛的美味，起飛。Bon Voyage.</div></div></div>
-    </div>
-  </div>
-</div>
-</div><!-- end days -->
-
-<!-- ═══ ONSEN MATRIX ═══ -->
-<div class="dark-band" id="onsen-sec">
-<div class="dark-inner">
-  <p class="dark-ey">溫泉品鑑矩陣</p>
-  <h2 class="dark-ti song">四種極致泉質の深層修復序列</h2>
-
-  <div class="oc-list">
-
-    <!-- 古湯 -->
-    <div class="oc">
-      <div class="oc-head">
-        <div class="oc-day">D2</div>
-        <div class="oc-info">
-          <div class="oc-name">古湯溫泉<br>旅館大和屋</div>
-          <div class="oc-type">鹼性單純泉 · ¥ 29,800</div>
+  </div></div>
+<div class="dp-sec"><p class="sec-ey">今日路線</p><div class="map-days"><!-- DAY 6 -->
+    <div class="map-day-card">
+      <div class="map-day-head">
+        <div class="mday-num">6<span>SAT</span></div>
+        <div class="mday-info">
+          <div class="mday-title">世界盡頭 · 生月島落日大道</div>
+          <div class="mday-route">佐世保 → 生月島 → 川內峠 → 糸島 → 福岡</div>
         </div>
-        <div class="oc-temp">38°C<span>微溫泉</span></div>
+        <div class="mday-km"><div class="km-n">130</div><div class="km-l">KM</div></div>
       </div>
-      <div class="oc-body">
-        <div class="oc-keyword">♨ 最適合長泡 · 鎮定神經 · 深層睡眠</div>
-        <div class="oc-desc">無色無味，低刺激，是最溫柔的秘湯體驗。水溫恰到好處，能長時間浸泡 30–40 分鐘而不暈眩，讓疲憊的身體一點一點地鬆開。隱於佐賀深山的清幽旅館，在林間的靜謐中徹底放空——這是鎮定神經、引導極致深層睡眠的「眠之湯」。</div>
-        <div class="oc-bars">
-          <div class="oc-br"><span class="oc-bl">舒眠</span><div class="oc-btrack"><div class="oc-bfill" style="width:95%"></div></div></div>
-          <div class="oc-br"><span class="oc-bl">潤澤</span><div class="oc-btrack"><div class="oc-bfill" style="width:52%"></div></div></div>
-          <div class="oc-br"><span class="oc-bl">循環</span><div class="oc-btrack"><div class="oc-bfill" style="width:58%"></div></div></div>
+      <div class="map-spots">
+        <div class="spot-list">
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">生月島落日大道</div><div class="spot-note">汽車廣告聖地 · 30km/35min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">川內峠（360°大草原）</div><div class="spot-note">無遮蔽壯景 · +18km/22min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">糸島 · 白色鳥居（夫婦岩）</div><div class="spot-note">黃金夕陽時刻 · +80km/1.5h</div></div></div>
+          <div class="spot-item"><span class="spot-pin">🏨</span><div><div class="spot-name">博多溫泉 富士の苑</div><div class="spot-note">100% 源泉掛流 · +32km/38min</div></div></div>
         </div>
+        <a class="map-btn" href="https://www.google.com/maps/dir/生月大橋/川内峠/桜井二見ヶ浦/博多温泉/@33.45,129.7,10z" target="_blank" rel="noopener">
+          📍 Day 6 路線在 Google Maps 查看
+        </a>
       </div>
-    </div>
-
-    <!-- 嬉野 -->
-    <div class="oc">
-      <div class="oc-head">
-        <div class="oc-day">D3</div>
-        <div class="oc-info">
-          <div class="oc-name">嬉野溫泉<br>光陽閣</div>
-          <div class="oc-type">碳酸氫鈉泉 · ¥ 36,700</div>
-        </div>
-        <div class="oc-temp">40–41°C<span>美肌之湯</span></div>
-      </div>
-      <div class="oc-body">
-        <div class="oc-keyword">♨ 日本三大美肌之湯 · 皮膚滑如絲 · 退房前必泡</div>
-        <div class="oc-desc">日本三大美肌之湯之一，富含碳酸氫鈉的泉水觸感如高濃度精華液，入浴後皮膚明顯滑嫩細緻。搭配展望露天風呂的開闊視野，是整趟旅程最奢華的溫泉體驗。晚餐是頂級佐賀和牛壽喜燒，和牛加上美肌湯，這一夜是整趟旅程最值得期待的夜晚。</div>
-        <div class="oc-bars">
-          <div class="oc-br"><span class="oc-bl">舒眠</span><div class="oc-btrack"><div class="oc-bfill" style="width:70%"></div></div></div>
-          <div class="oc-br"><span class="oc-bl">潤澤</span><div class="oc-btrack"><div class="oc-bfill" style="width:98%"></div></div></div>
-          <div class="oc-br"><span class="oc-bl">循環</span><div class="oc-btrack"><div class="oc-bfill" style="width:74%"></div></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 雲仙 -->
-    <div class="oc">
-      <div class="oc-head">
-        <div class="oc-day">D4</div>
-        <div class="oc-info">
-          <div class="oc-name">雲仙溫泉<br>みかど飯店</div>
-          <div class="oc-type">酸性硫磺泉 · ¥ 27,038</div>
-        </div>
-        <div class="oc-temp">42°C+<span>火山強湯</span></div>
-      </div>
-      <div class="oc-body">
-        <div class="oc-keyword">♨ 療效最強 · 解除肌肉疲痛 · 空中露天風呂</div>
-        <div class="oc-desc">乳白微透的火山強湯，空氣中帶著淡淡硫磺香，這是大自然最原始的能量。能強效擴張血管，立竿見影解除連日長途開車與步行累積的深層肌肉疲痛。珍稀銘木建築的空中露天風呂，一邊泡湯一邊飽覽有明海天一色——是整趟旅程「療效最強、視野最開闊」的溫泉。</div>
-        <div class="oc-bars">
-          <div class="oc-br"><span class="oc-bl">舒眠</span><div class="oc-btrack"><div class="oc-bfill" style="width:78%"></div></div></div>
-          <div class="oc-br"><span class="oc-bl">潤澤</span><div class="oc-btrack"><div class="oc-bfill" style="width:60%"></div></div></div>
-          <div class="oc-br"><span class="oc-bl">循環</span><div class="oc-btrack"><div class="oc-bfill" style="width:96%"></div></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 博多 -->
-    <div class="oc">
+    </div></div></div>
+<div class="dark-band"><div class="dark-inner"><p class="dark-ey">今晚溫泉</p><h2 class="dark-ti song">泉質品鑑</h2><div class="oc-list"><div class="oc"><div class="oc">
       <div class="oc-head">
         <div class="oc-day">D6</div>
         <div class="oc-info">
@@ -1186,88 +1220,83 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
 
   </div>
 </div>
-</div>
-
-<!-- ═══ FRUITS ═══ -->
-<div class="sec">
-  <p class="sec-ey">五月初夏味蕾</p>
-  <h2 class="sec-ti song">以茂木枇杷為首的季節盛宴</h2>
-  <p class="sec-sub">自駕最大特權——隨時停靠道の駅獵取產地直送的鮮甜</p>
-  <div class="fruit-grid">
-    <div class="fruit-card main"><div class="fc-ico">🍑</div><div class="fc-n song">長崎茂木枇杷（旅程絕對主角）</div><div class="fc-d">五月正達完美巔峰！全國產量第一，果肉極度柔軟多汁、甜度極高。極不耐壓，請當天享用，是五月九州最值得買的伴手禮。</div><div class="fc-w">📍 Day 4 · 國道 207 號「道の駅 太良」· 務必買一盒放車上當天吃</div></div>
-    <div class="fruit-card"><div class="fc-ico">🍓</div><div class="fc-n song">福岡甘王草莓</div><div class="fc-d">五月中已是季末，能以極具 CP 值的特惠價捕獲最後一批濃郁香氣</div><div class="fc-w">Day 1–2 超市採買</div></div>
-    <div class="fruit-card"><div class="fc-ico">🍊</div><div class="fc-n song">甘夏柑橘</div><div class="fc-d">呼子朝市與沿海公路盛產，帶有迷人微酸與飽滿果肉，是自駕途中最佳解膩聖品</div><div class="fc-w">Day 2 唐津朝市</div></div>
-    <div class="fruit-card"><div class="fc-ico">🍈</div><div class="fc-n song">初夏洋香瓜</div><div class="fc-d">回到旅館泡完溫泉後，享用一盒當地溫室哈密瓜，是最經典的日式享受</div><div class="fc-w">各地道の駅</div></div>
-  </div>
-</div>
-
-<!-- ═══ MAPCODE ═══ -->
-<div class="dark-band" id="nav-sec">
-<div class="dark-inner">
-  <p class="dark-ey">導航儀表板</p>
-  <h2 class="dark-ti song">絕景座標 · 自駕導航指南</h2>
-  <div class="nav-tip">💡 <span>導航秘訣：日本車機對「電話號碼」辨識度最高，尋找旅館與公家機關時直接輸入電話最精準。輸入 Mapcode 時需切換至「Mapcode」模式。</span></div>
-  <div class="nav-grid">
-    <div class="nav-card"><div class="nc-day">Day 2</div><div class="nc-spot">鏡山展望台</div><div class="nc-code">182 431 035*41</div><div class="nc-note">山頂免費停車場，步行 3 分即達</div></div>
-    <div class="nav-card"><div class="nc-day">Day 3</div><div class="nc-spot">嬉野茶空間梯田</div><div class="nc-code">104 010 371*18</div><div class="nc-note">內野山地區梯田茶園</div></div>
-    <div class="nav-card"><div class="nc-day">Day 4</div><div class="nc-spot">水果公車站</div><div class="nc-code">415 857 044*31</div><div class="nc-note">路邊注意安全</div></div>
-    <div class="nav-card"><div class="nc-day">Day 4</div><div class="nc-spot">仁田峠索道</div><div class="nc-code">173 511 773*63</div><div class="nc-note">第一停車場，杜鵑花海起點</div></div>
-    <div class="nav-card"><div class="nc-day">Day 5</div><div class="nc-spot">石岳展望台</div><div class="nc-code">307 435 593*33</div><div class="nc-note">步行 5 分鐘登頂</div></div>
-    <div class="nav-card"><div class="nc-day">Day 5</div><div class="nc-spot">神崎鼻（最西端）</div><div class="nc-code">89 156 770*63</div><div class="nc-note">步行至海邊拍石碑合照</div></div>
-    <div class="nav-card"><div class="nc-day">Day 6</div><div class="nc-spot">生月島落日大道</div><div class="nc-code">894 856 507*33</div><div class="nc-note">沿海公路最佳迴車彎</div></div>
-    <div class="nav-card"><div class="nc-day">Day 6</div><div class="nc-spot">糸島白色鳥居</div><div class="nc-code">224 788 285*46</div><div class="nc-note">海岸旁計次停車場</div></div>
-  </div>
-</div>
-</div>
-
-<!-- ═══ NOTES ═══ -->
-<div class="sec">
-  <p class="sec-ey">旅行備忘錄</p>
-  <h2 class="sec-ti song">重要注意事項</h2>
-  <div class="notes-grid">
-    <div class="note-card full alert"><div class="nc-ico">⚠️</div><div class="nc-t song" style="color:var(--red);">Day 5 民宿 · 務必備妥現金</div><div class="nc-b">民宿「海の幸」住宿費 ¥17,600 <strong>僅收日圓現金</strong>，不接受信用卡或 IC 卡。建議在福岡機場或便利商店 ATM 提前提領，出發前再次確認。</div></div>
-    <div class="note-card"><div class="nc-ico">🌊</div><div class="nc-t song">大魚神社退潮時機</div><div class="nc-b">Day 4 出發前查「太良町 潮汐表」，退潮時可步行至鳥居下方，效果最震撼。漲潮時鳥居浮在水面也很美，兩種各有特色。</div></div>
-    <div class="note-card"><div class="nc-ico">⏰</div><div class="nc-t song">古湯早餐要預約</div><div class="nc-b">Day 2 入住大和屋時，向櫃台預約「最早時段（一番早い時間）」，確保 07:30 吃完，趕上武雄大楠 09:30 最美斜射光。</div></div>
-    <div class="note-card"><div class="nc-ico">🏆</div><div class="nc-t song">最西端証明書領取</div><div class="nc-b">神崎鼻合照後，車程 1–2 分鐘至「小佐佐行政中心」（0956-68-2111），平日 17:15 前出示照片即可免費領取到達証明書。</div></div>
-    <div class="note-card"><div class="nc-ico">📸</div><div class="nc-t song">生月島 18:15 卡位</div><div class="nc-b">五月日落時間約 19:10。請務必 18:15 前抵達生月島落日大道卡位，才能捕捉暖橘色的公路電影感最佳時刻。</div></div>
-    <div class="note-card"><div class="nc-ico">🚗</div><div class="nc-t song">加油 · 停車提示</div><div class="nc-b">生月島建議在平戶市區加滿油再上橋。嬉野光陽閣、博多富士の苑均有寬敞停車場，無需擔心停車。</div></div>
-  </div>
-</div>
-
-<!-- ═══ FOOTER ═══ -->
-<footer>
-  <div class="ft">
-    <div class="ft-t song">佐賀嬉野秘湯和牛之旅</div>
-    <div class="ft-s">KYUSHU · FUKUOKA · SAGA · NAGASAKI · 2026.05.11–17</div>
-    <div class="ft-cost">
-      <div class="ft-cl">住宿費用合計（5晚）</div>
-      <span class="ft-cn">¥ 135,776</span>
+</div></div></div></div></div>
+<div class="dp-sec"><p class="sec-ey">今日備忘</p><h2 class="sec-ti song">⚠️ 注意事項</h2><div class="notes-grid"><div class="note-card"><div class="nc-ico">📸</div><div class="nc-t song">生月島 18:15 卡位</div><div class="nc-b">五月日落時間約 19:10。請務必 18:15 前抵達生月島落日大道卡位，才能捕捉暖橘色的公路電影感最佳時刻。</div></div>
+<div class="note-card"><div class="nc-ico">🚗</div><div class="nc-t song">加油 · 停車提示</div><div class="nc-b">生月島建議在平戶市區加滿油再上橋。嬉野光陽閣、博多富士の苑均有寬敞停車場，無需擔心停車。</div></div></div></div>
+<div class="dark-band"><div class="dark-inner"><p class="dark-ey">導航座標</p><h2 class="dark-ti song">今日 Mapcode</h2><div class="nav-tip">💡 <span>切換車機至 Mapcode 模式後輸入</span></div><div class="nav-grid"><div class="nav-card"><div class="nc-day">Day 6</div><div class="nc-spot">生月島落日大道</div><div class="nc-code">894 856 507*33</div><div class="nc-note">沿海公路最佳迴車彎</div></div>
+<div class="nav-card"><div class="nc-day">Day 6</div><div class="nc-spot">糸島白色鳥居</div><div class="nc-code">224 788 285*46</div><div class="nc-note">海岸旁計次停車場</div></div></div></div></div>
+<div class="dp-sec" style="padding-bottom:2.5rem;"><p class="sec-ey">沿途必備</p><h2 class="sec-ti song">🧺 今日洗衣站</h2><div class="laundry-days"><div class="ld-row">
+      <div class="ld-day">6</div>
+      <div class="ld-body">
+        <div class="ld-title">博多溫泉 富士の苑（門口 30m）</div>
+        <div class="ld-shops">
+          <div class="ld-shop">
+            <div class="ld-shop-info">
+              <div class="ld-shop-name">富士の苑 門口自助洗衣<span class="ld-badge ld-ok">官網確認</span></div>
+              <div class="ld-shop-meta">出門右轉 30m · 最後一晚補洗最方便</div>
+              <a class="ld-map-btn" href="https://maps.google.com/search?q=博多温泉+富士の苑+コインランドリー" target="_blank">📍 Google Maps 導航</a>
+            </div>
+          </div>
+        </div>
+        <div class="ld-tip">泡完源泉掛流の湯後，順便把行李整理好的髒衣服洗一洗</div>
+      </div>
     </div>
-    <span class="ft-bon">帶著 600 km 的光影、四泡秘湯的療癒與佐賀和牛的滋味，滿載而歸 ✦</span>
-    <div style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(200,151,58,.15);">
-      <p style="font-family:'Noto Serif TC','STSong',serif;font-size:.78rem;color:rgba(232,200,122,.65);letter-spacing:.22em;">Annie Hsu 規劃製作</p>
-    </div>
-  </div>
-</footer>
 
+  </div>
+</div>
+</div></div></div>
+</div>
+
+<div class="dp-panel" data-panel="7">
+<div class="dp-card"><div class="dh" data-d="7" onclick="tog(this)">
+    <div class="dh-num"><div class="dh-n">7</div><div class="dh-wd">SUN</div></div>
+    <div class="dh-mid"><div class="dh-date">5 月 17 日（日）</div><div class="dh-title">完美圓滿 · 晨光散步後返程</div><div class="dh-route">福岡市區 → 福岡機場</div></div>
+    <div class="dh-right"><div class="dh-km-wrap"><div class="dh-km">10</div><div class="dh-km-l">KM</div></div><div class="dh-arr">▾</div></div>
+  </div>
+  <div class="db">
+    <div class="day-intro"><strong>【旅程尾聲：帶著光影記憶起飛】</strong>最後一天，用最放鬆的節奏畫下句點。在富士の苑吃完 07:30 的日式早餐後，漫步到那珂川河堤，感受福岡清晨最柔和的光線——這是整趟旅程最後一次按下快門的機會，請放慢腳步，細細感受。帶著 600 公里的光影記憶、四種溫泉的療癒，以及佐賀和牛的滋味，依依不捨地起飛。</div>
+    <div class="tl">
+      <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot hi"></div></div><div class="tl-body"><div class="tags"><span class="tag t-photo">📸 最後一拍</span></div><div class="tl-name">那珂川河堤晨光散步</div><div class="tl-note">07:30–08:30 · 早晨光線最柔和迷人</div><div class="photo-tip">早晨的那珂川光線最柔和，隨手捕捉日本街道與河畔的寧靜日常，是整趟最放鬆的一張</div></div></div>
+      <div class="tl-conn"><div class="tl-cline"></div><div class="tl-cpill">🚶 步行 15 分鐘</div></div>
+      <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-body"><div class="tags"><span class="tag t-temple">神社</span></div><div class="tl-name">櫛田神社（選擇性）</div><div class="tl-note">超過 2000 年歷史 · 博多總鎮守 · 參拜求旅程平安</div></div></div>
+      <div class="tl-conn"><div class="tl-cline"></div><div class="tl-cpill">🚗 10 km · 15 分鐘</div></div>
+      <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot st"></div></div><div class="tl-body"><div class="tags"><span class="tag t-scene">完美圓滿</span></div><div class="tl-name">福岡機場 · 還車 · 起飛</div><div class="tl-note">帶著 600km 的光影記憶、四種溫泉療癒、佐賀和牛的美味，起飛。Bon Voyage.</div></div></div>
+    </div></div>
+<div class="dp-sec"><p class="sec-ey">今日路線</p><div class="map-days"><!-- DAY 7 -->
+    <div class="map-day-card">
+      <div class="map-day-head">
+        <div class="mday-num">7<span>SUN</span></div>
+        <div class="mday-info">
+          <div class="mday-title">完美圓滿 · 晨光散步後返程</div>
+          <div class="mday-route">福岡市區 → 福岡機場</div>
+        </div>
+        <div class="mday-km"><div class="km-n">10</div><div class="km-l">KM</div></div>
+      </div>
+      <div class="map-spots">
+        <div class="spot-list">
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">那珂川河堤晨光散步</div><div class="spot-note">07:30–08:30 · 最後一拍</div></div></div>
+          <div class="spot-item"><span class="spot-pin">📍</span><div><div class="spot-name">櫛田神社（選擇性）</div><div class="spot-note">2000年古社・步行15min</div></div></div>
+          <div class="spot-item"><span class="spot-pin">✈️</span><div><div class="spot-name">福岡機場・還車・起飛</div><div class="spot-note">約10km/15min</div></div></div>
+        </div>
+        <a class="map-btn map-btn-alt" href="https://www.google.com/maps/search/那珂川+福岡/@33.585,130.4,14z" target="_blank" rel="noopener">
+          📍 Day 7 在 Google Maps 查看
+        </a>
+      </div>
+    </div>
+
+  <</div></div>
+</div>
+
+</div>
 <script>
-function tog(header){
-  const body=header.nextElementSibling;
-  const arrow=header.querySelector('.dh-arr');
-  const isOpen=body.classList.contains('open');
-  document.querySelectorAll('.db').forEach(b=>b.classList.remove('open'));
-  document.querySelectorAll('.dh-arr').forEach(a=>a.classList.remove('open'));
-  if(!isOpen){body.classList.add('open');arrow.classList.add('open');setTimeout(()=>header.scrollIntoView({behavior:'smooth',block:'start'}),60);}
+function dpShow(n) {
+  document.querySelectorAll('.dp-panel').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('#dp-bar .dtab').forEach(function(b){ b.classList.remove('active'); });
+  document.querySelector('.dp-panel[data-panel="'+n+'"]').classList.add('active');
+  document.querySelector('#dp-bar .dtab[data-tab="'+n+'"]').classList.add('active');
+  var anchor = document.getElementById('dp-anchor');
+  window.scrollTo({ top: anchor.getBoundingClientRect().top + window.scrollY - 68, behavior: 'smooth' });
 }
-const snav=document.getElementById('snav');
-snav.classList.add('show');
-function goTo(id){
-  const el=document.getElementById(id);
-  if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
-  document.querySelectorAll('.snav-btn').forEach(b=>b.classList.remove('on'));
-  event.currentTarget.classList.add('on');
-}
-document.querySelector('.dh[data-d="1"]').click();
 </script>
 </body>
 </html>

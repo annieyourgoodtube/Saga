@@ -465,16 +465,18 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
 
 .db{display:block!important;background:var(--cream);padding:1rem 1.1rem 1.3rem;}
 .dh-arr{display:none!important;}
-.dh{cursor:default!important;}
 </style>
 </head>
 <body>
-
-<!-- 固定日期列 -->
-<div id="BAR" style="position:fixed;top:0;left:0;right:0;z-index:9999;display:flex;background:#08111a;border-bottom:3px solid #c8973a;box-shadow:0 4px 24px rgba(0,0,0,.7);padding:.48rem .2rem .4rem;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;">
+<div id="BAR" style="position:fixed;top:0;left:0;right:0;z-index:9999;display:flex;background:#08111a;border-bottom:3px solid #c8973a;box-shadow:0 4px 24px rgba(0,0,0,.7);padding:.48rem .2rem .4rem;overflow-x:auto;scrollbar-width:none;">
+<button id="T1" onclick="go(1)" style="flex:1;min-width:44px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:.6rem .1rem .5rem;background:none;border:none;border-bottom:3px solid #c8973a;cursor:pointer;-webkit-tap-highlight-color:transparent;"><span style="font-family:'Shippori Mincho B1',serif;font-size:1rem;font-weight:800;color:#ffe088;white-space:nowrap;">5/11</span><span style="font-size:.5rem;color:#e8c878;white-space:nowrap;font-family:'Zen Kaku Gothic New',sans-serif;">抵達福岡</span></button>
+<button id="T2" onclick="go(2)" style="flex:1;min-width:44px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:.6rem .1rem .5rem;background:none;border:none;border-bottom:3px solid transparent;cursor:pointer;-webkit-tap-highlight-color:transparent;"><span style="font-family:'Shippori Mincho B1',serif;font-size:1rem;font-weight:800;color:rgba(255,255,255,.4);white-space:nowrap;">5/12</span><span style="font-size:.5rem;color:rgba(200,151,58,.45);white-space:nowrap;font-family:'Zen Kaku Gothic New',sans-serif;">紫藤古城</span></button>
+<button id="T3" onclick="go(3)" style="flex:1;min-width:44px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:.6rem .1rem .5rem;background:none;border:none;border-bottom:3px solid transparent;cursor:pointer;-webkit-tap-highlight-color:transparent;"><span style="font-family:'Shippori Mincho B1',serif;font-size:1rem;font-weight:800;color:rgba(255,255,255,.4);white-space:nowrap;">5/13</span><span style="font-size:.5rem;color:rgba(200,151,58,.45);white-space:nowrap;font-family:'Zen Kaku Gothic New',sans-serif;">神木茶鄉</span></button>
+<button id="T4" onclick="go(4)" style="flex:1;min-width:44px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:.6rem .1rem .5rem;background:none;border:none;border-bottom:3px solid transparent;cursor:pointer;-webkit-tap-highlight-color:transparent;"><span style="font-family:'Shippori Mincho B1',serif;font-size:1rem;font-weight:800;color:rgba(255,255,255,.4);white-space:nowrap;">5/14</span><span style="font-size:.5rem;color:rgba(200,151,58,.45);white-space:nowrap;font-family:'Zen Kaku Gothic New',sans-serif;">海中鳥居</span></button>
+<button id="T5" onclick="go(5)" style="flex:1;min-width:44px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:.6rem .1rem .5rem;background:none;border:none;border-bottom:3px solid transparent;cursor:pointer;-webkit-tap-highlight-color:transparent;"><span style="font-family:'Shippori Mincho B1',serif;font-size:1rem;font-weight:800;color:rgba(255,255,255,.4);white-space:nowrap;">5/15</span><span style="font-size:.5rem;color:rgba(200,151,58,.45);white-space:nowrap;font-family:'Zen Kaku Gothic New',sans-serif;">最西端</span></button>
+<button id="T6" onclick="go(6)" style="flex:1;min-width:44px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:.6rem .1rem .5rem;background:none;border:none;border-bottom:3px solid transparent;cursor:pointer;-webkit-tap-highlight-color:transparent;"><span style="font-family:'Shippori Mincho B1',serif;font-size:1rem;font-weight:800;color:rgba(255,255,255,.4);white-space:nowrap;">5/16</span><span style="font-size:.5rem;color:rgba(200,151,58,.45);white-space:nowrap;font-family:'Zen Kaku Gothic New',sans-serif;">生月落日</span></button>
+<button id="T7" onclick="go(7)" style="flex:1;min-width:44px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:.6rem .1rem .5rem;background:none;border:none;border-bottom:3px solid transparent;cursor:pointer;-webkit-tap-highlight-color:transparent;"><span style="font-family:'Shippori Mincho B1',serif;font-size:1rem;font-weight:800;color:rgba(255,255,255,.4);white-space:nowrap;">5/17</span><span style="font-size:.5rem;color:rgba(200,151,58,.45);white-space:nowrap;font-family:'Zen Kaku Gothic New',sans-serif;">返程</span></button>
 </div>
-
-<!-- Hero -->
 <div style="margin-top:65px;"><!-- ═══ HERO ═══ -->
 <section class="hero" id="hero-sec">
   <div class="h-bg"></div>
@@ -577,11 +579,9 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
   </div>
 </div>
 <div id="ANC" style="height:1px;"></div>
-<!-- 每日內容由 JS 注入 -->
 <div id="CONTENT" style="background:var(--cream);min-height:400px;"></div>
-
 <script>
-var DAYS = [
+var DAYS=[
   `<div style="margin:.7rem .9rem 1.2rem;border-radius:14px;overflow:hidden;box-shadow:0 2px 18px rgba(26,39,68,.08);border:1px solid rgba(200,180,140,.22);background:#fff;"><div class="dh" style="cursor:default;" data-d="1">
     <div class="dh-num"><div class="dh-n">1</div><div class="dh-wd">MON</div></div>
     <div class="dh-mid"><div class="dh-date">5 月 11 日（一）</div><div class="dh-title">抵達福岡 · 接送直達 · 泡湯吃豬排</div><div class="dh-route">福岡機場 → 機場接送 → 日航飯店</div></div>
@@ -1026,10 +1026,12 @@ var DAYS = [
     <div class="dh-right"><div class="dh-km-wrap"><div class="dh-km">110</div><div class="dh-km-l">KM</div></div><div class="dh-arr" style="display:none;"></div></div>
   </div>
   <div class="db" style="display:block!important;background:var(--cream);padding:1rem 1.1rem 1.3rem;">
-    <div class="day-intro"><strong>【今日主題：制霸世界盡頭 × 漁夫海鮮體驗】</strong>今天是整趟最有「成就感」的一天。在石岳展望台欣賞九十九島千島奇景後，前往神崎鼻公園——站在日本本土最西端，眺望中國大陸方向，領取官方「到達証明書」。晚上入住漁夫民宿，吃一頓真正的漁夫料理——當天現捕的霸氣舟盛生魚片，鮮度讓人感動。⚠️ 請務必備妥現金 ¥17,600。</div>
+    <div class="day-intro"><strong>【今日主題：制霸世界盡頭 × 九十九島遊覧船 × 漁夫海鮮體驗】</strong>今天是整趟最有「成就感」的一天。⚠️ 07:30 準時從雲仙出發！先在西海橋欣賞渦潮，再搭 10:00 遊覧船巡遊九十九島——從海上仰望千島，視角完全不同於展望台。之後制霸最西端神崎鼻，領取到達証明書。晚上入住漁夫民宿享用現捕舟盛生魚片。⚠️ 請務必備妥現金 ¥17,600。</div>
     <div class="tl">
-      <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-body"><div class="tags"><span class="tag t-scene">橋樑</span></div><div class="tl-name">西海橋（渦潮 · 眼鏡岩）</div><div class="tl-note">1955年拱橋 · 渦潮壯觀 · 45km/50min from 雲仙</div></div></div>
-      <div class="tl-conn"><div class="tl-cline"></div><div class="tl-cpill">🚗 22 km · 28 分鐘</div></div>
+      <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-body"><div class="tags"><span class="tag t-scene">橋樑</span></div><div class="tl-name">西海橋（渦潮 · 眼鏡岩）</div><div class="tl-note">07:30 雲仙出發 · 45km/50min · 渦潮壯觀 · 眼鏡岩拍照</div></div></div>
+      <div class="tl-conn"><div class="tl-cline"></div><div class="tl-cpill">🚗 20 分鐘</div></div>
+      <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot hi"></div></div><div class="tl-body"><div class="tags"><span class="tag t-scene">🚢 遊覧船</span><span class="tag t-photo">📸 必拍</span></div><div class="tl-name">九十九島パールクィーン（10:00 出航）</div><div class="tl-note">約 50 分 · 大人 ¥1,500 · 無需預約 · 10:50 下船</div><div class="photo-tip">從海面仰望島嶼角度完全不同於展望台，五月晨光灑落千島之間，是整趟最難忘的海上體驗</div><div class="mapcode">🚢 班次參考：10:00 ／ 11:00 ／ 13:00 ／ 14:00 ／ 15:00（季節性臨時加班）· 建議搭 10:00 首班</div><div class="mapcode">📍 九十九島パールシーリゾート：0956-28-1999</div></div></div>
+      <div class="tl-conn"><div class="tl-cline"></div><div class="tl-cpill">🚗 15 分鐘</div></div>
       <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot hi"></div></div><div class="tl-body"><div class="tags"><span class="tag t-photo">📸 必拍 ★★</span><span class="tag t-scene">展望台</span></div><div class="tl-name">石岳展望台（九十九島全景）</div><div class="tl-note">建議 15:00–17:00 · 《末代武士》取景地 · 步行 300m 至頂</div><div class="photo-tip">望遠鏡頭壓縮九十九島層次，捕捉水面碎金光芒與島嶼剪影，整趟最具電影感</div><div class="mapcode">📍 Mapcode: 307 435 593*33</div></div></div>
       <div class="tl-conn"><div class="tl-cline"></div><div class="tl-cpill">🚗 52 km · 1 小時 10 分</div></div>
       <div class="tl-row"><div class="tl-dot-col"><div class="tl-dot hi"></div></div><div class="tl-body"><div class="tags"><span class="tag t-mile">🏆 制霸里程碑</span></div><div class="tl-name">神崎鼻公園（日本本土最西端）</div><div class="tl-note">Step 1 · 導航 Mapcode 89 156 770*63，步行至海邊拍石碑合照<br>Step 2 · 車程 1–2 分鐘至小佐佐行政中心（0956-68-2111），平日 17:15 前出示照片<br>Step 3 · 免費領取「日本本土最西端到達証明書」🎖</div></div></div>
@@ -1263,38 +1265,29 @@ var DAYS = [
 
   <</div></div>`
 ];
-var DATES = ["5/11", "5/12", "5/13", "5/14", "5/15", "5/16", "5/17"];
-var SUBS  = ["\u62b5\u9054\u798f\u5ca1", "\u7d2b\u85e4\u53e4\u57ce", "\u795e\u6728\u8336\u9109", "\u6d77\u4e2d\u9ce5\u5c45", "\u6700\u897f\u7aef", "\u751f\u6708\u843d\u65e5", "\u8fd4\u7a0b"];
-var cur = 0;
-
-function buildBar() {
-  var bar = document.getElementById('BAR');
-  bar.innerHTML = '';
-  for (var i = 0; i < 7; i++) {
-    (function(idx) {
-      var btn = document.createElement('button');
-      btn.style.cssText = 'flex:1;min-width:44px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:.6rem .1rem .5rem;background:none;border:none;border-bottom:3px solid ' + (idx===cur?'#c8973a':'transparent') + ';cursor:pointer;-webkit-tap-highlight-color:transparent;';
-      btn.innerHTML = '<span style="font-family:\'Shippori Mincho B1\',serif;font-size:1rem;font-weight:800;color:' + (idx===cur?'#ffe088':'rgba(255,255,255,.4)') + ';white-space:nowrap;">' + DATES[idx] + '</span>' +
-        '<span style="font-size:.5rem;color:' + (idx===cur?'#e8c878':'rgba(200,151,58,.45)') + ';white-space:nowrap;font-family:\'Zen Kaku Gothic New\',sans-serif;">' + SUBS[idx] + '</span>';
-      btn.onclick = function() { go(idx); };
-      bar.appendChild(btn);
+var DATES=["5/11", "5/12", "5/13", "5/14", "5/15", "5/16", "5/17"];
+var SUBS=["\u62b5\u9054\u798f\u5ca1", "\u7d2b\u85e4\u53e4\u57ce", "\u795e\u6728\u8336\u9109", "\u6d77\u4e2d\u9ce5\u5c45", "\u6700\u897f\u7aef", "\u751f\u6708\u843d\u65e5", "\u8fd4\u7a0b"];
+var cur=0;
+function buildBar(){
+  var bar=document.getElementById('BAR');bar.innerHTML='';
+  for(var i=0;i<7;i++){
+    (function(idx){
+      var b=document.createElement('button');
+      b.style.cssText='flex:1;min-width:44px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:.6rem .1rem .5rem;background:none;border:none;border-bottom:3px solid '+(idx===cur?'#c8973a':'transparent')+';cursor:pointer;-webkit-tap-highlight-color:transparent;';
+      b.innerHTML='<span style="font-family:\'Shippori Mincho B1\',serif;font-size:1rem;font-weight:800;color:'+(idx===cur?'#ffe088':'rgba(255,255,255,.4)')+';white-space:nowrap;">'+DATES[idx]+'</span><span style="font-size:.5rem;color:'+(idx===cur?'#e8c878':'rgba(200,151,58,.45)')+';white-space:nowrap;font-family:\'Zen Kaku Gothic New\',sans-serif;">'+SUBS[idx]+'</span>';
+      b.onclick=function(){go(idx);};bar.appendChild(b);
     })(i);
   }
 }
-
-function go(n) {
-  cur = n;
-  buildBar();
-  document.getElementById('CONTENT').innerHTML = DAYS[n];
-  var top = document.getElementById('ANC').getBoundingClientRect().top + window.scrollY - 70;
-  window.scrollTo({top: top, behavior: 'instant'});
+function go(n){
+  cur=n;buildBar();
+  document.getElementById('CONTENT').innerHTML=DAYS[n];
+  var top=document.getElementById('ANC').getBoundingClientRect().top+window.scrollY-70;
+  window.scrollTo({top:top,behavior:'instant'});
 }
-
-function tog() { return false; }
-
-// Init
+function tog(){return false;}
 buildBar();
-document.getElementById('CONTENT').innerHTML = DAYS[0];
+document.getElementById('CONTENT').innerHTML=DAYS[0];
 </script>
 </body>
 </html>

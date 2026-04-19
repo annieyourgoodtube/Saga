@@ -170,7 +170,28 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;background-image:radia
 .hs-price{font-size:.83rem;color:#5a4a2a;padding:.45rem .7rem;background:rgba(184,134,11,.08);border-radius:8px;border-left:3px solid #b8860b;}
 .hs-price strong{color:#8b5a00;font-size:.95rem;}
 .hs-cash{border-left-color:#c0392b;background:rgba(192,57,43,.07);}
-.hs-cash strong{color:#c0392b;}</style>
+.hs-cash strong{color:#c0392b;}
+.mc-full-card{background:#1a1208;border-radius:12px;padding:.9rem 1rem;border:1px solid rgba(184,134,11,.25);margin-bottom:0;}
+.mc-full-header{display:flex;align-items:center;gap:.6rem;margin-bottom:.4rem;}
+.mc-full-day{font-size:.7rem;background:rgba(184,134,11,.2);color:#d4a843;padding:.15rem .5rem;border-radius:20px;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;flex-shrink:0;}
+.mc-full-name{font-family:"Shippori Mincho B1",serif;font-size:.95rem;font-weight:800;color:#fff;}
+.mc-full-code{font-size:1.4rem;font-weight:900;color:#f0d080;font-family:monospace;letter-spacing:.08em;margin-bottom:.3rem;}
+.mc-full-note{font-size:.76rem;color:rgba(255,255,255,.55);font-family:"Zen Kaku Gothic New",sans-serif;}
+
+
+.mc-full-card{background:#1a1208;border-radius:12px;padding:.9rem 1rem;border:1px solid rgba(184,134,11,.25);}
+.mc-full-header{display:flex;align-items:center;gap:.6rem;margin-bottom:.4rem;}
+.mc-full-day{font-size:.7rem;background:rgba(184,134,11,.2);color:#d4a843;padding:.15rem .5rem;border-radius:20px;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;flex-shrink:0;}
+.mc-full-name{font-family:"Shippori Mincho B1",serif;font-size:.95rem;font-weight:800;color:#fff;}
+.mc-full-code{font-size:1.5rem;font-weight:900;color:#f0d080;font-family:monospace;letter-spacing:.1em;margin-bottom:.3rem;}
+.mc-full-note{font-size:.76rem;color:rgba(255,255,255,.55);font-family:"Zen Kaku Gothic New",sans-serif;}
+
+.day-vibe{font-size:.78rem;color:rgba(255,255,255,.72);margin-bottom:.4rem;font-family:"Zen Kaku Gothic New",sans-serif;letter-spacing:.03em;}
+.day-vibe-en{color:rgba(255,255,255,.45);font-style:italic;}
+.hotel-vibe{font-size:.78rem;color:rgba(255,255,255,.5);margin-bottom:.8rem;font-family:"Zen Kaku Gothic New",sans-serif;}
+
+.hs-vibe-badge{font-size:.72rem;color:#8b5a00;background:rgba(184,134,11,.1);border:1px solid rgba(184,134,11,.2);padding:.3rem .7rem;border-radius:20px;display:inline-block;margin-bottom:.8rem;font-family:"Zen Kaku Gothic New",sans-serif;letter-spacing:.04em;}
+</style>
 </head>
 <body>
 <div id="BAR"><button class="tab-btn" onclick="go(0)"><span class="tab-date">住宿</span><span class="tab-sub">飯店總覽</span></button>
@@ -180,7 +201,9 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;background-image:radia
 <button class="tab-btn" onclick="go(4)"><span class="tab-date">5/14</span><span class="tab-sub">海中鳥居</span></button>
 <button class="tab-btn" onclick="go(5)"><span class="tab-date">5/15</span><span class="tab-sub">最西端</span></button>
 <button class="tab-btn" onclick="go(6)"><span class="tab-date">5/16</span><span class="tab-sub">生月落日</span></button>
-<button class="tab-btn" onclick="go(7)"><span class="tab-date">5/17</span><span class="tab-sub">返程</span></button></div>
+<button class="tab-btn" onclick="go(7)"><span class="tab-date">5/17</span><span class="tab-sub">返程</span></button>
+<button class="tab-btn" onclick="go(8)"><span class="tab-date">♨</span><span class="tab-sub">大浴場</span></button>
+<button class="tab-btn" onclick="go(9)"><span class="tab-date">🧭</span><span class="tab-sub">Mapcode</span></button></div>
 <!-- ── Opening Hero ── -->
 <div id="hero-top" style="background:linear-gradient(170deg,#080e06 0%,#121a10 45%,#080c14 100%);position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;opacity:.07;background-image:url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f0d080' fill-rule='evenodd'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3Ccircle cx='0' cy='0' r='1'/%3E%3Ccircle cx='60' cy='0' r='1'/%3E%3Ccircle cx='0' cy='60' r='1'/%3E%3Ccircle cx='60' cy='60' r='1'/%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
@@ -206,6 +229,7 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;background-image:radia
     <p style="font-family:'Zen Kaku Gothic New',sans-serif;font-size:.72rem;color:rgba(200,151,58,.55);text-align:center;margin-top:1.5rem;letter-spacing:.1em;">↓ 點選日期開始瀏覽每日行程 ↓</p>
   </div>
 </div>
+
 <div id="CONTENT" style="min-height:100vh;"></div>
 <!-- ── Footer ── -->
 <div id="site-footer" style="background:#080e06;padding:1.8rem 1.4rem;text-align:center;border-top:1px solid rgba(184,134,11,.25);">
@@ -219,7 +243,7 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;background-image:radia
 </div>
 <script>
 var PAGES=[`<div class="hs-page">
-  <div class="hs-hero"><div class="jp-pattern"></div><div class="hs-hero-inner">
+  <div class="hs-hero" style="background:linear-gradient(160deg,#080e06 0%,#0d1a10 60%,#080c14 100%);"><div class="jp-pattern"></div><div class="hs-hero-inner">
     <div class="hs-hero-title">🏨 住宿總覽</div>
     <div class="hs-hero-sub">6 泊 · 山林秘湯 → 美肌溫泉 → 漁村民宿 → 昭和復古</div>
   </div></div>
@@ -240,11 +264,11 @@ var PAGES=[`<div class="hs-page">
     </div>
   </div>
   <div class="hs-card-body">
-    <p class="hs-desc">博多駅步行 7 分・地鐵祇園站步行 5 分。現代都市旅館融合博多傳統文化，山笠祭典主題藝術裝置遍布館內。</p>
+    <div class="hs-vibe-badge">繁華之序幕 · The Urban Prelude</div>
     <div class="hs-meals">
-      <div class="hs-meal hs-m-dinner"><span class="hs-meal-ico">🍽</span><div class="hs-meal-info"><div class="hs-meal-label">晚餐</div><div class="hs-meal-text">自由外出 — 黑かつ亭炸豬排（AMU Plaza 9F）或那珂川屋台街</div></div></div>
-      <div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">♨</span><div class="hs-meal-info"><div class="hs-meal-label">大浴場・溫泉</div><div class="hs-meal-text">13F「博多天空之湯」露天風呂・躺浴・蒸氣桑拿，開放至凌晨 01:00，免費供住客使用</div></div></div>
-      <div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早餐</div><div class="hs-meal-text">1F「農家萬菜まんてい」07:00–11:00 · 九州在地食材和食定食 · 早餐含</div></div></div>
+      <div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">♨</span><div class="hs-meal-info"><div class="hs-meal-label">癒 (Healing) · ♨ 13F 博多天空之湯</div><div class="hs-meal-text">市中心的高空露天風呂、躺浴與蒸氣桑拿。開放至凌晨 01:00，洗去飛行的疲憊。</div></div></div>
+      <div class="hs-meal hs-m-dinner"><span class="hs-meal-ico">🍽</span><div class="hs-meal-info"><div class="hs-meal-label">味 (Taste) · 在地與自由的交集</div><div class="hs-meal-text">自由探索博多夜色 — 推薦黑かつ亭炸豬排或那珂川屋台街</div></div></div>
+      <div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早餐</div><div class="hs-meal-text">1F「農家萬菜まんてい」07:00–11:00 — 嚴選九州在地食材的精緻和食定食（早餐含）</div></div></div>
     </div>
     <div class="hs-tags"><span class="hs-tag">博多駅步行 7 分</span><span class="hs-tag">13F 大浴場</span><span class="hs-tag">露天風呂</span><span class="hs-tag">早餐含</span></div>
     
@@ -259,14 +283,14 @@ var PAGES=[`<div class="hs-page">
     </div>
   </div>
   <div class="hs-card-body">
-    <p class="hs-desc">隱於深山的秘湯旅館，木頭香氣的傳統和室，窗外即是翠綠山景，是整趟旅程最「遠離塵囂」的一夜。</p>
+    <div class="hs-vibe-badge">深山裡的無念 · Deep Mountain Serenity</div>
     <div class="hs-meals">
-      <div class="hs-meal hs-m-dinner"><span class="hs-meal-ico">🍽</span><div class="hs-meal-info"><div class="hs-meal-label">晚餐</div><div class="hs-meal-text">山林懷石料理 · 佐賀在地食材精緻日式會席 · 和室內享用</div></div></div>
-      <div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">♨</span><div class="hs-meal-info"><div class="hs-meal-label">大浴場・溫泉</div><div class="hs-meal-text">鹼性單純泉 38°C・「眠之湯」最適長泡放鬆・加速入眠效果絕佳</div></div></div>
-      <div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早餐</div><div class="hs-meal-text">07:30（務必提前預約最早梯次）· 和食膳 · 吃完即可出發武雄大楠</div></div></div>
+      <div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">♨</span><div class="hs-meal-info"><div class="hs-meal-label">癒 (Healing) · ♨ 38°C 眠之湯</div><div class="hs-meal-text">極致溫和的鹼性單純泉。38°C 是最適合人體長時間放鬆的溫度，帶來絕佳的深層入眠效果。</div></div></div>
+      <div class="hs-meal hs-m-dinner"><span class="hs-meal-ico">🍽</span><div class="hs-meal-info"><div class="hs-meal-label">味 (Taste) · 山林裡的會席</div><div class="hs-meal-text">於專屬和室內享用山林懷石料理，品嚐佐賀在地食材的細膩變化</div></div></div>
+      <div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早餐</div><div class="hs-meal-text">07:30（務必提前預約）晨間和食膳 — 享用完畢後元氣飽滿出發武雄大楠</div></div></div>
     </div>
     <div class="hs-tags"><span class="hs-tag">山林秘湯</span><span class="hs-tag">鹼性單純泉</span><span class="hs-tag">38°C 眠之湯</span><span class="hs-tag">早餐 07:30</span></div>
-    <div class="hs-price">住宿實付 <strong>¥ 29,800</strong></div>
+    <div class="hs-price ">住宿實付 <strong>¥ 29,800</strong></div>
   </div>
 </div><div class="hs-card">
   <div class="hs-card-header" style="background:linear-gradient(135deg,#2e7d6eee,#2e7d6e99);">
@@ -278,14 +302,14 @@ var PAGES=[`<div class="hs-page">
     </div>
   </div>
   <div class="hs-card-body">
-    <p class="hs-desc">整趟旅程最奢華的一夜！展望和風客房俯瞰嬉野溫泉街與茶園綠意，日本三大美肌之湯加持，一泡難忘。</p>
+    <div class="hs-vibe-badge">極致奢華的頂點 · The Pinnacle of Luxury</div>
     <div class="hs-meals">
-      <div class="hs-meal hs-m-dinner"><span class="hs-meal-ico">🍽</span><div class="hs-meal-info"><div class="hs-meal-label">晚餐</div><div class="hs-meal-text">頂級佐賀和牛壽喜燒懷石 · 和牛以嬉野名水涮燙 · 脂香四溢</div></div></div>
-      <div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">♨</span><div class="hs-meal-info"><div class="hs-meal-label">大浴場・溫泉</div><div class="hs-meal-text">展望露天風呂俯瞰溫泉街夜景 · 碳酸氫鈉美肌湯 · 退房前務必再泡一回</div></div></div>
-      <div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早餐</div><div class="hs-meal-text">07:00 · 溫泉湯豆腐必吃（嬉野名物）· 退房前再泡一次展望露天</div></div></div>
+      <div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">♨</span><div class="hs-meal-info"><div class="hs-meal-label">癒 (Healing) · ♨ 日本三大美肌之湯</div><div class="hs-meal-text">碳酸氫鈉美肌湯，泡完肌膚如絲緞般滑潤。強烈建議退房前在展望露天風呂再泡一回，將溫泉街夜景與晨光盡收眼底。</div></div></div>
+      <div class="hs-meal hs-m-dinner"><span class="hs-meal-ico">🍽</span><div class="hs-meal-info"><div class="hs-meal-label">味 (Taste) · 脂香四溢的和牛盛宴</div><div class="hs-meal-text">頂級佐賀和牛壽喜燒懷石 — 以嬉野名水涮燙頂級和牛，入口即化</div></div></div>
+      <div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早餐</div><div class="hs-meal-text">07:00 嬉野名物「溫泉湯豆腐」— 用美肌溫泉水熬煮的極致柔嫩</div></div></div>
     </div>
     <div class="hs-tags"><span class="hs-tag">日本三大美肌之湯</span><span class="hs-tag">碳酸氫鈉泉</span><span class="hs-tag">展望露天風呂</span><span class="hs-tag">佐賀和牛晚餐</span><span class="hs-tag">早餐 07:00</span></div>
-    <div class="hs-price">住宿實付 <strong>¥ 36,700</strong></div>
+    <div class="hs-price ">住宿實付 <strong>¥ 36,700</strong></div>
   </div>
 </div><div class="hs-card">
   <div class="hs-card-header" style="background:linear-gradient(135deg,#c0512aee,#c0512a99);">
@@ -297,14 +321,14 @@ var PAGES=[`<div class="hs-page">
     </div>
   </div>
   <div class="hs-card-body">
-    <p class="hs-desc">整棟大量使用珍稀巨木銘木，極具藝術感。空中露天風呂飽覽有明海海天一色，是本旅程最震撼的飯店空間。</p>
+    <div class="hs-vibe-badge">巨木與海天一色 · Architectural Marvel & Panoramic Seas</div>
     <div class="hs-meals">
-      <div class="hs-meal hs-m-dinner"><span class="hs-meal-ico">🍽</span><div class="hs-meal-info"><div class="hs-meal-label">晚餐</div><div class="hs-meal-text">長崎島原食材懷石料理 · 搭配雲仙山間野蔬 · 精緻豐盛</div></div></div>
-      <div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">♨</span><div class="hs-meal-info"><div class="hs-meal-label">大浴場・溫泉</div><div class="hs-meal-text">空中露天風呂 · 酸性硫磺泉乳白強湯 · 飽覽有明海海天一色</div></div></div>
-      <div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早餐</div><div class="hs-meal-text">07:00 · 雲仙名物溫泉玉子・島原素麺 · 早餐後出發</div></div></div>
+      <div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">♨</span><div class="hs-meal-info"><div class="hs-meal-label">癒 (Healing) · ♨ 雲仙酸性硫磺泉</div><div class="hs-meal-text">在空中露天風呂中，浸泡於乳白色的強效礦物湯，眼前是無邊際的有明海，飽覽海天一色的壯闊。</div></div></div>
+      <div class="hs-meal hs-m-dinner"><span class="hs-meal-ico">🍽</span><div class="hs-meal-info"><div class="hs-meal-label">味 (Taste) · 長崎的大地恩惠</div><div class="hs-meal-text">長崎島原食材懷石料理，巧妙搭配雲仙山間的當季野蔬</div></div></div>
+      <div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早餐</div><div class="hs-meal-text">07:00 雲仙名物溫泉玉子與清爽的島原素麺 — 為一天的探索注入活力</div></div></div>
     </div>
     <div class="hs-tags"><span class="hs-tag">酸性硫磺泉</span><span class="hs-tag">空中露天風呂</span><span class="hs-tag">珍稀銘木建築</span><span class="hs-tag">早餐 07:00</span></div>
-    <div class="hs-price">住宿實付 <strong>¥ 27,038</strong></div>
+    <div class="hs-price ">住宿實付 <strong>¥ 27,038</strong></div>
   </div>
 </div><div class="hs-card">
   <div class="hs-card-header" style="background:linear-gradient(135deg,#1b6b8aee,#1b6b8a99);">
@@ -316,11 +340,11 @@ var PAGES=[`<div class="hs-page">
     </div>
   </div>
   <div class="hs-card-body">
-    <p class="hs-desc">最真實的九州漁村體驗。漁夫主人每天清晨出海，窗外即是九十九島的寧靜海域，旅程最有人情味的一夜。</p>
+    <div class="hs-vibe-badge">討海人的純粹款待 · Authentic Human Connection</div>
     <div class="hs-meals">
-      <div class="hs-meal hs-m-dinner"><span class="hs-meal-ico">🍽</span><div class="hs-meal-info"><div class="hs-meal-label">晚餐</div><div class="hs-meal-text">漁夫現捕霸氣舟盛生魚片・活蝦・蛤蜊味噌湯 · ⚠️ 18:00 前必須 Check-in</div></div></div>
-      <div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">♨</span><div class="hs-meal-info"><div class="hs-meal-label">大浴場・溫泉</div><div class="hs-meal-text">無大浴場 · 九十九島漁村氛圍・星空海景是最天然的療癒</div></div></div>
-      <div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早餐</div><div class="hs-meal-text">07:00 · 漁村家庭式早餐 · 煮魚・漬物・味噌湯 · 窗外九十九島晨景</div></div></div>
+      <div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">♨</span><div class="hs-meal-info"><div class="hs-meal-label">癒 (Healing) · ⭐ 天然的星空療癒</div><div class="hs-meal-text">今夜無需大浴場。九十九島純樸的漁村氛圍、海浪的白噪音與無光害的星空，便是最天然的療癒。</div></div></div>
+      <div class="hs-meal hs-m-dinner"><span class="hs-meal-ico">🍽</span><div class="hs-meal-info"><div class="hs-meal-label">味 (Taste) · 漁夫直送的霸氣海味</div><div class="hs-meal-text">震撼視覺的漁夫現捕霸氣舟盛生魚片、活蝦與濃郁的蛤蜊味噌湯 ⚠️ 需於 18:00 前 Check-in</div></div></div>
+      <div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早餐</div><div class="hs-meal-text">07:00 漁村家庭式早餐 — 溫暖的煮魚、手作漬物與味噌湯，佐以窗外九十九島絕美晨景</div></div></div>
     </div>
     <div class="hs-tags"><span class="hs-tag">純樸漁村</span><span class="hs-tag">漁夫直送舟盛</span><span class="hs-tag">早餐 07:00</span><span class="hs-tag">⚠️ 僅收現金</span></div>
     <div class="hs-price hs-cash">住宿實付 <strong>¥ 17,600</strong>&ensp;⚠️ 僅收現金</div>
@@ -335,25 +359,52 @@ var PAGES=[`<div class="hs-page">
     </div>
   </div>
   <div class="hs-card-body">
-    <p class="hs-desc">市區難得一見的昭和復古榻榻米旅館，福岡市區極罕見的 100% 源泉掛流純湯，旅程最後一晚完美收尾。</p>
+    <div class="hs-vibe-badge">昭和時代的溫潤回音 · The Showa Nostalgia</div>
     <div class="hs-meals">
-      <div class="hs-meal hs-m-dinner"><span class="hs-meal-ico">🍽</span><div class="hs-meal-info"><div class="hs-meal-label">晚餐</div><div class="hs-meal-text">自由外出 · 博多祇園居酒屋或中洲屋台 · 旅程最後一夜盡情享用</div></div></div>
-      <div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">♨</span><div class="hs-meal-info"><div class="hs-meal-label">大浴場・溫泉</div><div class="hs-meal-text">100% 源泉掛流 · 鈣鈉氯化物泉 · 鹽分薄膜保溫效果極佳 · 推薦「寢湯」放空</div></div></div>
-      <div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早餐</div><div class="hs-meal-text">07:30 · 和食膳清淡溫潤 · 旅程最後一個早餐</div></div></div>
+      <div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">♨</span><div class="hs-meal-info"><div class="hs-meal-label">癒 (Healing) · ♨ 100% 源泉掛流</div><div class="hs-meal-text">未經循環的純淨鈣鈉氯化物泉。強烈推薦在「寢湯」中徹底放空，鹽分薄膜的保溫效果將暖意深植體內。</div></div></div>
+      <div class="hs-meal hs-m-dinner"><span class="hs-meal-ico">🍽</span><div class="hs-meal-info"><div class="hs-meal-label">味 (Taste) · 繁華重現與溫和收尾</div><div class="hs-meal-text">自由探索博多祇園居酒屋或中洲屋台 — 在旅程的最後一夜盡情感受博多熱情</div></div></div>
+      <div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早餐</div><div class="hs-meal-text">07:30 清淡溫潤的和食膳，溫和地喚醒腸胃，準備踏上歸途</div></div></div>
     </div>
     <div class="hs-tags"><span class="hs-tag">100% 源泉掛流</span><span class="hs-tag">鈣鈉氯化物泉</span><span class="hs-tag">昭和復古榻榻米</span><span class="hs-tag">早餐 07:30</span></div>
-    <div class="hs-price">住宿實付 <strong>¥ 24,638</strong></div>
+    <div class="hs-price ">住宿實付 <strong>¥ 24,638</strong></div>
   </div>
 </div></div>
 </div>`,
-`<div class="day-hero" style="background:linear-gradient(160deg,#1a3a5c 0%,#2d6a8f 100%);"><div class="jp-pattern"></div><div class="day-hero-inner"><div class="day-badge"><span class="day-num">1</span><span class="day-wd">MON</span></div><div class="day-hero-text"><div class="day-date-str">5 月 11 日（一）</div><h1 class="day-title">✈️ 抵達福岡 · 接送直達 · 泡湯吃豬排</h1><div class="day-route-str">🗺 福岡機場 → 機場接送 → 三井ガーデンホテル福岡祇園&ensp;</div></div></div></div><div class="day-intro-band"><p class="day-intro-text">【旅程序章：輕鬆抵達，好好放鬆的第一夜】今天抵達福岡機場後，直接搭乘預約好的機場接送專車，門對門直達博多三井ガーデンホテル福岡祇園，完全不用拉著行李搭地鐵、找月台——旅程從第一步就優雅舒適。安頓後輕裝出門吃博多名物炸豬排，再沿那珂川散步看屋台夜景。回飯店好好泡個澡，養精蓄銳——明天才是自駕旅程的真正開始！</p></div>
+`<div class="day-hero" style="background:linear-gradient(160deg,#1a3a5c 0%,#2d6a8f 100%);"><div class="jp-pattern"></div><div class="day-hero-inner"><div class="day-badge"><span class="day-num">1</span><span class="day-wd">MON</span></div><div class="day-hero-text"><div class="day-date-str">5 月 11 日（一）</div><h1 class="day-title">✈️ 抵達福岡 · 接送直達 · 泡湯吃豬排</h1><div class="day-vibe">繁華之序幕 <span class="day-vibe-en">· The Urban Prelude</span></div><div class="day-route-str">🗺 福岡機場 → 機場接送 → 三井ガーデンホテル福岡祇園&ensp;</div></div></div></div><div class="day-intro-band"><p class="day-intro-text">【旅程序章：輕鬆抵達，好好放鬆的第一夜】今天抵達福岡機場後，直接搭乘預約好的機場接送專車，門對門直達博多三井ガーデンホテル福岡祇園，完全不用拉著行李搭地鐵、找月台——旅程從第一步就優雅舒適。安頓後輕裝出門吃博多名物炸豬排，再沿那珂川散步看屋台夜景。回飯店好好泡個澡，養精蓄銳——明天才是自駕旅程的真正開始！</p></div>
 <div class="section"><h2 class="sec-head">📋 今日行程</h2><div class="tl-new"><div class="tl-item "><div class="tl-icon">📍</div><div class="tl-body-new"><div class="tl-name-new">長榮航空 BR0106 · 桃園 → 福岡</div><div class="tl-note-new">🛫 桃園 TPE <strong style="color:var(--navy)">08:00</strong> 起飛 · 飛行約 2 小時 15 分<br>🛬 福岡 FUK <strong style="color:var(--navy)">11:15</strong> 抵達 · 第二航廈出發 · Boeing 787</div></div></div><div class="tl-conn-new">🛂 入境 · 領行李 · 約 30–45 分鐘</div><div class="tl-item tl-hi"><div class="tl-icon">📍</div><div class="tl-body-new"><div class="tl-name-new">福岡機場 · 入境 · 領行李</div><div class="tl-note-new">完成入境手續，領取行李，前往接機出口</div></div></div><div class="tl-conn-new">🚐 機場接送專車 · 約 25 分鐘 · 直達飯店</div><div class="tl-item tl-hi"><div class="tl-icon">📍</div><div class="tl-body-new"><div class="tl-name-new">三井ガーデンホテル福岡祇園 · Check-in</div><div class="tl-note-new">博多駅步行 7 分 · 地鐵祇園站步行 5 分</div></div></div><div class="tl-conn-new">🚶 步行 5 分鐘</div><div class="tl-item tl-hi"><div class="tl-icon">📍</div><div class="tl-body-new"><div class="tl-name-new">黑かつ亭（AMU Plaza 9F）· 博多炸豬排飯</div><div class="tl-note-new">博多最人氣低溫炸白豬排 · 17:00 首波開門不用等位 · 金黃酥脆肉汁豐富</div></div></div><div class="tl-conn-new">🚶 步行 10 分鐘</div><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">那珂川屋台街 · 夜景散步</div><div class="tl-note-new">飯後沿那珂川漫步 · 欣賞屋台燈籠倒映水面的溫暖光影</div><div class="tl-photo-new">💡 天黑後捕捉屋台暖橘燈光映照那珂川河面——整趟旅程最有人情味的第一張照片</div></div></div><div class="tl-conn-new">🚶 步行 10 分鐘</div><div class="tl-item tl-hi"><div class="tl-icon">⛩</div><div class="tl-body-new"><div class="tl-name-new">櫛田神社 · 夜間參拜（選擇性）</div><div class="tl-note-new">博多總鎮守・開放至 22:00 · 商売繁盛・不老長寿 · 祇園站步行 5 分</div><div class="tl-photo-new">💡 燈火輝映的夜間境內莊嚴寧靜，5月可見高 13m 的山笠飾り——是博多最有氣氛的夜晚體驗</div></div></div></div></div>
 <div class="section map-section"><h2 class="sec-head">🗺️ 今日路線</h2><div class="map-card-new"><div class="map-route-title">機場地鐵 → 三井ガーデンホテル福岡祇園 · 步行散策</div><div class="spots-row"><span class="spot-chip">📍 福岡機場 → 機場接送專車</span><span class="spot-chip">📍 博多運河城 · 市區散策</span><span class="spot-chip">📍 黑かつ亭 炸豬排飯</span><span class="spot-chip">📍 那珂川屋台夜景散步</span><span class="spot-chip">📍 福岡三井ガーデンホテル福岡祇園（今晚泡澡放鬆）</span></div><a href="https://www.google.com/maps/search/那珂川+博多+屋台/@33.585,130.4,14z" target="_blank" class="map-btn-new">📍 在 Google Maps 查看路線 →</a></div></div>
 <div class="section"><h2 class="sec-head">🍑 今日必買</h2><div class="fruits-grid-new"><div class="fruit-card-new"><div class="fruit-ico-new">🍓</div><div class="fruit-name-new">福岡甘王草莓</div><div class="fruit-desc-new">五月中已是季末，能以極具 CP 值的特惠價捕獲最後一批濃郁香氣</div><div class="fruit-when-new">Day 1–2 超市採買</div></div></div></div>
 <div class="section"><h2 class="sec-head">🧺 今日洗衣站</h2><div class="ld-area-new"><div class="ld-location-new">📍 博多 · 三井ガーデンホテル福岡祇園周邊</div><div class="ld-shops-new"><div class="ld-card-new"><div class="ld-shop-header"><span class="ld-shop-name-new">COIN LAUNDRY SAVON</span><span class="ld-badge-new">推薦</span></div><div class="ld-meta-new">⭐ 4.0 · 24 小時 · 8kg 僅 ¥300 · 自動投洗劑 · 博多站步行約 12 分</div><a href="https://maps.google.com/?cid=10727052327023882265" target="_blank" class="map-btn-new" style="font-size:.78rem;padding:.5rem .8rem;margin-top:.5rem;display:inline-block;">📍 Google Maps →</a></div><div class="ld-card-new"><div class="ld-shop-header"><span class="ld-shop-name-new">ランドリープレス 博多住吉店</span><span class="ld-badge-new">備選</span></div><div class="ld-meta-new">⭐ 3.8 · 24 小時 · 多語言介面 · Wi-Fi · 博多站步行約 10 分</div><a href="https://maps.google.com/?cid=3512073534513446634" target="_blank" class="map-btn-new" style="font-size:.78rem;padding:.5rem .8rem;margin-top:.5rem;display:inline-block;">📍 Google Maps →</a></div></div><div class="ld-tip-new">💡 抵達當天晚上散步去吃豬排飯時順路丟洗，隔天取車前取回</div></div></div>
-<div class="section hotel-section"><h2 class="sec-head">🏨 今晚住宿</h2><div class="hotel-card"><div class="hotel-name">三井ガーデンホテル福岡祇園</div><div class="hotel-desc">博多駅步行 7 分・地鐵祇園站步行 5 分。現代都市旅館融合博多傳統文化，山笠祭典主題藝術裝置遍布館內。</div><div class="ht-meals"><div class="ht-meal ht-dinner"><div class="ht-meal-icon">🍽</div><div class="ht-meal-body"><div class="ht-meal-label">今晚晚餐</div><div class="ht-meal-text">自由外出 — 黑かつ亭炸豬排（AMU Plaza 9F）或那珂川屋台街</div></div></div><div class="ht-meal ht-onsen"><div class="ht-meal-icon">♨</div><div class="ht-meal-body"><div class="ht-meal-label">大浴場・溫泉</div><div class="ht-meal-text">13F「博多天空之湯」露天風呂・躺浴・蒸氣桑拿，開放至凌晨 01:00，免費供住客使用</div></div></div><div class="ht-meal ht-breakfast"><div class="ht-meal-icon">🌅</div><div class="ht-meal-body"><div class="ht-meal-label">明日早餐</div><div class="ht-meal-text">1F「農家萬菜まんてい」07:00–11:00 · 九州在地食材和食定食 · 早餐含</div></div></div></div><div class="ht-tags"><span class="ht-tag">博多駅步行 7 分</span><span class="ht-tag">13F 大浴場</span><span class="ht-tag">露天風呂</span><span class="ht-tag">早餐含</span></div></div></div>`,
-`<div class="bf-banner"><div class="bf-left"><span class="bf-ico">🌅</span><span class="bf-label">今日早餐</span></div><div class="bf-right"><div class="bf-hotel">三井ガーデンホテル福岡祇園</div><div class="bf-detail">1F「農家萬菜まんてい」07:00–11:00 · 九州在地食材和食定食 · 早餐含</div></div></div>
-<div class="day-hero" style="background:linear-gradient(160deg,#4a2060 0%,#7b5ea7 100%);"><div class="jp-pattern"></div><div class="day-hero-inner"><div class="day-badge"><span class="day-num">2</span><span class="day-wd">TUE</span></div><div class="day-hero-text"><div class="day-date-str">5 月 12 日（二）</div><h1 class="day-title">🏯 上帝視角 · 紫藤古城與鯉魚旗</h1><div class="day-route-str">🗺 福岡 → 唐津城 → 呼子港 → 鏡山 → 古湯溫泉&ensp;<span class="km-pill">110 km</span></div></div></div></div><div class="day-intro-band"><p class="day-intro-text">【今日主題：取車出發！壯闊海景 × 季節限定浪漫】今天是自駕旅程的真正第一天！06:30 吃完飯店早餐後，搭地鐵回福岡機場取車，然後一路向西奔向唐津。先在唐津城仰望百年紫藤瀑布，再登鏡山展望台俯瞰日本最美的松原海岸。下午深入山林，在川上峽看 300 條鯉魚旗在溪谷飛舞——這是五月限定的季節畫面，過了就要等明年。晚上抵達古湯，在 38°C 微溫泉中長泡放鬆。</p></div>
+<div class="section hotel-section">
+  <h2 class="sec-head">🏨 今晚住宿</h2>
+  <div class="hotel-card">
+    <div class="hotel-name">🏙 三井ガーデンホテル福岡祇園</div>
+    <div class="hotel-vibe">📍 福岡・博多</div>
+    <div class="ht-meals"><div class="ht-meal ht-onsen">
+          <div class="ht-meal-icon">♨</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">癒 (Healing) · ♨ 13F 博多天空之湯</div>
+            <div class="ht-meal-text">市中心的高空露天風呂、躺浴與蒸氣桑拿。開放至凌晨 01:00，洗去飛行的疲憊。</div>
+          </div>
+        </div><div class="ht-meal ht-dinner">
+          <div class="ht-meal-icon">🍽</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">味 (Taste) · 在地與自由的交集</div>
+            <div class="ht-meal-text">自由探索博多夜色 — 推薦黑かつ亭炸豬排或那珂川屋台街</div>
+          </div>
+        </div><div class="ht-meal ht-breakfast">
+          <div class="ht-meal-icon">🌅</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">明日早餐</div>
+            <div class="ht-meal-text">1F「農家萬菜まんてい」07:00–11:00 — 嚴選九州在地食材的精緻和食定食（早餐含）</div>
+          </div>
+        </div></div>
+    <div class="ht-tags"><span class="ht-tag">博多駅步行 7 分</span><span class="ht-tag">13F 大浴場</span><span class="ht-tag">露天風呂</span><span class="ht-tag">早餐含</span></div>
+    
+  </div>
+</div>`,
+`<div class="bf-banner"><div class="bf-left"><span class="bf-ico">🌅</span><span class="bf-label">今日早餐</span></div><div class="bf-right"><div class="bf-hotel">三井ガーデンホテル福岡祇園</div><div class="bf-detail">1F「農家萬菜まんてい」07:00–11:00 — 嚴選九州在地食材的精緻和食定食（早餐含）</div></div></div>
+<div class="day-hero" style="background:linear-gradient(160deg,#4a2060 0%,#7b5ea7 100%);"><div class="jp-pattern"></div><div class="day-hero-inner"><div class="day-badge"><span class="day-num">2</span><span class="day-wd">TUE</span></div><div class="day-hero-text"><div class="day-date-str">5 月 12 日（二）</div><h1 class="day-title">🏯 上帝視角 · 紫藤古城與鯉魚旗</h1><div class="day-vibe">深山裡的無念 <span class="day-vibe-en">· Deep Mountain Serenity</span></div><div class="day-route-str">🗺 福岡 → 唐津城 → 呼子港 → 鏡山 → 古湯溫泉&ensp;<span class="km-pill">110 km</span></div></div></div></div><div class="day-intro-band"><p class="day-intro-text">【今日主題：取車出發！壯闊海景 × 季節限定浪漫】今天是自駕旅程的真正第一天！06:30 吃完飯店早餐後，搭地鐵回福岡機場取車，然後一路向西奔向唐津。先在唐津城仰望百年紫藤瀑布，再登鏡山展望台俯瞰日本最美的松原海岸。下午深入山林，在川上峽看 300 條鯉魚旗在溪谷飛舞——這是五月限定的季節畫面，過了就要等明年。晚上抵達古湯，在 38°C 微溫泉中長泡放鬆。</p></div>
 <div class="section"><h2 class="sec-head">📋 今日行程</h2><div class="tl-new"><div class="tl-item "><div class="tl-icon">🍱</div><div class="tl-body-new"><div class="tl-name-new">早餐 · 農家萬菜まんてい 博多祇園</div><div class="tl-note-new">07:00–11:00（最後入場 10:30）· 1F 餐廳 · 九州在地食材和食定食 · 建議 07:30 前往</div></div></div><div class="tl-conn-new">🚶 步行 3 分鐘</div><div class="tl-item "><div class="tl-icon">🚗</div><div class="tl-body-new"><div class="tl-name-new">Budget 博多祇園店 · 取車出發</div><div class="tl-note-new">三井ガーデンホテル福岡祇園步行 8 分 · 博多駅前 2-11-19 · 08:00 開門 · 辦理手續後自駕旅程正式啟動！</div><div class="tl-mc-new">🚶 博多口出發 → 大博通り → 區役所入口紅燈左轉 → 左手藍色看板 · 📞 092-473-0543</div></div></div><div class="tl-conn-new">🚗 60 km · 約 1 小時</div><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">唐津城（百年紫藤瀑布）</div><div class="tl-note-new">天守閣 09:00 開 · 五月限定絕景</div><div class="tl-photo-new">💡 以白色天守閣為背景，由下往上拍盛開的百年紫藤，如瀑布般垂落的紫色花串</div><div class="tl-mc-new">📍 導航：0955-72-5697</div></div></div><div class="tl-conn-new">🚗 25 km · 30 分鐘</div><div class="tl-item tl-hi"><div class="tl-icon">🛒</div><div class="tl-body-new"><div class="tl-name-new">呼子港朝市（日本三大朝市）</div><div class="tl-note-new">07:30–12:00 · 200m 朝市通 · 現烤魷魚・魚ロッケ・干物・甘夏柑橘 · 免費停車場</div><div class="tl-photo-new">💡 透明烏賊現切活造、魚ロッケ（魚肉可樂餅）邊走邊吃，是九州最鮮活的港口早晨體驗</div><div class="tl-mc-new">📍 唐津市呼子町呼子 · 0955-53-7160</div></div></div><div class="tl-conn-new">🚗 20 km · 25 分鐘</div><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">鏡山展望台（虹之松原全景）</div><div class="tl-note-new">建議 15:00–16:00 · 日本三大松原之一</div><div class="tl-photo-new">💡 午後斜射光增加 100 萬棵松林的立體層次感，弧形海岸線壯觀令人屏息</div><div class="tl-mc-new">📍 Mapcode: 182 431 035*41</div></div></div><div class="tl-conn-new">🚗 28 km · 35 分鐘</div><div class="tl-item "><div class="tl-icon">📍</div><div class="tl-body-new"><div class="tl-name-new">見歸之瀑布</div><div class="tl-note-new">佐賀縣最大瀑布 · 深山芬多精 · 靜謐療癒</div></div></div><div class="tl-conn-new">🚗 35 km · 42 分鐘</div><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">川上峽（300 條鯉魚旗）</div><div class="tl-note-new">傍晚抵達最迷人 · 五月端午節前後限定</div><div class="tl-photo-new">💡 抓準微風吹拂的瞬間，拍 300 條鯉魚旗在碧綠溪谷上空飛舞的鮮豔動態</div></div></div><div class="tl-conn-new">🚗 6 km · 8 分鐘 → 住宿</div></div></div>
 <div class="section map-section"><h2 class="sec-head">🗺️ 今日路線</h2><div class="map-card-new"><div class="map-route-title">福岡 → 唐津 → 鏡山 → 古湯溫泉</div><div class="spots-row"><span class="spot-chip">📍 福岡機場 · 取車出發</span><span class="spot-chip">📍 唐津城（百年紫藤）</span><span class="spot-chip">📍 鏡山展望台</span><span class="spot-chip">📍 見歸之瀑布</span><span class="spot-chip">📍 川上峽（300條鯉魚旗）</span><span class="spot-chip">📍 古湯溫泉 旅館大和屋</span></div><a href="https://www.google.com/maps/dir/唐津城/鏡山展望台/見帰りの滝/川上峡/古湯温泉/@33.45,130.1,11z" target="_blank" class="map-btn-new">📍 在 Google Maps 查看路線 →</a></div></div>
 <div class="section onsen-section"><h2 class="sec-head">♨️ 今晚溫泉</h2><div class="onsen-card-new"><div class="onsen-name-new">古湯溫泉 旅館大和屋</div><div class="onsen-meta-row"><span class="onsen-type">鹼性單純泉 · ¥ 29,800</span><span class="onsen-temp">🌡 38°C</span></div><div class="onsen-kw">♨ 最適合長泡 · 鎮定神經 · 深層睡眠</div><p class="onsen-desc">無色無味，低刺激，是最溫柔的秘湯體驗。水溫恰到好處，能長時間浸泡 30–40 分鐘而不暈眩，讓疲憊的身體一點一點地鬆開。隱於佐賀深山的清幽旅館，在林間的靜謐中徹底放空——這是鎮定神經、引導極致深層睡眠的「眠之湯」。</p></div></div>
@@ -361,17 +412,71 @@ var PAGES=[`<div class="hs-page">
 <div class="section dark-section"><h2 class="sec-head light">🧭 今日 Mapcode</h2><div class="mc-tip">切換車機至「Mapcode」模式後輸入</div><div class="mc-grid-new"><div class="mc-card"><div class="mc-spot">鏡山展望台</div><div class="mc-code">182 431 035*41</div><div class="mc-note">山頂免費停車場，步行 3 分即達</div></div></div></div>
 <div class="section"><h2 class="sec-head">🍑 今日必買</h2><div class="fruits-grid-new"><div class="fruit-card-new"><div class="fruit-ico-new">🍊</div><div class="fruit-name-new">甘夏柑橘</div><div class="fruit-desc-new">呼子朝市與沿海公路盛產，帶有迷人微酸與飽滿果肉，是自駕途中最佳解膩聖品</div><div class="fruit-when-new">Day 2 唐津朝市</div></div></div></div>
 <div class="section"><h2 class="sec-head">🧺 今日洗衣站</h2><div class="ld-area-new"><div class="ld-location-new">📍 唐津城附近（賞完紫藤後順路）</div><div class="ld-shops-new"><div class="ld-card-new"><div class="ld-shop-header"><span class="ld-shop-name-new">アサヒコインランドリー 二タ子店</span><span class="ld-badge-new">推薦</span></div><div class="ld-meta-new">⭐ 4.2 · 24 小時 · 空間寬敞乾淨 · 唐津城開車 3 分</div><a href="https://maps.google.com/?cid=13294716015697609720" target="_blank" class="map-btn-new" style="font-size:.78rem;padding:.5rem .8rem;margin-top:.5rem;display:inline-block;">📍 Google Maps →</a></div><div class="ld-card-new"><div class="ld-shop-header"><span class="ld-shop-name-new">Cleaning Station Karatsu</span><span class="ld-badge-new">步行最近</span></div><div class="ld-meta-new">⭐ 3.6 · 24 小時 · 唐津城步行 5 分 · 海邊方向</div><a href="https://maps.google.com/?cid=16335232965437776016" target="_blank" class="map-btn-new" style="font-size:.78rem;padding:.5rem .8rem;margin-top:.5rem;display:inline-block;">📍 Google Maps →</a></div></div><div class="ld-tip-new">💡 賞完紫藤丟進洗衣機 → 去鏡山拍照 → 回程取衣服，完全不浪費時間</div></div></div>
-<div class="section hotel-section"><h2 class="sec-head">🏨 今晚住宿</h2><div class="hotel-card"><div class="hotel-name">古湯溫泉 旅館大和屋</div><div class="hotel-desc">隱於深山的秘湯旅館，木頭香氣的傳統和室，窗外即是翠綠山景，是整趟旅程最「遠離塵囂」的一夜。</div><div class="ht-meals"><div class="ht-meal ht-dinner"><div class="ht-meal-icon">🍽</div><div class="ht-meal-body"><div class="ht-meal-label">今晚晚餐</div><div class="ht-meal-text">山林懷石料理 · 佐賀在地食材精緻日式會席 · 和室內享用</div></div></div><div class="ht-meal ht-onsen"><div class="ht-meal-icon">♨</div><div class="ht-meal-body"><div class="ht-meal-label">大浴場・溫泉</div><div class="ht-meal-text">鹼性單純泉 38°C・「眠之湯」最適長泡放鬆・加速入眠效果絕佳</div></div></div><div class="ht-meal ht-breakfast"><div class="ht-meal-icon">🌅</div><div class="ht-meal-body"><div class="ht-meal-label">明日早餐</div><div class="ht-meal-text">07:30（務必提前預約最早梯次）· 和食膳 · 吃完即可出發武雄大楠</div></div></div></div><div class="ht-tags"><span class="ht-tag">山林秘湯</span><span class="ht-tag">鹼性單純泉</span><span class="ht-tag">38°C 眠之湯</span><span class="ht-tag">早餐 07:30</span></div><div class="ht-price ">住宿實付 <strong>¥ 29,800</strong></div></div></div>`,
-`<div class="bf-banner"><div class="bf-left"><span class="bf-ico">⚠️</span><span class="bf-label">今日早餐</span></div><div class="bf-right"><div class="bf-hotel">古湯溫泉 旅館大和屋</div><div class="bf-detail">07:30（務必提前預約最早梯次）· 和食膳 · 吃完即可出發武雄大楠</div></div></div>
-<div class="day-hero" style="background:linear-gradient(160deg,#1a4a3a 0%,#2e7d6e 100%);"><div class="jp-pattern"></div><div class="day-hero-inner"><div class="day-badge"><span class="day-num">3</span><span class="day-wd">WED</span></div><div class="day-hero-text"><div class="day-date-str">5 月 13 日（三）</div><h1 class="day-title">🌳 神木茶鄉 · 千年靈氣與佐賀和牛</h1><div class="day-route-str">🗺 古湯 → 武雄 → 御船山 → 嬉野溫泉&ensp;<span class="km-pill">60 km</span></div></div></div></div><div class="day-intro-band"><p class="day-intro-text">【今日主題：千年靈氣 × 翠綠茶鄉 × 頂級佐賀和牛】今天是整趟旅程最有「靈氣」的一天。清晨走入武雄神社的竹林小徑，仰望 3000 年的大楠，晨光穿透樹冠的那一刻，讓人感受到時間的重量。傍晚抵達嬉野茶空間，看翠綠梯田茶園在斜陽下泛著金光。今晚最重要的事：在光陽閣享用整趟旅程最期待的頂級佐賀和牛壽喜燒，脂肪如油花均勻分布，入口即化，這就是佐賀縣的驕傲。</p></div>
+<div class="section hotel-section">
+  <h2 class="sec-head">🏨 今晚住宿</h2>
+  <div class="hotel-card">
+    <div class="hotel-name">🌿 古湯溫泉 旅館大和屋</div>
+    <div class="hotel-vibe">📍 佐賀・古湯溫泉</div>
+    <div class="ht-meals"><div class="ht-meal ht-onsen">
+          <div class="ht-meal-icon">♨</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">癒 (Healing) · ♨ 38°C 眠之湯</div>
+            <div class="ht-meal-text">極致溫和的鹼性單純泉。38°C 是最適合人體長時間放鬆的溫度，帶來絕佳的深層入眠效果。</div>
+          </div>
+        </div><div class="ht-meal ht-dinner">
+          <div class="ht-meal-icon">🍽</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">味 (Taste) · 山林裡的會席</div>
+            <div class="ht-meal-text">於專屬和室內享用山林懷石料理，品嚐佐賀在地食材的細膩變化</div>
+          </div>
+        </div><div class="ht-meal ht-breakfast">
+          <div class="ht-meal-icon">🌅</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">明日早餐</div>
+            <div class="ht-meal-text">07:30（務必提前預約）晨間和食膳 — 享用完畢後元氣飽滿出發武雄大楠</div>
+          </div>
+        </div></div>
+    <div class="ht-tags"><span class="ht-tag">山林秘湯</span><span class="ht-tag">鹼性單純泉</span><span class="ht-tag">38°C 眠之湯</span><span class="ht-tag">早餐 07:30</span></div>
+    <div class="ht-price ">住宿實付 <strong>¥ 29,800</strong></div>
+  </div>
+</div>`,
+`<div class="bf-banner"><div class="bf-left"><span class="bf-ico">⚠️</span><span class="bf-label">今日早餐</span></div><div class="bf-right"><div class="bf-hotel">古湯溫泉 旅館大和屋</div><div class="bf-detail">07:30（務必提前預約）晨間和食膳 — 享用完畢後元氣飽滿出發武雄大楠</div></div></div>
+<div class="day-hero" style="background:linear-gradient(160deg,#1a4a3a 0%,#2e7d6e 100%);"><div class="jp-pattern"></div><div class="day-hero-inner"><div class="day-badge"><span class="day-num">3</span><span class="day-wd">WED</span></div><div class="day-hero-text"><div class="day-date-str">5 月 13 日（三）</div><h1 class="day-title">🌳 神木茶鄉 · 千年靈氣與佐賀和牛</h1><div class="day-vibe">極致奢華的頂點 <span class="day-vibe-en">· The Pinnacle of Luxury</span></div><div class="day-route-str">🗺 古湯 → 武雄 → 御船山 → 嬉野溫泉&ensp;<span class="km-pill">60 km</span></div></div></div></div><div class="day-intro-band"><p class="day-intro-text">【今日主題：千年靈氣 × 翠綠茶鄉 × 頂級佐賀和牛】今天是整趟旅程最有「靈氣」的一天。清晨走入武雄神社的竹林小徑，仰望 3000 年的大楠，晨光穿透樹冠的那一刻，讓人感受到時間的重量。傍晚抵達嬉野茶空間，看翠綠梯田茶園在斜陽下泛著金光。今晚最重要的事：在光陽閣享用整趟旅程最期待的頂級佐賀和牛壽喜燒，脂肪如油花均勻分布，入口即化，這就是佐賀縣的驕傲。</p></div>
 <div class="section"><h2 class="sec-head">📋 今日行程</h2><div class="tl-new"><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">武雄神社 · 大楠（樹齡 3000 年）</div><div class="tl-note-new">24 小時開放 · 竹林秘境通道 · 45km/50min from 古湯</div><div class="tl-photo-new">💡 09:30 抵達，晨光穿透樹冠灑在青苔上的神聖光影，是整趟最有靈氣的一張</div><div class="tl-mc-new">📍 導航：0954-22-2976</div></div></div><div class="tl-conn-new">🚗 1 km · 5 分鐘（極近！）</div><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">御船山樂園（磅礡斷崖 × 杜鵑花海）</div><div class="tl-note-new">08:00 開 · 距武雄神社僅 1km · 五月杜鵑花期</div><div class="tl-photo-new">💡 廣角鏡頭將垂直斷崖與前景粉紅杜鵑花海一起收進畫面，如同日本水墨畫</div></div></div><div class="tl-conn-new">🚗 30 km · 35 分鐘</div><div class="tl-item "><div class="tl-icon">⛩</div><div class="tl-body-new"><div class="tl-name-new">祐德稻荷神社</div><div class="tl-note-new">日本三大稻荷 · 建議步行至「奧之院」欣賞視野</div></div></div><div class="tl-conn-new">🚗 24 km · 28 分鐘</div><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">嬉野茶空間梯田（翠綠茶園）</div><div class="tl-note-new">五月新茶盛產 · 傍晚斜射光最立體</div><div class="tl-photo-new">💡 五月中旬新茶盛產，內野山地區如絲綢般起伏的幾何梯田茶園，翠綠色線條是最佳構圖</div><div class="tl-mc-new">📍 Mapcode: 104 010 371*18</div></div></div><div class="tl-conn-new">🚗 10 km · 12 分鐘 → 住宿</div></div></div>
 <div class="section map-section"><h2 class="sec-head">🗺️ 今日路線</h2><div class="map-card-new"><div class="map-route-title">古湯 → 武雄 → 御船山 → 嬉野</div><div class="spots-row"><span class="spot-chip">📍 武雄神社 · 大楠（3000年）</span><span class="spot-chip">📍 御船山樂園（斷崖絕景）</span><span class="spot-chip">📍 祐德稻荷神社</span><span class="spot-chip">📍 嬉野茶空間梯田</span><span class="spot-chip">📍 嬉野溫泉 光陽閣</span></div><a href="https://www.google.com/maps/dir/武雄神社/御船山楽園/祐徳稲荷神社/嬉野温泉/@33.1,130.0,11z" target="_blank" class="map-btn-new">📍 在 Google Maps 查看路線 →</a></div></div>
 <div class="section onsen-section"><h2 class="sec-head">♨️ 今晚溫泉</h2><div class="onsen-card-new"><div class="onsen-name-new">嬉野溫泉 光陽閣</div><div class="onsen-meta-row"><span class="onsen-type">碳酸氫鈉泉 · ¥ 36,700</span><span class="onsen-temp">🌡 40–41°C</span></div><div class="onsen-kw">♨ 日本三大美肌之湯 · 皮膚滑如絲 · 退房前必泡</div><p class="onsen-desc">日本三大美肌之湯之一，富含碳酸氫鈉的泉水觸感如高濃度精華液，入浴後皮膚明顯滑嫩細緻。搭配展望露天風呂的開闊視野，是整趟旅程最奢華的溫泉體驗。晚餐是頂級佐賀和牛壽喜燒，和牛加上美肌湯，這一夜是整趟旅程最值得期待的夜晚。</p></div></div>
 <div class="section dark-section"><h2 class="sec-head light">🧭 今日 Mapcode</h2><div class="mc-tip">切換車機至「Mapcode」模式後輸入</div><div class="mc-grid-new"><div class="mc-card"><div class="mc-spot">嬉野茶空間梯田</div><div class="mc-code">104 010 371*18</div><div class="mc-note">內野山地區梯田茶園</div></div></div></div>
 <div class="section"><h2 class="sec-head">🧺 今日洗衣站</h2><div class="ld-area-new"><div class="ld-location-new">📍 嬉野溫泉 · 光陽閣周邊</div><div class="ld-shops-new"><div class="ld-card-new"><div class="ld-shop-header"><span class="ld-shop-name-new">WASH House 嬉野溫泉店</span><span class="ld-badge-new">推薦</span></div><div class="ld-meta-new">⭐ 4.3 · 24 小時 · App 付款 · 可遠端查看進度 · 設備新</div><a href="https://maps.google.com/?cid=13585954405883797623" target="_blank" class="map-btn-new" style="font-size:.78rem;padding:.5rem .8rem;margin-top:.5rem;display:inline-block;">📍 Google Maps →</a></div><div class="ld-card-new"><div class="ld-shop-header"><span class="ld-shop-name-new">ASAHI コインランドリー 嬉野店</span><span class="ld-badge-new">備選</span></div><div class="ld-meta-new">24 小時 · 洗乾一體機 · WASH House 滿了可用</div><a href="https://maps.google.com/?cid=3910803147851663901" target="_blank" class="map-btn-new" style="font-size:.78rem;padding:.5rem .8rem;margin-top:.5rem;display:inline-block;">📍 Google Maps →</a></div></div><div class="ld-tip-new">💡 泡完嬉野美肌湯後去洗，約 1 小時搞定，隔天出發前取回</div></div></div>
-<div class="section hotel-section"><h2 class="sec-head">🏨 今晚住宿</h2><div class="hotel-card"><div class="hotel-name">嬉野溫泉 光陽閣</div><div class="hotel-desc">整趟旅程最奢華的一夜！展望和風客房俯瞰嬉野溫泉街與茶園綠意，日本三大美肌之湯加持，一泡難忘。</div><div class="ht-meals"><div class="ht-meal ht-dinner"><div class="ht-meal-icon">🍽</div><div class="ht-meal-body"><div class="ht-meal-label">今晚晚餐</div><div class="ht-meal-text">頂級佐賀和牛壽喜燒懷石 · 和牛以嬉野名水涮燙 · 脂香四溢</div></div></div><div class="ht-meal ht-onsen"><div class="ht-meal-icon">♨</div><div class="ht-meal-body"><div class="ht-meal-label">大浴場・溫泉</div><div class="ht-meal-text">展望露天風呂俯瞰溫泉街夜景 · 碳酸氫鈉美肌湯 · 退房前務必再泡一回</div></div></div><div class="ht-meal ht-breakfast"><div class="ht-meal-icon">🌅</div><div class="ht-meal-body"><div class="ht-meal-label">明日早餐</div><div class="ht-meal-text">07:00 · 溫泉湯豆腐必吃（嬉野名物）· 退房前再泡一次展望露天</div></div></div></div><div class="ht-tags"><span class="ht-tag">日本三大美肌之湯</span><span class="ht-tag">碳酸氫鈉泉</span><span class="ht-tag">展望露天風呂</span><span class="ht-tag">佐賀和牛晚餐</span><span class="ht-tag">早餐 07:00</span></div><div class="ht-price ">住宿實付 <strong>¥ 36,700</strong></div></div></div>`,
-`<div class="bf-banner"><div class="bf-left"><span class="bf-ico">🌅</span><span class="bf-label">今日早餐</span></div><div class="bf-right"><div class="bf-hotel">嬉野溫泉 光陽閣</div><div class="bf-detail">07:00 · 溫泉湯豆腐必吃（嬉野名物）· 退房前再泡一次展望露天</div></div></div>
-<div class="day-hero" style="background:linear-gradient(160deg,#5a2010 0%,#c0512a 100%);"><div class="jp-pattern"></div><div class="day-hero-inner"><div class="day-badge"><span class="day-num">4</span><span class="day-wd">THU</span></div><div class="day-hero-text"><div class="day-date-str">5 月 14 日（四）</div><h1 class="day-title">🌋 火山地熱 · 海中鳥居與杜鵑花海</h1><div class="day-route-str">🗺 嬉野 → 太良 → 島原半島 → 雲仙&ensp;<span class="km-pill">90 km</span></div></div></div></div><div class="day-intro-band"><p class="day-intro-text">【今日主題：有明海岸線 × 火山仙境】今天沿著有明海的國道 207 號行駛，左右皆是海景，先在退潮的大魚神社拍攝海上鳥居，再在太良採買今年最美的長崎枇杷。接著搭纜車登上仁田峠欣賞五月限定杜鵑花海。最後進入雲仙地獄，傍晚的硫磺白煙在冷空氣中格外壯觀。今晚在みかど飯店享用長崎直送海鮮螃蟹自助百匯，再泡強效硫磺泉解除一天的疲憊。</p></div>
+<div class="section hotel-section">
+  <h2 class="sec-head">🏨 今晚住宿</h2>
+  <div class="hotel-card">
+    <div class="hotel-name">✨ 嬉野溫泉 光陽閣</div>
+    <div class="hotel-vibe">📍 佐賀・嬉野溫泉</div>
+    <div class="ht-meals"><div class="ht-meal ht-onsen">
+          <div class="ht-meal-icon">♨</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">癒 (Healing) · ♨ 日本三大美肌之湯</div>
+            <div class="ht-meal-text">碳酸氫鈉美肌湯，泡完肌膚如絲緞般滑潤。強烈建議退房前在展望露天風呂再泡一回，將溫泉街夜景與晨光盡收眼底。</div>
+          </div>
+        </div><div class="ht-meal ht-dinner">
+          <div class="ht-meal-icon">🍽</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">味 (Taste) · 脂香四溢的和牛盛宴</div>
+            <div class="ht-meal-text">頂級佐賀和牛壽喜燒懷石 — 以嬉野名水涮燙頂級和牛，入口即化</div>
+          </div>
+        </div><div class="ht-meal ht-breakfast">
+          <div class="ht-meal-icon">🌅</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">明日早餐</div>
+            <div class="ht-meal-text">07:00 嬉野名物「溫泉湯豆腐」— 用美肌溫泉水熬煮的極致柔嫩</div>
+          </div>
+        </div></div>
+    <div class="ht-tags"><span class="ht-tag">日本三大美肌之湯</span><span class="ht-tag">碳酸氫鈉泉</span><span class="ht-tag">展望露天風呂</span><span class="ht-tag">佐賀和牛晚餐</span><span class="ht-tag">早餐 07:00</span></div>
+    <div class="ht-price ">住宿實付 <strong>¥ 36,700</strong></div>
+  </div>
+</div>`,
+`<div class="bf-banner"><div class="bf-left"><span class="bf-ico">🌅</span><span class="bf-label">今日早餐</span></div><div class="bf-right"><div class="bf-hotel">嬉野溫泉 光陽閣</div><div class="bf-detail">07:00 嬉野名物「溫泉湯豆腐」— 用美肌溫泉水熬煮的極致柔嫩</div></div></div>
+<div class="day-hero" style="background:linear-gradient(160deg,#5a2010 0%,#c0512a 100%);"><div class="jp-pattern"></div><div class="day-hero-inner"><div class="day-badge"><span class="day-num">4</span><span class="day-wd">THU</span></div><div class="day-hero-text"><div class="day-date-str">5 月 14 日（四）</div><h1 class="day-title">🌋 火山地熱 · 海中鳥居與杜鵑花海</h1><div class="day-vibe">巨木與海天一色 <span class="day-vibe-en">· Architectural Marvel & Panoramic Seas</span></div><div class="day-route-str">🗺 嬉野 → 太良 → 島原半島 → 雲仙&ensp;<span class="km-pill">90 km</span></div></div></div></div><div class="day-intro-band"><p class="day-intro-text">【今日主題：有明海岸線 × 火山仙境】今天沿著有明海的國道 207 號行駛，左右皆是海景，先在退潮的大魚神社拍攝海上鳥居，再在太良採買今年最美的長崎枇杷。接著搭纜車登上仁田峠欣賞五月限定杜鵑花海。最後進入雲仙地獄，傍晚的硫磺白煙在冷空氣中格外壯觀。今晚在みかど飯店享用長崎直送海鮮螃蟹自助百匯，再泡強效硫磺泉解除一天的疲憊。</p></div>
 <div class="section"><h2 class="sec-head">📋 今日行程</h2><div class="tl-new"><div class="tl-item tl-hi"><div class="tl-icon">✨</div><div class="tl-body-new"><div class="tl-name-new">豐玉姬神社（美肌女神・白なまず様）</div><div class="tl-note-new">光陽閣出發步行 5 分 · 嬉野溫泉街中心 · 手水為溫泉水 · 全日開放</div><div class="tl-photo-new">💡 白磁なまず様に願い水をかけ→二礼二拍手一礼→再一礼，祈願美肌・皮膚病退散。嬉野温泉泡湯加美肌女神加持，雙重美肌效果！</div><div class="tl-mc-new">📍 嬉野市嬉野町下宿乙2231-2 · 步行即達</div></div></div><div class="tl-conn-new">🚗 車程 25 分鐘</div><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">大魚神社「海上三鳥居」</div><div class="tl-note-new">24 小時 · ⚠️ 出發前查「太良町 潮汐表」退潮 · 40km/45min from 嬉野</div><div class="tl-photo-new">💡 退潮時三座朱紅鳥居從海底延伸而出，拍攝延伸感；漲潮時鳥居浮在海面，各有其美</div></div></div><div class="tl-conn-new">🚗 10 km · 12 分鐘</div><div class="tl-item "><div class="tl-icon">📍</div><div class="tl-body-new"><div class="tl-name-new">道の駅 太良（長崎茂木枇杷）</div><div class="tl-note-new">五月完美巔峰 · 極度柔軟多汁 · 不耐壓請當天享用</div></div></div><div class="tl-conn-new">🚗 5 分鐘</div><div class="tl-item tl-hi"><div class="tl-icon">🦀</div><div class="tl-body-new"><div class="tl-name-new">竹崎海産（漁師直營・有明海炭火燒）</div><div class="tl-note-new">10:00–15:30 LO · 火曜定休 · 竹崎蟹・竹崎牡蠣・サザエ・蛤・蟹飯 · 📞 0954-67-0603</div><div class="tl-photo-new">💡 現役漁師炭火燒烤有明海名物！竹崎蟹肉甜濃郁、牡蠣烤不縮汁不流失，是整趟最野性的午餐</div><div class="tl-mc-new">📍 太良町多良4261-1 · takezaki-kaisan.com</div></div></div><div class="tl-conn-new">🚗 20 km · 25 分鐘</div><div class="tl-item "><div class="tl-icon">📍</div><div class="tl-body-new"><div class="tl-name-new">水果公車站（哈密瓜造型）</div><div class="tl-note-new">長崎著名萌系地標 · Mapcode: 415 857 044*31</div></div></div><div class="tl-conn-new">🚗 55 km · 1 小時（上山）</div><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">仁田峠索道（九州杜鵑花海）</div><div class="tl-note-new">五月中旬盛開 · 搭纜車賞滿山粉紫 · Mapcode: 173 511 773*63</div><div class="tl-photo-new">💡 頂光展現花海飽和度，山下有明海為背景，九州五月最具震撼力的花卉景觀</div></div></div><div class="tl-conn-new">🚗 15 km · 18 分鐘（下山）</div><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">雲仙地獄谷</div><div class="tl-note-new">傍晚氣溫微降時白煙最壯觀 · 貓咪聚集的火山奇景</div><div class="tl-photo-new">💡 傍晚氣溫降低時，地熱白煙在冷空氣中格外凝重壯觀，拍出火山仙境的極致張力</div></div></div><div class="tl-conn-new">🚗 5 km · 5 分鐘 → 住宿</div></div></div>
 <div class="section map-section"><h2 class="sec-head">🗺️ 今日路線</h2><div class="map-card-new"><div class="map-route-title">嬉野 → 太良 → 島原半島 → 雲仙</div><div class="spots-row"><span class="spot-chip">📍 大魚神社「海上三鳥居」</span><span class="spot-chip">📍 道の駅 太良（茂木枇杷）</span><span class="spot-chip">📍 水果公車站</span><span class="spot-chip">📍 仁田峠索道（杜鵑花海）</span><span class="spot-chip">📍 雲仙地獄谷</span><span class="spot-chip">📍 雲仙みかど飯店</span></div><a href="https://www.google.com/maps/dir/大魚神社/道の駅+太良/水果バス停/仁田峠/雲仙地獄/@32.85,130.2,11z" target="_blank" class="map-btn-new">📍 在 Google Maps 查看路線 →</a></div></div>
 <div class="section onsen-section"><h2 class="sec-head">♨️ 今晚溫泉</h2><div class="onsen-card-new"><div class="onsen-name-new">雲仙溫泉 みかど飯店</div><div class="onsen-meta-row"><span class="onsen-type">酸性硫磺泉 · ¥ 27,038</span><span class="onsen-temp">🌡 42°C+</span></div><div class="onsen-kw">♨ 療效最強 · 解除肌肉疲痛 · 空中露天風呂</div><p class="onsen-desc">乳白微透的火山強湯，空氣中帶著淡淡硫磺香，這是大自然最原始的能量。能強效擴張血管，立竿見影解除連日長途開車與步行累積的深層肌肉疲痛。珍稀銘木建築的空中露天風呂，一邊泡湯一邊飽覽有明海天一色——是整趟旅程「療效最強、視野最開闊」的溫泉。</p></div></div>
@@ -379,28 +484,204 @@ var PAGES=[`<div class="hs-page">
 <div class="section dark-section"><h2 class="sec-head light">🧭 今日 Mapcode</h2><div class="mc-tip">切換車機至「Mapcode」模式後輸入</div><div class="mc-grid-new"><div class="mc-card"><div class="mc-spot">水果公車站</div><div class="mc-code">415 857 044*31</div><div class="mc-note">路邊注意安全</div></div><div class="mc-card"><div class="mc-spot">仁田峠索道</div><div class="mc-code">173 511 773*63</div><div class="mc-note">第一停車場，杜鵑花海起點</div></div></div></div>
 <div class="section"><h2 class="sec-head">🍑 今日必買</h2><div class="fruits-grid-new"><div class="fruit-card-new"><div class="fruit-ico-new">🍑</div><div class="fruit-name-new">長崎茂木枇杷（旅程絕對主角）</div><div class="fruit-desc-new">五月正達完美巔峰！全國產量第一，果肉極度柔軟多汁、甜度極高。極不耐壓，請當天享用，是五月九州最值得買的伴手禮。</div><div class="fruit-when-new">📍 Day 4 · 國道 207 號「道の駅 太良」· 務必買一盒放車上當天吃</div></div><div class="fruit-card-new"><div class="fruit-ico-new">🍈</div><div class="fruit-name-new">初夏洋香瓜</div><div class="fruit-desc-new">回到旅館泡完溫泉後，享用一盒當地溫室哈密瓜，是最經典的日式享受</div><div class="fruit-when-new">各地道の駅</div></div></div></div>
 <div class="section"><h2 class="sec-head">🧺 今日洗衣站</h2><div class="ld-area-new"><div class="ld-location-new">📍 島原 · 雲仙路上（備用）</div><div class="ld-shops-new"><div class="ld-card-new"><div class="ld-shop-header"><span class="ld-shop-name-new">洗濯ハカセ Laundry.LAB 島原</span><span class="ld-badge-new">最新設備</span></div><div class="ld-meta-new">⭐ 4.5 · 24 小時 · App 監控進度 · 有停車場 · 下山進雲仙地獄前順路</div><a href="https://maps.google.com/?cid=14104483558334194938" target="_blank" class="map-btn-new" style="font-size:.78rem;padding:.5rem .8rem;margin-top:.5rem;display:inline-block;">📍 Google Maps →</a></div></div><div class="ld-tip-new">💡 D3 嬉野沒時間洗的話，D4 下山順路在此補洗</div></div></div>
-<div class="section hotel-section"><h2 class="sec-head">🏨 今晚住宿</h2><div class="hotel-card"><div class="hotel-name">雲仙 みかど飯店（本館）</div><div class="hotel-desc">整棟大量使用珍稀巨木銘木，極具藝術感。空中露天風呂飽覽有明海海天一色，是本旅程最震撼的飯店空間。</div><div class="ht-meals"><div class="ht-meal ht-dinner"><div class="ht-meal-icon">🍽</div><div class="ht-meal-body"><div class="ht-meal-label">今晚晚餐</div><div class="ht-meal-text">長崎島原食材懷石料理 · 搭配雲仙山間野蔬 · 精緻豐盛</div></div></div><div class="ht-meal ht-onsen"><div class="ht-meal-icon">♨</div><div class="ht-meal-body"><div class="ht-meal-label">大浴場・溫泉</div><div class="ht-meal-text">空中露天風呂 · 酸性硫磺泉乳白強湯 · 飽覽有明海海天一色</div></div></div><div class="ht-meal ht-breakfast"><div class="ht-meal-icon">🌅</div><div class="ht-meal-body"><div class="ht-meal-label">明日早餐</div><div class="ht-meal-text">07:00 · 雲仙名物溫泉玉子・島原素麺 · 早餐後出發</div></div></div></div><div class="ht-tags"><span class="ht-tag">酸性硫磺泉</span><span class="ht-tag">空中露天風呂</span><span class="ht-tag">珍稀銘木建築</span><span class="ht-tag">早餐 07:00</span></div><div class="ht-price ">住宿實付 <strong>¥ 27,038</strong></div></div></div>`,
-`<div class="bf-banner"><div class="bf-left"><span class="bf-ico">🌅</span><span class="bf-label">今日早餐</span></div><div class="bf-right"><div class="bf-hotel">雲仙 みかど飯店（本館）</div><div class="bf-detail">07:00 · 雲仙名物溫泉玉子・島原素麺 · 早餐後出發</div></div></div>
-<div class="day-hero" style="background:linear-gradient(160deg,#0a3050 0%,#1b6b8a 100%);"><div class="jp-pattern"></div><div class="day-hero-inner"><div class="day-badge"><span class="day-num">5</span><span class="day-wd">FRI</span></div><div class="day-hero-text"><div class="day-date-str">5 月 15 日（五）</div><h1 class="day-title">🚢 西端群島 · 制霸日本最西端</h1><div class="day-route-str">🗺 雲仙 → 西海 → 佐世保漁村&ensp;<span class="km-pill">110 km</span></div></div></div></div><div class="day-intro-band"><p class="day-intro-text">【今日主題：制霸世界盡頭 × 九十九島遊覧船 × 漁夫海鮮體驗】今天是整趟最有「成就感」的一天。⚠️ 07:30 準時從雲仙出發！先在西海橋欣賞渦潮，再搭 10:00 遊覧船巡遊九十九島——從海上仰望千島，視角完全不同於展望台。之後制霸最西端神崎鼻，領取到達証明書。晚上入住漁夫民宿享用現捕舟盛生魚片。⚠️ 請務必備妥現金 ¥17,600。</p></div>
+<div class="section hotel-section">
+  <h2 class="sec-head">🏨 今晚住宿</h2>
+  <div class="hotel-card">
+    <div class="hotel-name">🌋 雲仙 みかど飯店（本館）</div>
+    <div class="hotel-vibe">📍 長崎・雲仙</div>
+    <div class="ht-meals"><div class="ht-meal ht-onsen">
+          <div class="ht-meal-icon">♨</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">癒 (Healing) · ♨ 雲仙酸性硫磺泉</div>
+            <div class="ht-meal-text">在空中露天風呂中，浸泡於乳白色的強效礦物湯，眼前是無邊際的有明海，飽覽海天一色的壯闊。</div>
+          </div>
+        </div><div class="ht-meal ht-dinner">
+          <div class="ht-meal-icon">🍽</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">味 (Taste) · 長崎的大地恩惠</div>
+            <div class="ht-meal-text">長崎島原食材懷石料理，巧妙搭配雲仙山間的當季野蔬</div>
+          </div>
+        </div><div class="ht-meal ht-breakfast">
+          <div class="ht-meal-icon">🌅</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">明日早餐</div>
+            <div class="ht-meal-text">07:00 雲仙名物溫泉玉子與清爽的島原素麺 — 為一天的探索注入活力</div>
+          </div>
+        </div></div>
+    <div class="ht-tags"><span class="ht-tag">酸性硫磺泉</span><span class="ht-tag">空中露天風呂</span><span class="ht-tag">珍稀銘木建築</span><span class="ht-tag">早餐 07:00</span></div>
+    <div class="ht-price ">住宿實付 <strong>¥ 27,038</strong></div>
+  </div>
+</div>`,
+`<div class="bf-banner"><div class="bf-left"><span class="bf-ico">🌅</span><span class="bf-label">今日早餐</span></div><div class="bf-right"><div class="bf-hotel">雲仙 みかど飯店（本館）</div><div class="bf-detail">07:00 雲仙名物溫泉玉子與清爽的島原素麺 — 為一天的探索注入活力</div></div></div>
+<div class="day-hero" style="background:linear-gradient(160deg,#0a3050 0%,#1b6b8a 100%);"><div class="jp-pattern"></div><div class="day-hero-inner"><div class="day-badge"><span class="day-num">5</span><span class="day-wd">FRI</span></div><div class="day-hero-text"><div class="day-date-str">5 月 15 日（五）</div><h1 class="day-title">🚢 西端群島 · 制霸日本最西端</h1><div class="day-vibe">討海人的純粹款待 <span class="day-vibe-en">· Authentic Human Connection</span></div><div class="day-route-str">🗺 雲仙 → 西海 → 佐世保漁村&ensp;<span class="km-pill">110 km</span></div></div></div></div><div class="day-intro-band"><p class="day-intro-text">【今日主題：制霸世界盡頭 × 九十九島遊覧船 × 漁夫海鮮體驗】今天是整趟最有「成就感」的一天。⚠️ 07:30 準時從雲仙出發！先在西海橋欣賞渦潮，再搭 10:00 遊覧船巡遊九十九島——從海上仰望千島，視角完全不同於展望台。之後制霸最西端神崎鼻，領取到達証明書。晚上入住漁夫民宿享用現捕舟盛生魚片。⚠️ 請務必備妥現金 ¥17,600。</p></div>
 <div class="section"><h2 class="sec-head">📋 今日行程</h2><div class="tl-new"><div class="tl-item "><div class="tl-icon">🌉</div><div class="tl-body-new"><div class="tl-name-new">西海橋（渦潮 · 眼鏡岩）</div><div class="tl-note-new">07:30 雲仙出發 · 45km/50min · 渦潮壯觀 · 眼鏡岩拍照</div></div></div><div class="tl-conn-new">🚗 20 分鐘</div><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">九十九島パールクィーン（10:00 出航）</div><div class="tl-note-new">約 50 分 · 大人 ¥1,500 · 無需預約 · 10:50 下船</div><div class="tl-photo-new">💡 從海面仰望島嶼角度完全不同於展望台，五月晨光灑落千島之間，是整趟最難忘的海上體驗</div><div class="tl-mc-new">🚢 班次參考：10:00 ／ 11:00 ／ 13:00 ／ 14:00 ／ 15:00（季節性臨時加班）· 建議搭 10:00 首班</div></div></div><div class="tl-conn-new">🚗 15 分鐘</div><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">石岳展望台（九十九島全景）</div><div class="tl-note-new">建議 15:00–17:00 · 《末代武士》取景地 · 步行 300m 至頂</div><div class="tl-photo-new">💡 望遠鏡頭壓縮九十九島層次，捕捉水面碎金光芒與島嶼剪影，整趟最具電影感</div><div class="tl-mc-new">📍 Mapcode: 307 435 593*33</div></div></div><div class="tl-conn-new">🚗 52 km · 1 小時 10 分</div><div class="tl-item tl-hi"><div class="tl-icon">📍</div><div class="tl-body-new"><div class="tl-name-new">神崎鼻公園（日本本土最西端）</div><div class="tl-note-new">Step 1 · 導航 Mapcode 89 156 770*63，步行至海邊拍石碑合照<br>Step 2 · 車程 1–2 分鐘至小佐佐行政中心（0956-68-2111），平日 17:15 前出示照片<br>Step 3 · 免費領取「日本本土最西端到達証明書」🎖</div></div></div><div class="tl-conn-new">🚗 10 km · 12 分鐘 → 住宿</div></div></div>
 <div class="section map-section"><h2 class="sec-head">🗺️ 今日路線</h2><div class="map-card-new"><div class="map-route-title">雲仙 → 西海 → 佐世保 · 漁村</div><div class="spots-row"><span class="spot-chip">📍 西海橋（渦潮）</span><span class="spot-chip">📍 石岳展望台（九十九島）</span><span class="spot-chip">📍 神崎鼻公園（最西端）</span><span class="spot-chip">📍 民宿 海の幸</span></div><a href="https://www.google.com/maps/dir/西海橋/石岳展望台/神崎鼻公園/@33.15,129.65,11z" target="_blank" class="map-btn-new">📍 在 Google Maps 查看路線 →</a></div></div>
 <div class="section"><h2 class="sec-head">⚠️ 注意事項</h2><div class="notes-new"><div class="note-card-new note-alert"><div class="note-ico-new">⚠️</div><div class="note-body-new"><div class="note-title-new">Day 5 民宿 · 務必備妥現金</div><div class="note-text-new">民宿「海の幸」住宿費 ¥17,600 僅收日圓現金，不接受信用卡或 IC 卡。建議在福岡機場或便利商店 ATM 提前提領，出發前再次確認。</div></div></div><div class="note-card-new "><div class="note-ico-new">🏆</div><div class="note-body-new"><div class="note-title-new">最西端証明書領取</div><div class="note-text-new">神崎鼻合照後，車程 1–2 分鐘至「小佐佐行政中心」（0956-68-2111），平日 17:15 前出示照片即可免費領取到達証明書。</div></div></div></div></div>
 <div class="section dark-section"><h2 class="sec-head light">🧭 今日 Mapcode</h2><div class="mc-tip">切換車機至「Mapcode」模式後輸入</div><div class="mc-grid-new"><div class="mc-card"><div class="mc-spot">石岳展望台</div><div class="mc-code">307 435 593*33</div><div class="mc-note">步行 5 分鐘登頂</div></div><div class="mc-card"><div class="mc-spot">神崎鼻（最西端）</div><div class="mc-code">89 156 770*63</div><div class="mc-note">步行至海邊拍石碑合照</div></div></div></div>
 <div class="section"><h2 class="sec-head">🧺 今日洗衣站</h2><div class="ld-area-new"><div class="ld-location-new">📍 平戶市區 · 民宿附近</div><div class="ld-shops-new"><div class="ld-card-new"><div class="ld-shop-header"><span class="ld-shop-name-new">Dondon Coin Laundry 平戶</span><span class="ld-badge-new">推薦</span></div><div class="ld-meta-new">6:00 AM – 11:00 PM · 自動投洗劑 · 有停車場 · 平戶市區</div><a href="https://maps.google.com/?cid=15805190931912654745" target="_blank" class="map-btn-new" style="font-size:.78rem;padding:.5rem .8rem;margin-top:.5rem;display:inline-block;">📍 Google Maps →</a></div><div class="ld-card-new"><div class="ld-shop-header"><span class="ld-shop-name-new">SUN コインランドリー 平戶店</span><span class="ld-badge-new">備選</span></div><div class="ld-meta-new">6:00 AM – 12:00 AM · 有找零機 · 平戶碼頭附近</div><a href="https://maps.google.com/?cid=13305596518222358029" target="_blank" class="map-btn-new" style="font-size:.78rem;padding:.5rem .8rem;margin-top:.5rem;display:inline-block;">📍 Google Maps →</a></div></div><div class="ld-tip-new">💡 ⚠️ 民宿晚餐前去洗（記得備現金），飯後取回</div></div></div>
-<div class="section hotel-section"><h2 class="sec-head">🏨 今晚住宿</h2><div class="hotel-card"><div class="hotel-name">民宿 海の幸（九十九島北側）</div><div class="hotel-desc">最真實的九州漁村體驗。漁夫主人每天清晨出海，窗外即是九十九島的寧靜海域，旅程最有人情味的一夜。</div><div class="ht-meals"><div class="ht-meal ht-dinner"><div class="ht-meal-icon">🍽</div><div class="ht-meal-body"><div class="ht-meal-label">今晚晚餐</div><div class="ht-meal-text">漁夫現捕霸氣舟盛生魚片・活蝦・蛤蜊味噌湯 · ⚠️ 18:00 前必須 Check-in</div></div></div><div class="ht-meal ht-onsen"><div class="ht-meal-icon">♨</div><div class="ht-meal-body"><div class="ht-meal-label">大浴場・溫泉</div><div class="ht-meal-text">無大浴場 · 九十九島漁村氛圍・星空海景是最天然的療癒</div></div></div><div class="ht-meal ht-breakfast"><div class="ht-meal-icon">🌅</div><div class="ht-meal-body"><div class="ht-meal-label">明日早餐</div><div class="ht-meal-text">07:00 · 漁村家庭式早餐 · 煮魚・漬物・味噌湯 · 窗外九十九島晨景</div></div></div></div><div class="ht-tags"><span class="ht-tag">純樸漁村</span><span class="ht-tag">漁夫直送舟盛</span><span class="ht-tag">早餐 07:00</span><span class="ht-tag">⚠️ 僅收現金</span></div><div class="ht-price ht-cash">住宿實付 <strong>¥ 17,600</strong>&ensp;⚠️ 僅收現金</div></div></div>`,
-`<div class="bf-banner"><div class="bf-left"><span class="bf-ico">🌅</span><span class="bf-label">今日早餐</span></div><div class="bf-right"><div class="bf-hotel">民宿 海の幸（九十九島北側）</div><div class="bf-detail">07:00 · 漁村家庭式早餐 · 煮魚・漬物・味噌湯 · 窗外九十九島晨景</div></div></div>
-<div class="day-hero" style="background:linear-gradient(160deg,#3a1a08 0%,#8b4513 100%);"><div class="jp-pattern"></div><div class="day-hero-inner"><div class="day-badge"><span class="day-num">6</span><span class="day-wd">SAT</span></div><div class="day-hero-text"><div class="day-date-str">5 月 16 日（六）</div><h1 class="day-title">🌅 世界盡頭 · 生月島落日大道</h1><div class="day-route-str">🗺 佐世保 → 生月島 → 川內峠 → 糸島 → 福岡&ensp;<span class="km-pill">130 km</span></div></div></div></div><div class="day-intro-band"><p class="day-intro-text">【今日主題：極致公路電影感 × 糸島夕陽鳥居】今天是攝影成就感最高的一天。清晨在漁夫民宿吃完味噌湯後提早出發，驅車前往生月島——這裡有讓汽車廣告趨之若鶩的「落日大道」，沿斷崖絕壁的海岸公路蜿蜒前行。川內峠的 360 度草原讓你俯瞰九十九島全景。最後在糸島的白色鳥居前等待黃金夕陽——夕陽穿過鳥居倒映海面，是整趟最浪漫的收尾。今晚回福岡，在昭和復古的博多源泉掛流溫泉泡去所有疲憊。</p></div>
+<div class="section hotel-section">
+  <h2 class="sec-head">🏨 今晚住宿</h2>
+  <div class="hotel-card">
+    <div class="hotel-name">🎣 民宿 海の幸（九十九島北側）</div>
+    <div class="hotel-vibe">📍 長崎・九十九島</div>
+    <div class="ht-meals"><div class="ht-meal ht-onsen">
+          <div class="ht-meal-icon">♨</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">癒 (Healing) · ⭐ 天然的星空療癒</div>
+            <div class="ht-meal-text">今夜無需大浴場。九十九島純樸的漁村氛圍、海浪的白噪音與無光害的星空，便是最天然的療癒。</div>
+          </div>
+        </div><div class="ht-meal ht-dinner">
+          <div class="ht-meal-icon">🍽</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">味 (Taste) · 漁夫直送的霸氣海味</div>
+            <div class="ht-meal-text">震撼視覺的漁夫現捕霸氣舟盛生魚片、活蝦與濃郁的蛤蜊味噌湯 ⚠️ 需於 18:00 前 Check-in</div>
+          </div>
+        </div><div class="ht-meal ht-breakfast">
+          <div class="ht-meal-icon">🌅</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">明日早餐</div>
+            <div class="ht-meal-text">07:00 漁村家庭式早餐 — 溫暖的煮魚、手作漬物與味噌湯，佐以窗外九十九島絕美晨景</div>
+          </div>
+        </div></div>
+    <div class="ht-tags"><span class="ht-tag">純樸漁村</span><span class="ht-tag">漁夫直送舟盛</span><span class="ht-tag">早餐 07:00</span><span class="ht-tag">⚠️ 僅收現金</span></div>
+    <div class="ht-price ht-cash">住宿實付 <strong>¥ 17,600</strong>&ensp;⚠️ 僅收現金</div>
+  </div>
+</div>`,
+`<div class="bf-banner"><div class="bf-left"><span class="bf-ico">🌅</span><span class="bf-label">今日早餐</span></div><div class="bf-right"><div class="bf-hotel">民宿 海の幸（九十九島北側）</div><div class="bf-detail">07:00 漁村家庭式早餐 — 溫暖的煮魚、手作漬物與味噌湯，佐以窗外九十九島絕美晨景</div></div></div>
+<div class="day-hero" style="background:linear-gradient(160deg,#3a1a08 0%,#8b4513 100%);"><div class="jp-pattern"></div><div class="day-hero-inner"><div class="day-badge"><span class="day-num">6</span><span class="day-wd">SAT</span></div><div class="day-hero-text"><div class="day-date-str">5 月 16 日（六）</div><h1 class="day-title">🌅 世界盡頭 · 生月島落日大道</h1><div class="day-vibe">昭和時代的溫潤回音 <span class="day-vibe-en">· The Showa Nostalgia</span></div><div class="day-route-str">🗺 佐世保 → 生月島 → 川內峠 → 糸島 → 福岡&ensp;<span class="km-pill">130 km</span></div></div></div></div><div class="day-intro-band"><p class="day-intro-text">【今日主題：極致公路電影感 × 糸島夕陽鳥居】今天是攝影成就感最高的一天。清晨在漁夫民宿吃完味噌湯後提早出發，驅車前往生月島——這裡有讓汽車廣告趨之若鶩的「落日大道」，沿斷崖絕壁的海岸公路蜿蜒前行。川內峠的 360 度草原讓你俯瞰九十九島全景。最後在糸島的白色鳥居前等待黃金夕陽——夕陽穿過鳥居倒映海面，是整趟最浪漫的收尾。今晚回福岡，在昭和復古的博多源泉掛流溫泉泡去所有疲憊。</p></div>
 <div class="section"><h2 class="sec-head">📋 今日行程</h2><div class="tl-new"><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">生月島落日大道（Ikitsuki Sunset Way）</div><div class="tl-note-new">24 小時開放 · 朝早包場 · ⚠️ 18:15 卡位等落日 · 30km/35min from 民宿</div><div class="tl-photo-new">💡 汽車廣告聖地！五月日落 19:10，務必 18:15 前到達，捕捉暖橘色公路電影感最佳時刻</div><div class="tl-mc-new">📍 Mapcode: 894 856 507*33</div></div></div><div class="tl-conn-new">🚗 18 km · 22 分鐘（回橋）</div><div class="tl-item "><div class="tl-icon">📍</div><div class="tl-body-new"><div class="tl-name-new">川內峠（360 度無死角大草原）</div><div class="tl-note-new">30公頃廣闊草原 · 俯瞰九十九島與玄界灘全景</div></div></div><div class="tl-conn-new">🚗 80 km · 1.5 小時（趕往糸島）</div><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">糸島 · 桜井神社白色鳥居（夫婦岩）</div><div class="tl-note-new">傍晚夕照最美 · Mapcode: 224 788 285*46</div><div class="tl-photo-new">💡 抓準太陽落入白色鳥居與夫婦岩之間的黃金魔幻時刻，整趟最浪漫的一張</div></div></div><div class="tl-conn-new">🚗 32 km · 38 分鐘 → 住宿</div></div></div>
 <div class="section map-section"><h2 class="sec-head">🗺️ 今日路線</h2><div class="map-card-new"><div class="map-route-title">佐世保 → 生月島 → 川內峠 → 糸島 → 福岡</div><div class="spots-row"><span class="spot-chip">📍 生月島落日大道</span><span class="spot-chip">📍 川內峠（360°大草原）</span><span class="spot-chip">📍 糸島 · 白色鳥居（夫婦岩）</span><span class="spot-chip">📍 博多溫泉 富士の苑</span></div><a href="https://www.google.com/maps/dir/生月大橋/川内峠/桜井二見ヶ浦/博多温泉/@33.45,129.7,10z" target="_blank" class="map-btn-new">📍 在 Google Maps 查看路線 →</a></div></div>
 <div class="section onsen-section"><h2 class="sec-head">♨️ 今晚溫泉</h2><div class="onsen-card-new"><div class="onsen-name-new">博多溫泉 富士の苑</div><div class="onsen-meta-row"><span class="onsen-type">鈣鈉氯化物泉 · ¥ 24,638</span><span class="onsen-temp">🌡 源泉<br>直出</span></div><div class="onsen-kw">♨ 市區極罕見源泉掛流 · 鹽分保溫 · 昭和復古</div><p class="onsen-desc">福岡市區極罕見的 100% 源泉掛流純湯，不加水不加熱，溫度隨季節自然流出。泡後鹽分薄膜包覆全身，保溫效果極佳，讓整個旅途最後積累的深層寒氣徹底散去。昭和時代的復古榻榻米旅館氛圍，推薦躺在「寢湯」仰望天花板放空——最後一夜，用最溫柔的方式畫下句點。</p></div></div>
 <div class="section"><h2 class="sec-head">⚠️ 注意事項</h2><div class="notes-new"><div class="note-card-new "><div class="note-ico-new">📸</div><div class="note-body-new"><div class="note-title-new">生月島 18:15 卡位</div><div class="note-text-new">五月日落時間約 19:10。請務必 18:15 前抵達生月島落日大道卡位，才能捕捉暖橘色的公路電影感最佳時刻。</div></div></div><div class="note-card-new "><div class="note-ico-new">🚗</div><div class="note-body-new"><div class="note-title-new">加油 · 停車提示</div><div class="note-text-new">生月島建議在平戶市區加滿油再上橋。嬉野光陽閣、博多富士の苑均有寬敞停車場，無需擔心停車。</div></div></div></div></div>
 <div class="section dark-section"><h2 class="sec-head light">🧭 今日 Mapcode</h2><div class="mc-tip">切換車機至「Mapcode」模式後輸入</div><div class="mc-grid-new"><div class="mc-card"><div class="mc-spot">生月島落日大道</div><div class="mc-code">894 856 507*33</div><div class="mc-note">沿海公路最佳迴車彎</div></div><div class="mc-card"><div class="mc-spot">糸島白色鳥居</div><div class="mc-code">224 788 285*46</div><div class="mc-note">海岸旁計次停車場</div></div></div></div>
 <div class="section"><h2 class="sec-head">🧺 今日洗衣站</h2><div class="ld-area-new"><div class="ld-location-new">📍 博多溫泉 富士の苑（門口 30m）</div><div class="ld-shops-new"><div class="ld-card-new"><div class="ld-shop-header"><span class="ld-shop-name-new">富士の苑 門口自助洗衣</span><span class="ld-badge-new">官網確認</span></div><div class="ld-meta-new">出門右轉 30m · 最後一晚補洗最方便</div><a href="https://maps.google.com/search?q=博多温泉+富士の苑+コインランドリー" target="_blank" class="map-btn-new" style="font-size:.78rem;padding:.5rem .8rem;margin-top:.5rem;display:inline-block;">📍 Google Maps →</a></div></div><div class="ld-tip-new">💡 泡完源泉掛流の湯後，順便把行李整理好的髒衣服洗一洗</div></div></div>
-<div class="section hotel-section"><h2 class="sec-head">🏨 今晚住宿</h2><div class="hotel-card"><div class="hotel-name">博多溫泉 旅館富士の苑</div><div class="hotel-desc">市區難得一見的昭和復古榻榻米旅館，福岡市區極罕見的 100% 源泉掛流純湯，旅程最後一晚完美收尾。</div><div class="ht-meals"><div class="ht-meal ht-dinner"><div class="ht-meal-icon">🍽</div><div class="ht-meal-body"><div class="ht-meal-label">今晚晚餐</div><div class="ht-meal-text">自由外出 · 博多祇園居酒屋或中洲屋台 · 旅程最後一夜盡情享用</div></div></div><div class="ht-meal ht-onsen"><div class="ht-meal-icon">♨</div><div class="ht-meal-body"><div class="ht-meal-label">大浴場・溫泉</div><div class="ht-meal-text">100% 源泉掛流 · 鈣鈉氯化物泉 · 鹽分薄膜保溫效果極佳 · 推薦「寢湯」放空</div></div></div><div class="ht-meal ht-breakfast"><div class="ht-meal-icon">🌅</div><div class="ht-meal-body"><div class="ht-meal-label">明日早餐</div><div class="ht-meal-text">07:30 · 和食膳清淡溫潤 · 旅程最後一個早餐</div></div></div></div><div class="ht-tags"><span class="ht-tag">100% 源泉掛流</span><span class="ht-tag">鈣鈉氯化物泉</span><span class="ht-tag">昭和復古榻榻米</span><span class="ht-tag">早餐 07:30</span></div><div class="ht-price ">住宿實付 <strong>¥ 24,638</strong></div></div></div>`,
-`<div class="bf-banner"><div class="bf-left"><span class="bf-ico">🌅</span><span class="bf-label">今日早餐</span></div><div class="bf-right"><div class="bf-hotel">博多溫泉 旅館富士の苑</div><div class="bf-detail">07:30 · 和食膳清淡溫潤 · 旅程最後一個早餐</div></div></div>
+<div class="section hotel-section">
+  <h2 class="sec-head">🏨 今晚住宿</h2>
+  <div class="hotel-card">
+    <div class="hotel-name">🌸 博多溫泉 旅館富士の苑</div>
+    <div class="hotel-vibe">📍 福岡・博多溫泉</div>
+    <div class="ht-meals"><div class="ht-meal ht-onsen">
+          <div class="ht-meal-icon">♨</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">癒 (Healing) · ♨ 100% 源泉掛流</div>
+            <div class="ht-meal-text">未經循環的純淨鈣鈉氯化物泉。強烈推薦在「寢湯」中徹底放空，鹽分薄膜的保溫效果將暖意深植體內。</div>
+          </div>
+        </div><div class="ht-meal ht-dinner">
+          <div class="ht-meal-icon">🍽</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">味 (Taste) · 繁華重現與溫和收尾</div>
+            <div class="ht-meal-text">自由探索博多祇園居酒屋或中洲屋台 — 在旅程的最後一夜盡情感受博多熱情</div>
+          </div>
+        </div><div class="ht-meal ht-breakfast">
+          <div class="ht-meal-icon">🌅</div>
+          <div class="ht-meal-body">
+            <div class="ht-meal-label">明日早餐</div>
+            <div class="ht-meal-text">07:30 清淡溫潤的和食膳，溫和地喚醒腸胃，準備踏上歸途</div>
+          </div>
+        </div></div>
+    <div class="ht-tags"><span class="ht-tag">100% 源泉掛流</span><span class="ht-tag">鈣鈉氯化物泉</span><span class="ht-tag">昭和復古榻榻米</span><span class="ht-tag">早餐 07:30</span></div>
+    <div class="ht-price ">住宿實付 <strong>¥ 24,638</strong></div>
+  </div>
+</div>`,
+`<div class="bf-banner"><div class="bf-left"><span class="bf-ico">🌅</span><span class="bf-label">今日早餐</span></div><div class="bf-right"><div class="bf-hotel">博多溫泉 旅館富士の苑</div><div class="bf-detail">07:30 清淡溫潤的和食膳，溫和地喚醒腸胃，準備踏上歸途</div></div></div>
 <div class="day-hero" style="background:linear-gradient(160deg,#1a3020 0%,#4a7a5a 100%);"><div class="jp-pattern"></div><div class="day-hero-inner"><div class="day-badge"><span class="day-num">7</span><span class="day-wd">SUN</span></div><div class="day-hero-text"><div class="day-date-str">5 月 17 日（日）</div><h1 class="day-title">🏠 完美圓滿 · 晨光散步後返程</h1><div class="day-route-str">🗺 福岡市區 → 福岡機場&ensp;<span class="km-pill">10 km</span></div></div></div></div><div class="day-intro-band"><p class="day-intro-text">【旅程尾聲：帶著光影記憶起飛】最後一天，用最放鬆的節奏畫下句點。在富士の苑吃完 07:30 的日式早餐後，漫步到那珂川河堤，感受福岡清晨最柔和的光線——這是整趟旅程最後一次按下快門的機會，請放慢腳步，細細感受。帶著 600 公里的光影記憶、四種溫泉的療癒，以及佐賀和牛的滋味，依依不捨地起飛。</p></div>
 <div class="section"><h2 class="sec-head">📋 今日行程</h2><div class="tl-new"><div class="tl-item tl-hi"><div class="tl-icon">📸</div><div class="tl-body-new"><div class="tl-name-new">那珂川河堤晨光散步</div><div class="tl-note-new">07:30–08:30 · 早晨光線最柔和迷人</div><div class="tl-photo-new">💡 早晨的那珂川光線最柔和，隨手捕捉日本街道與河畔的寧靜日常，是整趟最放鬆的一張</div></div></div><div class="tl-conn-new">🚶 步行 15 分鐘</div><div class="tl-item "><div class="tl-icon">⛩</div><div class="tl-body-new"><div class="tl-name-new">櫛田神社（選擇性）</div><div class="tl-note-new">超過 2000 年歷史 · 博多總鎮守 · 參拜求旅程平安</div></div></div><div class="tl-conn-new">🚗 10 km · 15 分鐘</div><div class="tl-item "><div class="tl-icon">📍</div><div class="tl-body-new"><div class="tl-name-new">福岡機場 · 還車 · 起飛</div><div class="tl-note-new">帶著 600km 的光影記憶、四種溫泉療癒、佐賀和牛的美味，起飛。Bon Voyage.</div></div></div></div></div>
-<div class="section map-section"><h2 class="sec-head">🗺️ 今日路線</h2><div class="map-card-new"><div class="map-route-title">福岡市區 → 福岡機場</div><div class="spots-row"><span class="spot-chip">📍 那珂川河堤晨光散步</span><span class="spot-chip">📍 櫛田神社（選擇性）</span><span class="spot-chip">📍 福岡機場・還車・起飛</span></div><a href="https://www.google.com/maps/search/那珂川+福岡/@33.585,130.4,14z" target="_blank" class="map-btn-new">📍 在 Google Maps 查看路線 →</a></div></div>`];
+<div class="section map-section"><h2 class="sec-head">🗺️ 今日路線</h2><div class="map-card-new"><div class="map-route-title">福岡市區 → 福岡機場</div><div class="spots-row"><span class="spot-chip">📍 那珂川河堤晨光散步</span><span class="spot-chip">📍 櫛田神社（選擇性）</span><span class="spot-chip">📍 福岡機場・還車・起飛</span></div><a href="https://www.google.com/maps/search/那珂川+福岡/@33.585,130.4,14z" target="_blank" class="map-btn-new">📍 在 Google Maps 查看路線 →</a></div></div>`,
+`<div class="hs-page">
+  <div class="hs-hero" style="background:linear-gradient(160deg,#080808 0%,#1a1400 60%,#0a0808 100%);">
+    <div class="jp-pattern"></div>
+    <div class="hs-hero-inner">
+      <div class="hs-hero-title">🧭 景點 Mapcode</div>
+      <div class="hs-hero-sub">切換車機至「Mapcode」模式後輸入 · 比 GPS 地址更準確</div>
+    </div>
+  </div>
+  <div class="hs-summary">
+    <div class="hs-sum-item"><div class="hs-sum-num">8</div><div class="hs-sum-label">個景點</div></div>
+    <div class="hs-sum-div"></div>
+    <div class="hs-sum-item"><div class="hs-sum-num">5</div><div class="hs-sum-label">天使用</div></div>
+    <div class="hs-sum-div"></div>
+    <div class="hs-sum-item"><div class="hs-sum-num">📍</div><div class="hs-sum-label">精準導航</div></div>
+  </div>
+
+  <div style="padding:1rem 1rem 0;">
+
+    <div style="margin-bottom:.7rem;font-family:'Zen Kaku Gothic New',sans-serif;font-size:.78rem;color:#888;padding:.5rem .2rem;">
+      💡 使用方法：按下車機上「目的地」→「Mapcode」→ 輸入數字（含 * 號）→ 確認
+    </div>
+
+    <!-- D2 -->
+    <div style="margin-bottom:.5rem;font-family:'Shippori Mincho B1',serif;font-size:.8rem;font-weight:800;color:#b8860b;padding:.3rem .2rem;border-bottom:1px solid rgba(184,134,11,.2);">5/12 TUE</div>
+    <div class="mc-full-card">
+      <div class="mc-full-header"><span class="mc-full-day">D2</span><span class="mc-full-name">鏡山展望台</span></div>
+      <div class="mc-full-code">182 431 035*41</div>
+      <div class="mc-full-note">山頂免費停車場，步行 3 分即達</div>
+    </div>
+
+    <!-- D3 -->
+    <div style="margin-bottom:.5rem;margin-top:.9rem;font-family:'Shippori Mincho B1',serif;font-size:.8rem;font-weight:800;color:#b8860b;padding:.3rem .2rem;border-bottom:1px solid rgba(184,134,11,.2);">5/13 WED</div>
+    <div class="mc-full-card">
+      <div class="mc-full-header"><span class="mc-full-day">D3</span><span class="mc-full-name">嬉野茶梯田（内野山）</span></div>
+      <div class="mc-full-code">104 010 371*18</div>
+      <div class="mc-full-note">内野山地區梯田茶園</div>
+    </div>
+
+    <!-- D4 -->
+    <div style="margin-bottom:.5rem;margin-top:.9rem;font-family:'Shippori Mincho B1',serif;font-size:.8rem;font-weight:800;color:#b8860b;padding:.3rem .2rem;border-bottom:1px solid rgba(184,134,11,.2);">5/14 THU</div>
+    <div class="mc-full-card">
+      <div class="mc-full-header"><span class="mc-full-day">D4</span><span class="mc-full-name">水果公車站</span></div>
+      <div class="mc-full-code">415 857 044*31</div>
+      <div class="mc-full-note">路邊停車，注意安全</div>
+    </div>
+    <div class="mc-full-card" style="margin-top:.5rem;">
+      <div class="mc-full-header"><span class="mc-full-day">D4</span><span class="mc-full-name">仁田峠索道</span></div>
+      <div class="mc-full-code">173 511 773*63</div>
+      <div class="mc-full-note">第一停車場，杜鵑花海起點</div>
+    </div>
+
+    <!-- D5 -->
+    <div style="margin-bottom:.5rem;margin-top:.9rem;font-family:'Shippori Mincho B1',serif;font-size:.8rem;font-weight:800;color:#b8860b;padding:.3rem .2rem;border-bottom:1px solid rgba(184,134,11,.2);">5/15 FRI</div>
+    <div class="mc-full-card">
+      <div class="mc-full-header"><span class="mc-full-day">D5</span><span class="mc-full-name">石岳展望台</span></div>
+      <div class="mc-full-code">307 435 593*33</div>
+      <div class="mc-full-note">步行 5 分鐘登頂</div>
+    </div>
+    <div class="mc-full-card" style="margin-top:.5rem;">
+      <div class="mc-full-header"><span class="mc-full-day">D5</span><span class="mc-full-name">神崎鼻（日本最西端）</span></div>
+      <div class="mc-full-code">89 156 770*63</div>
+      <div class="mc-full-note">步行至海邊拍石碑 · 証明書 17:15 前</div>
+    </div>
+
+    <!-- D6 -->
+    <div style="margin-bottom:.5rem;margin-top:.9rem;font-family:'Shippori Mincho B1',serif;font-size:.8rem;font-weight:800;color:#b8860b;padding:.3rem .2rem;border-bottom:1px solid rgba(184,134,11,.2);">5/16 SAT</div>
+    <div class="mc-full-card">
+      <div class="mc-full-header"><span class="mc-full-day">D6</span><span class="mc-full-name">生月島落日大道</span></div>
+      <div class="mc-full-code">894 856 507*33</div>
+      <div class="mc-full-note">沿海公路最佳迴車彎</div>
+    </div>
+    <div class="mc-full-card" style="margin-top:.5rem;">
+      <div class="mc-full-header"><span class="mc-full-day">D6</span><span class="mc-full-name">糸島 白色鳥居（二見ヶ浦）</span></div>
+      <div class="mc-full-code">224 788 285*46</div>
+      <div class="mc-full-note">海岸旁計次停車場</div>
+    </div>
+
+    <div style="margin-top:1.5rem;padding:1rem;background:rgba(184,134,11,.08);border-radius:12px;border:1px solid rgba(184,134,11,.2);">
+      <div style="font-family:'Shippori Mincho B1',serif;font-size:.88rem;font-weight:800;color:#b8860b;margin-bottom:.5rem;">📌 未收錄景點導航方式</div>
+      <div style="font-family:'Zen Kaku Gothic New',sans-serif;font-size:.78rem;color:#666;line-height:1.7;">
+        以下景點直接輸入電話號碼導航更方便：<br>
+        唐津城：0955-72-5697<br>
+        呼子朝市：0955-53-7160<br>
+        竹崎海産：0954-67-0603<br>
+        Budget 博多祇園店：092-473-0543
+      </div>
+    </div>
+
+    <div style="height:2rem;"></div>
+  </div>
+</div>`
+,
+`<div class="hs-page"><div class="hs-hero" style="background:linear-gradient(160deg,#0a1a30 0%,#0d2040 60%,#080c18 100%);"><div class="jp-pattern"></div><div class="hs-hero-inner"><div class="hs-hero-title">♨ 大浴場・泡湯時間</div><div class="hs-hero-sub">6 間住宿 · 4 種不同溫泉 · 每晚都有驚喜</div></div></div><div class="hs-summary"><div class="hs-sum-item"><div class="hs-sum-num">4</div><div class="hs-sum-label">種泉質</div></div><div class="hs-sum-div"></div><div class="hs-sum-item"><div class="hs-sum-num">6</div><div class="hs-sum-label">晚泡湯</div></div><div class="hs-sum-div"></div><div class="hs-sum-item"><div class="hs-sum-num">∞</div><div class="hs-sum-label">療癒時光</div></div></div><div class="hs-cards"><div class="hs-card"><div class="hs-card-header" style="background:linear-gradient(135deg,#2d6a8fee,#2d6a8f99);"><div class="hs-day-badge">D1</div><div class="hs-header-text"><div class="hs-date">5/11 MON · 都市大浴場</div><div class="hs-name">♨ 博多天空之湯</div><div class="hs-area">📍 三井ガーデンホテル福岡祇園 13F</div></div></div><div class="hs-card-body"><div class="hs-meals"><div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">🌙</span><div class="hs-meal-info"><div class="hs-meal-label">夜間入浴</div><div class="hs-meal-text">15:00 ～ 翌 01:00</div></div></div><div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早朝入浴</div><div class="hs-meal-text">05:00 ～ 09:00</div></div></div></div><div class="hs-desc">露天風呂・躺浴・蒸氣桑拿三合一。非溫泉（人工浴），但設備齊全，深夜 01:00 仍可入浴。博多市區難得的高樓空中浴池，城市夜景一覽無遺。</div><div class="hs-tags"><span class="hs-tag">13F 空中浴池</span><span class="hs-tag">露天風呂</span><span class="hs-tag">蒸氣桑拿</span><span class="hs-tag">躺浴</span><span class="hs-tag">免費</span></div></div></div><div class="hs-card"><div class="hs-card-header" style="background:linear-gradient(135deg,#7b5ea7ee,#7b5ea799);"><div class="hs-day-badge">D2</div><div class="hs-header-text"><div class="hs-date">5/12 TUE · 山林秘湯</div><div class="hs-name">♨ 古湯温泉 眠之湯</div><div class="hs-area">📍 旅館大和屋 大浴場・露天・酒樽貸切</div></div></div><div class="hs-card-body"><div class="hs-meals"><div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">🌙</span><div class="hs-meal-info"><div class="hs-meal-label">夜間入浴</div><div class="hs-meal-text">15:00 ～ 22:30</div></div></div><div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早朝入浴</div><div class="hs-meal-text">06:30 ～ 10:00</div></div></div></div><div class="hs-desc">鹼性單純泉 38°C 最溫柔。低刺激可長泡 30-40 分鐘，讓疲憊身體徹底放鬆入眠。六尺酒樽貸切風呂特色體驗 +¥1,000 / 50分（需預約）。</div><div class="hs-tags"><span class="hs-tag">鹼性單純泉</span><span class="hs-tag">38°C 眠之湯</span><span class="hs-tag">可長泡</span><span class="hs-tag">酒樽貸切</span><span class="hs-tag">美人湯十選</span></div></div></div><div class="hs-card"><div class="hs-card-header" style="background:linear-gradient(135deg,#2e7d6eee,#2e7d6e99);"><div class="hs-day-badge">D3</div><div class="hs-header-text"><div class="hs-date">5/13 WED · 日本三大美肌之湯</div><div class="hs-name">♨ 嬉野温泉 展望露天風呂</div><div class="hs-area">📍 光陽閣 最上階 7F 展望大浴場＋露天風呂</div></div></div><div class="hs-card-body"><div class="hs-meals"><div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">🌙</span><div class="hs-meal-info"><div class="hs-meal-label">夜間入浴</div><div class="hs-meal-text">チェックイン後 ～ 23:00（目安）</div></div></div><div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早朝入浴</div><div class="hs-meal-text">06:00 ～ チェックアウト前</div></div></div></div><div class="hs-desc">碳酸氫鈉泉觸感如精華液，入浴後皮膚明顯滑嫩。每早貯滿新鮮源泉，幾乎 100% 純泉。7F 展望露天風呂俯瞰嬉野茶園與溫泉街夜景——退房前務必再泡一回！</div><div class="hs-tags"><span class="hs-tag">碳酸氫鈉泉</span><span class="hs-tag">日本三大美肌</span><span class="hs-tag">7F 展望露天</span><span class="hs-tag">近源泉 100%</span><span class="hs-tag">俯瞰茶園</span></div></div></div><div class="hs-card"><div class="hs-card-header" style="background:linear-gradient(135deg,#c0512aee,#c0512a99);"><div class="hs-day-badge">D4</div><div class="hs-header-text"><div class="hs-date">5/14 THU · 空中絕景溫泉</div><div class="hs-name">♨ 天空の湯（露天）</div><div class="hs-area">📍 雲仙みかどホテル 大浴場「天空の湯」</div></div></div><div class="hs-card-body"><div class="hs-meals"><div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">🌙</span><div class="hs-meal-info"><div class="hs-meal-label">夜間入浴</div><div class="hs-meal-text">チェックイン後 ～ 深夜（有明海夜景）</div></div></div><div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早朝入浴</div><div class="hs-meal-text">早朝 ～ チェックアウト前（男女湯入替）</div></div></div></div><div class="hs-desc">天然石くり抜き石風呂。昼は青い有明海、夜は満天の星、朝は天草から昇る太陽！露天は夜朝で男女湯が入れ替わり、宿泊すれば両方の景色を体験できる絶景溫泉。</div><div class="hs-tags"><span class="hs-tag">天然石露天</span><span class="hs-tag">有明海絕景</span><span class="hs-tag">夜朝男女入替</span><span class="hs-tag">源泉掛流</span><span class="hs-tag">滿天星空</span></div></div></div><div class="hs-card"><div class="hs-card-header" style="background:linear-gradient(135deg,#1b6b8aee,#1b6b8a99);"><div class="hs-day-badge">D5</div><div class="hs-header-text"><div class="hs-date">5/15 FRI · 漁村民宿</div><div class="hs-name">🚿 民宿 海の幸</div><div class="hs-area">📍 九十九島北側 漁村民宿</div></div></div><div class="hs-card-body"><div class="hs-meals"><div class="hs-meal" style="background:rgba(100,100,100,.08);border-left:3px solid rgba(100,100,100,.3);"><span class="hs-meal-ico">ℹ️</span><div class="hs-meal-info"><div class="hs-meal-label" style="color:#888;">大浴場なし</div><div class="hs-meal-text">家庭式お風呂のみ。シャワー可。</div></div></div></div><div class="hs-desc">民宿なので大浴場はなし。今日の本命は九十九島絕景と漁夫舟盛の晩餐！浴槽でゆっくり疲れを癒して、早めに就寝。翌朝のクルーズに備えよう。</div><div class="hs-tags"><span class="hs-tag">家庭式浴室</span><span class="hs-tag">シャワー可</span><span class="hs-tag">窗外九十九島</span></div></div></div><div class="hs-card"><div class="hs-card-header" style="background:linear-gradient(135deg,#8b4513ee,#8b451399);"><div class="hs-day-badge">D6</div><div class="hs-header-text"><div class="hs-date">5/16 SAT · 昭和復古源泉</div><div class="hs-name">♨ 博多溫泉 源泉掛流</div><div class="hs-area">📍 旅館富士の苑 一番風呂・二番風呂・露天</div></div></div><div class="hs-card-body"><div class="hs-meals"><div class="hs-meal hs-m-onsen"><span class="hs-meal-ico">🌙</span><div class="hs-meal-info"><div class="hs-meal-label">夜間入浴</div><div class="hs-meal-text">チェックイン後 ～ 22:00</div></div></div><div class="hs-meal hs-m-breakfast"><span class="hs-meal-ico">🌅</span><div class="hs-meal-info"><div class="hs-meal-label">早朝入浴</div><div class="hs-meal-text">07:00 ～ 10:00（内湯のみ・露天は低温で不可）</div></div></div></div><div class="hs-desc">100% 源泉掛流純湯。「一気風呂」注入時湯氣瀰漫浴場是最特別體驗！旅程最後一泡，鹽分薄膜包覆全身，帶著溫暖回家。</div><div class="hs-tags"><span class="hs-tag">100% 源泉掛流</span><span class="hs-tag">鈣鈉氯化物泉</span><span class="hs-tag">一気風呂</span><span class="hs-tag">昭和復古</span><span class="hs-tag">鹽分保溫</span></div></div></div></div></div>,
+<div class="hs-page"><div class="hs-hero" style="background:linear-gradient(160deg,#080808 0%,#1a1400 60%,#0a0808 100%);"><div class="jp-pattern"></div><div class="hs-hero-inner"><div class="hs-hero-title">🧭 景點 Mapcode</div><div class="hs-hero-sub">切換車機至「Mapcode」模式後輸入 · 比地址更準確</div></div></div><div class="hs-summary"><div class="hs-sum-item"><div class="hs-sum-num">8</div><div class="hs-sum-label">個景點</div></div><div class="hs-sum-div"></div><div class="hs-sum-item"><div class="hs-sum-num">5</div><div class="hs-sum-label">天使用</div></div><div class="hs-sum-div"></div><div class="hs-sum-item"><div class="hs-sum-num">📍</div><div class="hs-sum-label">精準導航</div></div></div><div style="padding:1rem 1rem 0;"><div style="margin-bottom:.7rem;font-family:'Zen Kaku Gothic New',sans-serif;font-size:.78rem;color:#888;padding:.5rem .2rem;">💡 車機操作：目的地 → Mapcode → 輸入數字（含 * 號）→ 確認</div><div style="margin-bottom:.5rem;font-family:'Shippori Mincho B1',serif;font-size:.8rem;font-weight:800;color:#b8860b;padding:.3rem .2rem;border-bottom:1px solid rgba(184,134,11,.2);">5/12 TUE</div><div class="mc-full-card"><div class="mc-full-header"><span class="mc-full-day">D2</span><span class="mc-full-name">鏡山展望台</span></div><div class="mc-full-code">182 431 035*41</div><div class="mc-full-note">山頂免費停車場，步行 3 分即達</div></div><div style="margin-bottom:.5rem;margin-top:.9rem;font-family:'Shippori Mincho B1',serif;font-size:.8rem;font-weight:800;color:#b8860b;padding:.3rem .2rem;border-bottom:1px solid rgba(184,134,11,.2);">5/13 WED</div><div class="mc-full-card"><div class="mc-full-header"><span class="mc-full-day">D3</span><span class="mc-full-name">嬉野茶梯田（内野山）</span></div><div class="mc-full-code">104 010 371*18</div><div class="mc-full-note">内野山地區梯田茶園</div></div><div style="margin-bottom:.5rem;margin-top:.9rem;font-family:'Shippori Mincho B1',serif;font-size:.8rem;font-weight:800;color:#b8860b;padding:.3rem .2rem;border-bottom:1px solid rgba(184,134,11,.2);">5/14 THU</div><div class="mc-full-card"><div class="mc-full-header"><span class="mc-full-day">D4</span><span class="mc-full-name">水果公車站</span></div><div class="mc-full-code">415 857 044*31</div><div class="mc-full-note">路邊停車，注意安全</div></div><div class="mc-full-card" style="margin-top:.5rem;"><div class="mc-full-header"><span class="mc-full-day">D4</span><span class="mc-full-name">仁田峠索道</span></div><div class="mc-full-code">173 511 773*63</div><div class="mc-full-note">第一停車場，杜鵑花海起點</div></div><div style="margin-bottom:.5rem;margin-top:.9rem;font-family:'Shippori Mincho B1',serif;font-size:.8rem;font-weight:800;color:#b8860b;padding:.3rem .2rem;border-bottom:1px solid rgba(184,134,11,.2);">5/15 FRI</div><div class="mc-full-card"><div class="mc-full-header"><span class="mc-full-day">D5</span><span class="mc-full-name">石岳展望台</span></div><div class="mc-full-code">307 435 593*33</div><div class="mc-full-note">步行 5 分鐘登頂</div></div><div class="mc-full-card" style="margin-top:.5rem;"><div class="mc-full-header"><span class="mc-full-day">D5</span><span class="mc-full-name">神崎鼻（日本最西端）</span></div><div class="mc-full-code">89 156 770*63</div><div class="mc-full-note">步行至海邊拍石碑 · 証明書 17:15 前</div></div><div style="margin-bottom:.5rem;margin-top:.9rem;font-family:'Shippori Mincho B1',serif;font-size:.8rem;font-weight:800;color:#b8860b;padding:.3rem .2rem;border-bottom:1px solid rgba(184,134,11,.2);">5/16 SAT</div><div class="mc-full-card"><div class="mc-full-header"><span class="mc-full-day">D6</span><span class="mc-full-name">生月島落日大道</span></div><div class="mc-full-code">894 856 507*33</div><div class="mc-full-note">沿海公路最佳迴車彎</div></div><div class="mc-full-card" style="margin-top:.5rem;"><div class="mc-full-header"><span class="mc-full-day">D6</span><span class="mc-full-name">糸島 白色鳥居（二見ヶ浦）</span></div><div class="mc-full-code">224 788 285*46</div><div class="mc-full-note">海岸旁計次停車場</div></div><div style="margin-top:1.5rem;padding:1rem;background:rgba(184,134,11,.08);border-radius:12px;border:1px solid rgba(184,134,11,.2);"><div style="font-family:'Shippori Mincho B1',serif;font-size:.88rem;font-weight:800;color:#b8860b;margin-bottom:.5rem;">📞 電話號碼導航（較方便）</div><div style="font-family:'Zen Kaku Gothic New',sans-serif;font-size:.78rem;color:#666;line-height:1.9;">唐津城：0955-72-5697<br>呼子朝市：0955-53-7160<br>竹崎海産：0954-67-0603<br>Budget 博多祇園：092-473-0543<br>神崎鼻証明書（小佐佐）：0956-68-2111</div></div><div style="height:2rem;"></div></div></div>`
+`];
 function go(n){
   document.querySelectorAll('.tab-btn').forEach(function(b,i){b.classList.toggle('on',i===n);});
   document.getElementById('CONTENT').innerHTML=PAGES[n];
